@@ -1,0 +1,591 @@
+{
+  "HomePage": {
+    "title": "Tu juego. Tu escenario. Escanea la pista – empieza tu show.",
+    "description": "Con Élitetreplay, cada punto se convierte en un momento épico. Nuestra IA detecta automáticamente tus mejores jugadas y crea highlights profesionales listos para compartir. Sin app. Sin instalación. Solo tú – y tu juego.",
+    "button1": "Aplicar como cancha piloto",
+    "button2": "Escanea y empieza ya",
+    "button3": "¿Acabas de jugar?",
+    "Features": {
+    "headline": "Descubre tu juego – como nunca antes.",
+    "description": "Élitetreplay transforma tu partido en un highlight profesional. Tú juegas – nosotros grabamos, analizamos y editamos con IA avanzada.",
+      "replayWall": {
+        "title": "Configuración de Múltiples Cámaras",
+        "description": "Nuestro avanzado sistema de múltiples cámaras captura cada ángulo de tu juego, asegurando que ningún momento se pierda. Las cámaras sincronizadas trabajan juntas para proporcionar una cobertura completa y perspectivas cinematográficas.",
+        "list1": "Cobertura de 360° de la cancha",
+        "list2": "Resolución S4K Ultra HD",
+        "list3": "Selección automática del mejor ángulo"
+      },
+      "smartHighlight": {
+        "title": "Creación Inteligente de Momentos Destacados",
+        "description": "Nuestra avanzada IA identifica automáticamente los momentos clave de tu juego y crea resúmenes personalizados en tiempo real, asegurando que nunca te pierdas tus mejores jugadas.",
+        "list1": "Detección automática de momentos clave",
+        "list2": "Seguimiento de jugador y balón",
+        "list3": "Creación personalizada de momentos destacados"
+      },
+      "seamlessExperience": {
+        "title": "Experiencia Sin Interrupciones",
+        "description": "Simplemente escanea un código QR en la cancha para iniciar tu sesión de grabación y recibe tus momentos destacados profesionales al instante en tu dispositivo.",
+        "list1": "Inicio de sesión con un solo escaneo",
+        "list2": "Entrega instantánea a tu dispositivo",
+        "list3": "Compartir fácilmente en redes sociales"
+      },
+      "instantProcessing": {
+        "title": "Procesamiento Instantáneo",
+        "description": "Nuestros dispositivos NVIDIA Jetson Orin in situ procesan tu video localmente en tiempo real, garantizando una generación de video de alta calidad instantánea sin retrasos ni dependencias de la nube.",
+        "list1": "Procesamiento de video en tiempo real",
+        "list2": "Computación de IA de alto rendimiento",
+        "list3": "No se requiere carga en la nube"
+      },
+      "journey":{
+        "title": "Your Journey with Élitetreplay"
+      },
+    "cta": "Escanea. Juega. Comparte."
+  },
+  "journey": {
+      "title": "Tu Viaje de Momentos Destacados",
+      "step1": {
+        "heading": "Juega Tu Partido",
+        "description": "Concéntrate en lo que mejor haces – jugar con todo tu corazón en la cancha."
+      },
+      "step2": {
+        "heading": "Capturamos Todo",
+        "description": "Nuestras cámaras y IA rastrean toda la acción mientras juegas."
+      },
+      "step3": {
+        "heading": "Obtén Tus Momentos Destacados",
+        "description": "Recibe tu resumen personalizado al instante después del juego."
+      },
+      "step4": {
+        "heading": "Comparte y Celebra",
+        "description": "Muestra tus habilidades a amigos, familia, entrenadores y ojeadores."
+      }
+    },
+    "start": {
+      "title": "Comienza en Segundos",
+      "description": "Obtener tus momentos destacados es tan fácil como escanear un código. Sin configuraciones complicadas, sin esperas – solo acceso instantáneo a tus mejores momentos.",
+      "testimonial": {
+        "quote": "Escaneé el código QR antes de nuestro juego, y para cuando llegué al vestuario, mis momentos destacados estaban listos para ver. ¡Mi mate se veía aún mejor de lo que recordaba!",
+        "author": "- Jamal T., Ala"
+      }
+    },
+    "action": {
+      "title": "Véalo en Acción",
+      "description": "Experimente cómo nuestra IA transforma metraje crudo en resúmenes destacados impresionantes",
+      "cta": "Iniciar Sesión Ahora"
+      
+    },
+    "community": {
+      "title": "Momentos Destacados de la Comunidad",
+      "description": "Únete a miles de jugadores que ya están creando momentos inolvidables",
+      "highlights": {
+        "highlight1": {
+          "title": "Tiro Ganador del Campeonato"
+        },
+        "highlight2": {
+          "title": "Concurso de Mate Increíble"
+        },
+        "highlight3": {
+          "title": "Jugada Defensiva del Año"
+        }
+      }
+    },
+    "partners": {
+      "title": "Para Operadores de Canchas y Socios",
+      "description": "Transforma tu instalación en un destino premium con la tecnología ÉliteReplay",
+      "monetization": {
+        "title": "Monetización",
+        "description": "Crea nuevas fuentes de ingresos ofreciendo paquetes de momentos destacados premium a jugadores y equipos. Aumenta las reservas de canchas con propuestas de valor únicas."
+      },
+      "clubBranding": {
+        "title": "Branding del Club",
+        "description": "Personaliza videos con la marca, logotipos y colores de tu club para un aspecto profesional. Mejora la reputación de tu instalación y el alcance de marketing."
+      },
+      "communityFeatures": {
+        "title": "Características de la Comunidad",
+        "description": "Construye una comunidad más fuerte permitiendo que los jugadores compartan sus momentos destacados en redes sociales. Fomenta el compromiso y atrae nuevos miembros."
+      },
+      "applyButton": "Solicitar como Cancha Piloto"
+    }
+  },
+ "Footer":{
+  "text":"Resúmenes deportivos impulsados por IA",
+  "copyright":"Élitetreplay. Todos los derechos reservados.",
+  "contact":"Contacto",
+  "imprint" :"Imprenta",
+  "privacy":"Privacidad"
+ },
+ "ContactPage": {
+    "title": "Contáctenos",
+    "description": "¿Listo para transformar su instalación deportiva con momentos destacados impulsados por IA? Hablemos de cómo ÉliteReplay puede elevar su negocio.",
+    "contactInfo": {
+      "title": "Información de Contacto",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "phoneHours": "Lun-Vie, 9AM-6PM EST",
+      "office": "Oficina"
+    },
+    "partnershipOpportunities": {
+      "title": "Oportunidades de Asociación",
+      "options": {
+        "list1": "Instalaciones Deportivas y Canchas",
+        "list2": "Clubes Atléticos y Gimnasios",
+        "list3": "Escuelas y Universidades",
+        "list4": "Integradores de Tecnología"
+      }
+    },
+    "form": {
+      "title": "Envíenos un Mensaje",
+      "successMessage": "Gracias por contactarnos. Le responderemos dentro de 24 horas.",
+      "submit": "Enviar Mensaje",
+        "reset": "Enviar otro mensaje"
+    }
+  },
+  "recording": {
+      "title": "Iniciar Grabación",
+      "description": "Listo para capturar tu juego en la cancha: demo123",
+      "session": {
+        "title": "Inicia Tu Sesión",
+        "emailLabel": "Dirección de Correo",
+        "emailDescription": "Enviamos tu video destacado a este correo",
+        "button": "Iniciar Sesión"
+      },
+      "courtNotFound": {
+        "title": "Cancha No Encontrada",
+        "message": "ID de cancha no encontrada. Por favor, escanee el código QR nuevamente."
+      },
+      "success": {
+        "title": "¡Sesión Iniciada!",
+        "description": "Tu sesión de grabación está en marcha. Recibirás tu video destacado pronto en {email}.",
+        "encouragement": "¡Juega tu mejor partido! Nuestra IA está observando y capturará todos tus momentos destacados.",
+        "viewButton": "Ver Tu Sesión",
+        "closeButton": "Cerrar Esta Ventana"
+      }
+    },
+    "imprint": {
+      "title": "Imprenta",
+      "subtitle": "Información legal y detalles de la empresa",
+      "company": {
+        "title": "Información de la Empresa",
+        "name": "ÉliteReplay Inc.",
+        "address": "123 Innovation Drive, San Francisco, CA 94105, Estados Unidos"
+      },
+      "contact": {
+        "title": "Información de Contacto",
+        "email": "contacto@elitereplay.com",
+        "phone": "+1 (555) 123-4567",
+        "website": "www.elitereplay.com"
+      },
+      "legal": {
+        "title": "Representantes Legales",
+        "ceo": "CEO: Oliver Schmidt",
+        "cto": "CTO: Dra. Sarah Johnson",
+        "legalCounsel": "Asesoría Legal: Martinez & Associates LLP"
+      },
+      "registration": {
+        "title": "Detalles de Registro",
+        "companyType": "Corporación de Delaware",
+        "registrationNumber": "7891234",
+        "taxId": "12-3456789",
+        "founded": "2024"
+      },
+      "responsible": {
+        "title": "Responsable del Contenido",
+        "name": "Oliver Schmidt",
+        "position": "CEO, ÉliteReplay Inc.",
+        "address": "123 Innovation Drive, San Francisco, CA 94105",
+        "email": "oliver@elitereplay.com"
+      },
+      "disclaimer": {
+        "title": "Descargo de Responsabilidad",
+        "text": "La información en este sitio web se proporciona de buena fe y con fines informativos generales únicamente. No ofrecemos garantías sobre la completitud, confiabilidad y exactitud de esta información. Cualquier acción que tome basada en la información de este sitio web es estrictamente bajo su propio riesgo, y no seremos responsables por pérdidas o daños en relación con el uso de nuestro sitio web."
+      },
+      "copyright": {
+        "title": "Aviso de Derechos de Autor",
+        "text": "© {year} ÉliteReplay Inc. Todos los derechos reservados. El contenido, diseño, gráficos y otros materiales en este sitio web están protegidos por leyes de derechos de autor, marcas registradas y otras leyes de propiedad intelectual. No puede reproducir, distribuir ni crear obras derivadas de ningún contenido en este sitio web sin nuestro permiso escrito expreso."
+      },
+      "thirdParty": {
+        "title": "Enlaces de Terceros",
+        "text": "Nuestro sitio web puede contener enlaces a sitios web de terceros. Estos enlaces se proporcionan solo para su conveniencia. No tenemos control sobre el contenido de estos sitios web y no aceptamos responsabilidad por ellos ni por ninguna pérdida o daño que pueda surgir de su uso."
+      },
+      "lastUpdated": "Última actualización: Enero 2025"
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "subtitle": "Cómo recopilamos, usamos y protegemos tu información",
+      "effectiveDate": "Fecha de entrada en vigor: 1 de enero de 2025",
+      "lastUpdated": "Última actualización: 1 de enero de 2025",
+      "sections": {
+        "introduction": {
+          "title": "1. Introducción",
+          "text": "Bienvenido a ÉliteReplay ('nosotros', 'nuestro' o 'nos'). Estamos comprometidos a proteger tu privacidad y garantizar la seguridad de tu información personal. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando usas nuestro servicio de highlights deportivos con inteligencia artificial, incluyendo nuestro sitio web, aplicaciones móviles y servicios relacionados (colectivamente, el 'Servicio')."
+        },
+        "informationCollected": {
+          "title": "2. Información que Recopilamos",
+          "personal": {
+            "title": "2.1 Información Personal",
+            "text": "Podemos recopilar la siguiente información personal:",
+            "item1": "Direcciones de correo electrónico para entrega de videos y comunicación",
+            "item2": "Nombre e información de contacto cuando nos contactas",
+            "item3": "Información de pago para servicios premium (procesada de forma segura por proveedores externos)",
+            "item4": "Información de cuenta si creas una cuenta con nosotros"
+          },
+          "videoData": {
+            "title": "2.2 Datos de Video e Imagen",
+            "text": "Nuestro servicio procesa grabaciones de video de instalaciones deportivas para crear resúmenes destacados. Esto puede incluir:",
+            "item1": "Imágenes de actividades deportivas",
+            "item2": "Imágenes extraídas del video para análisis con IA",
+            "item3": "Datos biométricos derivados del análisis de movimiento (anonimizados)"
+          },
+          "technical": {
+            "title": "2.3 Información Técnica",
+            "item1": "Información y identificadores del dispositivo",
+            "item2": "Direcciones IP y datos de ubicación",
+            "item3": "Datos de uso y análisis",
+            "item4": "Cookies y tecnologías de seguimiento similares"
+          }
+        },
+        "useInformation": {
+          "title": "3. Cómo Usamos Tu Información",
+          "text": "Usamos tu información para:",
+          "item1": "Proporcionar y mejorar nuestro servicio de generación de highlights con IA",
+          "item2": "Entregar contenido de video personalizado a tu dirección de correo especificada",
+          "item3": "Procesar pagos y gestionar tu cuenta",
+          "item4": "Comunicarnos contigo sobre nuestros servicios",
+          "item5": "Analizar patrones de uso para mejorar nuestra tecnología",
+          "item6": "Garantizar la seguridad y prevenir el fraude",
+          "item7": "Cumplir con obligaciones legales"
+        },
+        "dataProcessing": {
+          "title": "4. Procesamiento de Datos y Tecnología de IA",
+          "text": "Nuestros sistemas de IA procesan datos de video localmente en dispositivos edge (NVIDIA Jetson Orin) instalados en instalaciones deportivas. Este enfoque asegura:",
+          "item1": "Transmisión mínima de datos a través de redes",
+          "item2": "Procesamiento en tiempo real sin dependencia de la nube",
+          "item3": "Mayor privacidad mediante procesamiento local",
+          "item4": "Eliminación automática de grabaciones sin procesar después de generar highlights"
+        },
+        "dataSharing": {
+          "title": "5. Compartir y Divulgación de Datos",
+          "text": "Podemos compartir tu información en las siguientes circunstancias:",
+          "item1": "Con tu consentimiento: Cuando acuerdes explícitamente compartir tu información",
+          "item2": "Proveedores de servicios: Proveedores externos que nos ayudan a proporcionar nuestros servicios",
+          "item3": "Instalaciones deportivas: Las instalaciones asociadas pueden recibir análisis agregados y anonimizados",
+          "item4": "Requisitos legales: Cuando sea requerido por la ley o para proteger nuestros derechos",
+          "item5": "Transferencias de negocio: En relación con fusiones, adquisiciones o ventas de activos"
+        },
+        "dataSecurity": {
+          "title": "6. Seguridad de Datos",
+          "text": "Implementamos medidas de seguridad estándar de la industria para proteger tu información, incluyendo: cifrado en tránsito y en reposo, infraestructura de cómputo edge segura, auditorías de seguridad regulares, controles de acceso y autenticación, y políticas de eliminación automática de datos."
+        },
+        "dataRetention": {
+          "title": "7. Retención de Datos",
+          "text": "Retenemos tu información de la siguiente manera:",
+          "item1": "Grabaciones de video sin procesar: Eliminadas dentro de las 24 horas posteriores al procesamiento",
+          "item2": "Videos destacados: Almacenados por 90 días a menos que solicites una retención más larga",
+          "item3": "Información personal: Retenida mientras sea necesario para proporcionar servicios",
+          "item4": "Datos de análisis: Anonimizados y retenidos para mejorar el servicio"
+        },
+        "yourRights": {
+          "title": "8. Tus Derechos",
+          "text": "Dependiendo de tu ubicación, puedes tener los siguientes derechos:",
+          "item1": "Acceso a tu información personal",
+          "item2": "Corrección de información inexacta",
+          "item3": "Eliminación de tu información personal",
+          "item4": "Portabilidad de tus datos",
+          "item5": "Objeción al procesamiento",
+          "item6": "Retiro de consentimiento",
+          "contact": "Para ejercer estos derechos, por favor contáctanos en privacy@elitereplay.com."
+        },
+        "internationalTransfers": {
+          "title": "9. Transferencias Internacionales de Datos",
+          "text": "Nuestros servicios pueden involucrar la transferencia de tu información a países fuera de tu residencia. Aseguramos que se implementen salvaguardas adecuadas para proteger tu información durante dichas transferencias, en cumplimiento con las leyes aplicables de protección de datos."
+        },
+        "childrensPrivacy": {
+          "title": "10. Privacidad de Menores",
+          "text": "Nuestros servicios no están dirigidos a niños menores de 13 años. No recopilamos intencionalmente información personal de niños menores de 13 años. Si crees que hemos recopilado información de un niño menor de 13 años, contáctanos de inmediato."
+        },
+        "policyChanges": {
+          "title": "11. Cambios a Esta Política de Privacidad",
+          "text": "Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos de cualquier cambio material publicando la nueva Política de Privacidad en nuestro sitio web y actualizando la fecha 'Última Actualización'. Tu uso continuo de nuestros servicios después de dichos cambios constituye la aceptación de la política actualizada."
+        },
+        "contactUs": {
+          "title": "12. Contáctanos",
+          "text": "Si tienes alguna pregunta sobre esta Política de Privacidad o nuestras prácticas de privacidad, por favor contáctanos:",
+          "address": {
+            "company": "ÉliteReplay Inc.",
+            "line1": "123 Innovation Drive",
+            "line2": "San Francisco, CA 94105",
+            "email": "privacy@elitereplay.com",
+            "phone": "+1 (555) 123-4567"
+          }
+        }
+      }
+    },
+    "sessionDemo": {
+      "loading": {
+        "title": "Cargando tus highlights...",
+        "subtitle": "Esto puede tomar unos momentos"
+      },
+      "notFound": {
+        "title": "Video No Encontrado",
+        "message": "El video destacado que buscas no está disponible aún o puede haber sido eliminado.",
+        "return": "Volver al Inicio"
+      },
+      "titleInfo": {
+        "date": "Fecha:",
+        "duration": "Duración:",
+        "court": "Cancha:"
+      },
+      "buttons": {
+        "download": "Descargar Video",
+        "downloading": "Descargando...",
+        "share": "Compartir",
+        "copied": "¡Enlace Copiado!",
+        "like": "Me Gusta",
+        "comment": "Comentarios"
+      },
+      "tabs": {
+        "highlights": "Momentos Destacados",
+        "aiAnalysis": "Análisis de IA",
+        "details": "Detalles"
+      },
+      "highlights": {
+        "title": "Momentos Clave"
+      },
+      "aiAnalysis": {
+        "title": "Informe de Análisis de IA",
+        "subtitle": "Impulsado por la tecnología avanzada de visión computacional de ÉliteReplay",
+        "playerStats": "Estadísticas del Jugador",
+        "detectionDetails": "Detalles de Detección",
+        "howItWorks": {
+          "title": "Cómo Funciona Nuestra IA",
+          "text": "Nuestra IA de vanguardia analiza cada cuadro para rastrear jugadores, detectar movimientos y señalar momentos destacados. Combina reconocimiento de objetos, seguimiento de movimiento y puntuación de highlights para una experiencia personalizada."
+        },
+        "detectionConfidence": "Confianza en la Detección"
+      },
+      "details": {
+        "title": "Detalles de la Sesión",
+        "fields": {
+          "date": "Fecha",
+          "duration": "Duración",
+          "court": "Cancha",
+          "player": "Jugador",
+          "sessionId": "ID de Sesión",
+          "quality": "Calidad"
+        }
+      },
+      "playerInfo": {
+        "title": "Información del Jugador",
+        "recordedAt": "Grabado en"
+      },
+      "aiTechInfo": {
+        "title": "Acerca de la IA de ÉliteReplay",
+        "description": "Este highlight fue creado por nuestra IA con computación de borde. El dispositivo NVIDIA Jetson Orin en la cancha procesó el metraje en vivo, capturando jugadas clave para tu reel personalizado.",
+        "processingTime": "Tiempo de Procesamiento",
+        "learnMore": "Aprende Más Sobre Nuestra Tecnología"
+      },
+      "subscription": {
+        "title": "Mantente Actualizado",
+        "message": "¿Quieres recibir alertas sobre próximos partidos y nuevos highlights?",
+        "placeholder": "Ingresa tu correo",
+        "button": "Suscribirse"
+      }
+    },
+    "technology": {
+      "hero": {
+        "title": "Nuestra Tecnología de IA",
+        "description": "Descubre cómo nuestra innovadora IA convierte grabaciones deportivas en reels destacados impresionantes"
+      },
+      "hardware": {
+        "title": "Hardware de Computación de Borde",
+        "nvidia": {
+          "title": "NVIDIA Jetson Orin",
+          "description": "Utilizamos dispositivos NVIDIA Jetson Orin instalados en las sedes deportivas. Estos potentes equipos de IA procesan video localmente, eliminando la necesidad de subir datos a la nube.",
+          "specs": {
+            "processing": "Procesamiento: Hasta 275 TOPS de rendimiento de IA",
+            "memory": "Memoria: 64GB de RAM para modelos de IA complejos",
+            "connectivity": "Conectividad: Red de alta velocidad para entrega instantánea"
+          }
+        },
+        "features": {
+          "multiCamera": {
+            "title": "Configuración de Múltiples Cámaras",
+            "description": "Emplea varias cámaras 4K posicionadas estratégicamente alrededor de la cancha para capturar cada ángulo."
+          },
+          "localStorage": {
+            "title": "Almacenamiento Local",
+            "description": "SSDs de alta velocidad almacenan el metraje crudo temporalmente, asegurando un procesamiento fluido."
+          },
+          "powerEfficiency": {
+            "title": "Eficiencia Energética",
+            "description": "Diseñado para un uso óptimo de energía manteniendo un rendimiento de IA de primer nivel."
+          }
+        }
+      },
+      "aiTech": {
+        "title": "Pila de Tecnología de IA",
+        "visionModels": {
+          "title": "Modelos de Visión por Computadora",
+          "description": "Nuestros modelos personalizados, entrenados en horas extensas de metraje deportivo, detectan jugadores, rastrean el movimiento del balón y comprenden las dinámicas del juego.",
+          "features": {
+            "objectDetection": {
+              "title": "Detección de Objetos",
+              "description": "Identifica y rastrea jugadores, balones y elementos del juego con un 99.7% de precisión"
+            },
+            "actionRecognition": {
+              "title": "Reconocimiento de Acciones",
+              "description": "Clasifica acciones deportivas específicas como mates, tiros o jugadas destacadas"
+            },
+            "poseEstimation": {
+              "title": "Estimación de Postura",
+              "description": "Monitorea movimientos y posturas de jugadores para resaltar logros atléticos"
+            },
+            "trajectoryAnalysis": {
+              "title": "Análisis de Trayectoria",
+              "description": "Analiza trayectorias de balón para identificar tiros y jugadas exitosas"
+            }
+          }
+        },
+        "highlightEngine": {
+          "title": "Motor de Generación de Highlights",
+          "description": "Más allá de la detección, nuestra IA evalúa qué define un gran highlight y crea videos atractivos automáticamente.",
+          "features": {
+            "excitementScore": {
+              "title": "Algoritmo de Puntuación de Excitación",
+              "description": "Los momentos se puntúan según:",
+              "items": {
+                "movement": "Intensidad del movimiento del jugador",
+                "ballSpeed": "Velocidad y trayectoria del balón",
+                "uniqueness": "Singularidad de la acción",
+                "context": "Contexto del juego (puntuación, tiempo)"
+              }
+            },
+            "autoEditing": {
+              "title": "Edición Automática de Video",
+              "description": "Aplica técnicas de edición profesionales incluyendo:",
+              "items": {
+                "angles": "Selección de los mejores ángulos de cámara",
+                "slowMotion": "Añadir efectos de cámara lenta en momentos clave",
+                "transitions": "Creación de transiciones suaves entre clips",
+                "timing": "Ajuste de cortes para maximizar impacto"
+              }
+            }
+          }
+        },
+        "realTimePipeline": {
+          "title": "Pipeline de Procesamiento en Tiempo Real",
+          "description": "Entrega highlights en minutos mediante un proceso optimizado.",
+          "steps": {
+            "capture": {
+              "title": "Captura de Video",
+              "description": "Múltiples cámaras 4K graban desde varios ángulos simultáneamente"
+            },
+            "preProcessing": {
+              "title": "Pre-procesamiento",
+              "description": "Estabiliza y sincroniza el metraje de todas las cámaras"
+            },
+            "aiAnalysis": {
+              "title": "Análisis de IA",
+              "description": "Analiza el metraje para detectar jugadores, acciones y momentos clave"
+            },
+            "highlightSelection": {
+              "title": "Selección de Highlights",
+              "description": "Clasifica momentos por puntuación de excitación y selecciona los mejores"
+            },
+            "autoEditing": {
+              "title": "Edición Automática",
+              "description": "Edita clips con transiciones, efectos y ajustes de tiempo"
+            },
+            "delivery": {
+              "title": "Entrega",
+              "description": "Envía el video final al usuario a través de la plataforma web"
+            }
+          }
+        }
+      },
+      "results": {
+        "title": "Resultados Inigualables",
+        "description": "Nuestra IA ofrece un rendimiento excepcional en métricas clave",
+        "metrics": {
+          "accuracy": {
+            "value": "99.7%",
+            "label": "Precisión de Detección"
+          },
+          "time": {
+            "value": "<5 min",
+            "label": "Tiempo de Procesamiento"
+          },
+          "quality": {
+            "value": "4K",
+            "label": "Calidad de Video"
+          },
+          "satisfaction": {
+            "value": "95%",
+            "label": "Satisfacción del Usuario"
+          }
+        },
+        "cta": "Pruébalo Tú Mismo"
+      }
+    },
+    "demo": {
+      "title": "Demostración Interactiva",
+      "description": "Explora cómo funciona la tecnología de ÉliteReplay a través de estas demostraciones interactivas",
+      "tabs": {
+        "replayWall": {
+          "title": "Visualización de Configuración Multicámara",
+          "description": "Nuestra Pared de Reproducción utiliza múltiples cámaras sincronizadas para capturar cada ángulo del juego. Estas cámaras trabajan juntas para no perderse ningún momento.",
+          "cameraSpecs": {
+            "title": "Especificaciones de la Cámara",
+            "items": {
+              "resolution": "Resolución 4K Ultra HD",
+              "fps": "120 FPS para captura en cámara lenta",
+              "lenses": "Lentes de gran angular para cobertura completa de la cancha",
+              "sync": "Grabación sincronizada en todas las cámaras",
+              "nightVision": "Visión nocturna y optimización para poca luz"
+            }
+          },
+          "coverageBenefits": {
+            "title": "Beneficios de Cobertura",
+            "items": {
+              "view": "Vista de 360° de todas las acciones de los jugadores",
+              "angles": "Múltiples ángulos para cada jugada",
+              "selection": "Selección automática del mejor ángulo",
+              "blindSpots": "Sin puntos ciegos en la cancha",
+              "quality": "Calidad cinematográfica premium"
+            }
+          },
+          "courtEnv": {
+            "title": "Entorno de Cancha Premium",
+            "description": "Diseñado para funcionar en todas las condiciones de iluminación, desde días soleados hasta partidos nocturnos dramáticos. Las cámaras se ajustan automáticamente para una calidad de captura superior, garantizando highlights profesionales en cualquier momento. Esta demo muestra una cancha nocturna vibrante con iluminación focalizada."
+          }
+        },
+        "aiDetection": {
+          "title": "Detección de Objetos por IA en Tiempo Real",
+          "description": "Observa cómo nuestra IA identifica jugadores, rastrea el balón y detecta momentos clave en vivo.",
+          "detectedObjects": "Objetos Detectados"
+        },
+        "edgeProcessing": {
+          "title": "Simulación de Computación de Borde",
+          "description": "Descubre cómo nuestros dispositivos NVIDIA Jetson Orin procesan video localmente para resultados inmediatos."
+        },
+        "qrAccess": {
+          "title": "Simulación de Acceso por Código QR",
+          "description": "Vea qué tan fácil es iniciar una sesión de grabación con nuestro sistema de códigos QR.",
+          "howItWorks": {
+            "title": "Cómo Funciona",
+            "steps": {
+              "find": "Encuentra el código QR mostrado en la entrada de la cancha",
+              "scan": "Escanea con la cámara de tu teléfono",
+              "email": "Ingresa tu correo en la página de sesión",
+              "play": "¡Juega tu partido - nosotros nos encargamos del resto!"
+            }
+          },
+          "scanMessage": "Escanea este código QR en la cancha para iniciar tu sesión de grabación",
+          "scannedMessage": "Redirigiendo a la página de inicio de sesión...",
+          "courtInfo": {
+            "courtId": "ID de Cancha: ABC123",
+            "location": "Ubicación: Cancha de Baloncesto del Centro"
+          }
+        }
+      }
+    }
+}
