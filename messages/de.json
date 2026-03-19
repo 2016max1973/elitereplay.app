@@ -1,9 +1,9 @@
 {
   "HomePage": {
-    "title": "Dein Spiel. Deine Bühne. Scanne den Court – starte deine Highlights.",
-    "description": "Mit Élitetreplay wird jeder Ballwechsel zm Erlebnis. Unsere KI erkennt automatisch deine besten Momente – und schneidet sie zu professionellen Highlight-Reels. Direkt aufs Handy, direkt teilbar. Keine App. Kein Setup. Nur du – und dein Spiel.",
-    "button1": "Als Pilotplatz bewerben",
-    "button2": "Jetzt scannen & loslegen",
+    "title": "Dein Spiel. Dein Moment",
+    "description": "ÉliteReplay bringt deine besten Padel-Momente auf den Bildschirm – automatisch, emotional und bereit zum Teilen.",
+    "button1": "Jetzt eintragen",",
+    "button2": "Highlight erhalten",
     "button3": "Gerade gespielt?",
     "Features": {
     "headline": "Erlebe dein Spiel – wie du es noch nie gesehen hast.",
@@ -63,8 +63,8 @@
       "title": "Starte in Sekunden",
       "description": "Das Erhalten deiner Highlights ist so einfach wie das Scannen eines Codes. Keine komplizierte Einrichtung, kein Warten – nur sofortiger Zugriff auf deine größten Momente.",
       "testimonial": {
-        "quote": "Ich habe den QR-Code vor unserem Spiel gescannt, und als ich in die Umkleide kam, waren meine Highlights bereit zum Ansehen. Mein Dunk sah sogar besser aus, als ich es in Erinnerung hatte!",
-        "author": "- Jamal T., Flügelspieler"
+        "quote": "Ich habe den QR-Code vor unserem Spiel gescannt, und nach dem Match waren meine Highlights direkt da. Das fühlt sich an wie ein eigenes Highlight-Video.",
+        "author": "- Spieler, Fuerteventura"
       }
     },
     "action": {
@@ -77,10 +77,10 @@
       "description": "Tritt Tausenden von Spielern bei, die bereits unvergessliche Momente schaffen",
       "highlights": {
         "highlight1": {
-          "title": "Meisterschaftsentscheidender Wurf"
+          "title": ""Starker Punkt am Netz"
         },
         "highlight2": {
-          "title": "Erstaunlicher Dunk-Wettbewerb"
+          "title": ""Spektakulärer Smash""
         },
         "highlight3": {
           "title": "Defensive Leistung des Jahres"
