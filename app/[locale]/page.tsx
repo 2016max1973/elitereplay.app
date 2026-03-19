@@ -27,19 +27,7 @@ export default function LandingPage() {
       <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-40"
-          >
-            <source
-              src="/placeholder.svg?height=1080&width=1920&text=Slow-Motion+Basketball+Highlights"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-blue-800/10 to-black/80"></div>
         </div>
 
