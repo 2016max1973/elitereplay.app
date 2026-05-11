@@ -183,7 +183,7 @@ export function AIVideoProcessor({
       const allConfidences = [
         ...objectDetections.map((d) => d.score),
         ...poseDetections.flatMap((p) => p.keypoints.map((k) => k.score)),
-      ]
+      ].filter((score): score is number => typeof score === "number")
       const avgConfidence =
         allConfidences.length > 0 ? allConfidences.reduce((sum, score) => sum + score, 0) / allConfidences.length : 0
 
@@ -265,7 +265,7 @@ export function AIVideoProcessor({
           const ball = frame.objects.find((obj: any) => obj.class === "sports ball")
           return ball ? { x: ball.bbox[0] + ball.bbox[2] / 2, y: ball.bbox[1] + ball.bbox[3] / 2 } : null
         })
-        .filter(Boolean)
+        .filter((position): position is { x: number; y: number } => position !== null)
 
       if (ballPositions.length >= 5) {
         // Calculate ball velocity
@@ -283,11 +283,11 @@ export function AIVideoProcessor({
         const hasLowVelocity = velocities.slice(-3).some((v) => v < 5)
 
         if (hasHighVelocity && hasLowVelocity) {
-          // This could be a shot or pass
+          // This could be a strong shot or pass
           const confidence = Math.min(0.9, 0.5 + avgVelocity / 100)
           return {
             time: history[history.length - 1].time,
-            description: "Possible shot or pass detected",
+            description: "Possible strong shot or pass detected",
             confidence,
           }
         }
@@ -323,7 +323,7 @@ export function AIVideoProcessor({
               }
               return null
             })
-            .filter(Boolean)
+            .filter((distance): distance is number => typeof distance === "number")
 
           if (previousPoses.length >= 5) {
             const minDist = Math.min(...previousPoses)
@@ -331,11 +331,11 @@ export function AIVideoProcessor({
             const jumpHeight = maxDist - minDist
 
             if (jumpHeight > 30) {
-              // This could be a jump shot or dunk
+              // This could be an explosive movement at the net
               const confidence = Math.min(0.95, 0.7 + jumpHeight / 200)
               return {
                 time: history[history.length - 1].time,
-                description: "Jump shot or dunk detected",
+                description: "Explosive net movement detected",
                 confidence,
               }
             }
@@ -385,7 +385,7 @@ export function AIVideoProcessor({
 
       // Draw keypoints
       keypoints.forEach((keypoint) => {
-        if (keypoint.score > 0.3) {
+        if ((keypoint.score ?? 0) > 0.3) {
           ctx.fillStyle = "#7A5CFA"
           ctx.beginPath()
           ctx.arc(keypoint.x, keypoint.y, 4, 0, 2 * Math.PI)
@@ -419,7 +419,7 @@ export function AIVideoProcessor({
         const p1 = keypoints.find((kp) => kp.name === p1Name)
         const p2 = keypoints.find((kp) => kp.name === p2Name)
 
-        if (p1 && p2 && p1.score > 0.3 && p2.score > 0.3) {
+        if (p1 && p2 && (p1.score ?? 0) > 0.3 && (p2.score ?? 0) > 0.3) {
           ctx.strokeStyle = "rgba(122, 92, 250, 0.7)"
           ctx.lineWidth = 2
           ctx.beginPath()

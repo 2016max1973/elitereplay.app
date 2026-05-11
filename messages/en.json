@@ -86,6 +86,57 @@
         }
       }
     },
+    "productModules": {
+      "eyebrow": "ÉliteReplay System",
+      "title": "From match moment to finished product",
+      "intro": "ÉliteReplay connects camera perspectives, local detection, and clear outputs: highlights, MultiView replays, coach feedback, and premium match memories.",
+      "closing": "The player does not just get a video. They get their moment: clear, shareable, and recognizable.",
+      "highlightDetection": {
+        "title": "Highlight Detection",
+        "label": "Rallys · Moments · Timing",
+        "text": "Strong rallies, emotional scenes, and clear match moments are filtered out of long recordings."
+      },
+      "multiView": {
+        "title": "MultiView Replay",
+        "label": "Top-Down · SideView · NetView",
+        "text": "Top-Down shows the build-up. SideView and NetView add proximity, speed, and emotion to the clip."
+      },
+      "coachReview": {
+        "title": "Coach Review",
+        "label": "Feedback · Focus · Drill",
+        "text": "A highlight becomes a concrete training impulse: what worked, what to focus on, and what to practice next."
+      },
+      "matchFacts": {
+        "title": "MatchFacts",
+        "label": "Zones · Patterns · Progress",
+        "text": "Compact match facts: zones, presence, rally structure, and recurring patterns."
+      }
+    },
+    "cards": {
+      "eyebrow": "Premium Match Memories",
+      "title": "Player Cards, Team Cards, Club Cards",
+      "text": "Highlights become digital memories for players, teams, clubs, and camps.",
+      "subtext": "Not decoration. A shareable result from a real match moment.",
+      "cta": "Optional premium add-on",
+      "playerAlt": "ÉliteReplay Player Card example",
+      "teamAlt": "ÉliteReplay Team Card example",
+      "clubAlt": "ÉliteReplay Club Card example",
+      "player": {
+        "title": "Player Card",
+        "chip": "Your moment as a digital collectible",
+        "text": "A personal digital card from a real match moment."
+      },
+      "team": {
+        "title": "Team Card",
+        "chip": "For doubles, camps, and tournaments",
+        "text": "Two players, one moment, one polished result."
+      },
+      "club": {
+        "title": "Club Card",
+        "chip": "The court as a stage",
+        "text": "A premium frame for clubs, courts, and events."
+      }
+    },
     "partners": {
       "title": "For Court Operators & Partners",
       "description": "Transform your facility into a premium destination with ÉliteReplay technology",

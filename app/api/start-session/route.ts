@@ -90,7 +90,7 @@ async function simulateCommunicationWithEdgeDevice(courtId: string, email: strin
     status: "recording",
     deviceId: `JETSON_${courtId}`,
     aiStatus: "active",
-    modelVersion: "EliteReplay-CV-v3.2",
+    modelVersion: "ÉliteReplay-CV-v3.2",
     timestamp: Date.now(),
   }
 }
@@ -137,6 +137,6 @@ async function getAIProcessingStatus(sessionCode: string, courtId: string) {
     },
     estimatedCompletionTime: Date.now() + 1000 * 60 * 2, // 2 minutes from now
     deviceId: `JETSON_${courtId}`,
-    modelVersion: "EliteReplay-CV-v3.2",
+    modelVersion: "ÉliteReplay-CV-v3.2",
   }
 }

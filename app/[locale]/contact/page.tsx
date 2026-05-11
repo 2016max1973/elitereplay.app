@@ -5,7 +5,7 @@ import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import { ArrowLeft, Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
+import { ArrowLeft, Mail, MapPin, Send, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -112,19 +112,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">{t("contactInfo.email")}</h3>
-                      <p className="text-gray-400">contact@elitereplay.com</p>
-                      <p className="text-gray-400">partnerships@elitereplay.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="bg-[#F5BE2D]/20 p-3 rounded-full mr-4">
-                      <Phone className="h-6 w-6 text-[#F5BE2D]" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">{t("contactInfo.phone")}</h3>
-                      <p className="text-gray-400">+1 (555) 123-4567</p>
-                      <p className="text-gray-400">Mon-Fri, 9AM-6PM EST</p>
+                      <p className="text-gray-400">info@elitereplay.es</p>
                     </div>
                   </div>
 
@@ -134,8 +122,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">{t("contactInfo.office")}</h3>
-                      <p className="text-gray-400">123 Innovation Drive</p>
-                      <p className="text-gray-400">San Francisco, CA 94105</p>
+                      <p className="text-gray-400">ÉliteReplay</p>
+                      <p className="text-gray-400">Calle Tarabilla 1</p>
+                      <p className="text-gray-400">C 48</p>
+                      <p className="text-gray-400">35660 Corralejo</p>
+                      <p className="text-gray-400">Las Palmas</p>
+                      <p className="text-gray-400">España</p>
                     </div>
                   </div>
                 </div>

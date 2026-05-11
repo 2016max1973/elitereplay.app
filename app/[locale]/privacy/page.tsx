@@ -177,9 +177,13 @@ export default function PrivacyPage() {
                       <br />
                       {t('sections.contactUs.address.line2')}
                       <br />
-                      Email: {t('sections.contactUs.address.email')}
+                      {t('sections.contactUs.address.line3')}
                       <br />
-                      Phone: {t('sections.contactUs.address.phone')}
+                      {t('sections.contactUs.address.line4')}
+                      <br />
+                      {t('sections.contactUs.address.line5')}
+                      <br />
+                      Email: {t('sections.contactUs.address.email')}
                     </p>
                   </div>
                 </div>

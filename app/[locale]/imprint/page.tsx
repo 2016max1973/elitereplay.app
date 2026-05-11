@@ -53,33 +53,7 @@ export default function ImprintPage() {
                   <p>
                     <strong>Email:</strong> {t('contact.email')}
                     <br />
-                    <strong>Phone:</strong> {t('contact.phone')}
-                    <br />
                     <strong>Website:</strong> {t('contact.website')}
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{t('legal.title')}</h3>
-                  <p>
-                    <strong>{t('legal.ceo')}</strong>
-                    <br />
-                    <strong>{t('legal.cto')}</strong>
-                    <br />
-                    <strong>{t('legal.legalCounsel')}</strong>
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{t('registration.title')}</h3>
-                  <p>
-                    <strong>Company Registration:</strong> {t('registration.companyType')}
-                    <br />
-                    <strong>Registration Number:</strong> {t('registration.registrationNumber')}
-                    <br />
-                    <strong>Tax ID:</strong> {t('registration.taxId')}
-                    <br />
-                    <strong>Founded:</strong> {t('registration.founded')}
                   </p>
                 </div>
 

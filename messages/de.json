@@ -1,120 +1,175 @@
 {
   "HomePage": {
-    "title": "Dein Spiel. Dein Moment",
-    "description": "ÉliteReplay bringt deine besten Padel-Momente auf den Bildschirm – automatisch, emotional und bereit zum Teilen.",
-    "button1": "Jetzt eintragen",",
-    "button2": "Highlight erhalten",
-    "button3": "Gerade gespielt?",
+    "title": "Dein Spiel. Dein Moment.",
+    "description": "ÉliteReplay erkennt starke Ballwechsel, emotionale Szenen und echte Match-Momente direkt am Court. Lokal verarbeitet. Per QR zugeordnet. Bereit für Highlights, Coach Reviews und Club-Erlebnisse.",
+    "button1": "Pilotplatz anfragen",
+    "button2": "So funktioniert ÉliteReplay",
+    "button3": "So funktioniert ÉliteReplay",
     "Features": {
-    "headline": "Erlebe dein Spiel – wie du es noch nie gesehen hast.",
-    "description": "Élitetreplay macht aus deinem Match ein professionelles Highlight-Video. Du spielst – wir filmen, analysieren und schneiden automatisch mit modernster KI.",
+      "headline": "This moment didn’t exist until now.",
+      "description": "ÉliteReplay macht aus echten Padel-Matches automatisch starke Highlight-Momente – lokal verarbeitet, sauber zugeordnet und bereit für Spieler, Trainer, Clubs und Camps.",
       "replayWall": {
-        "title": "Multikamera-Setup",
-        "description": "Unser fortschrittliches Multikamera-System erfasst jeden Winkel deines Spiels und stellt sicher, dass kein Moment verpasst wird. Die synchronisierten Kameras arbeiten zusammen, um eine vollständige Abdeckung und filmische Perspektiven zu bieten.",
-        "list1": "360°-Abdeckung des Spielfelds",
-        "list2": "S4K Ultra HD-Auflösung",
-        "list3": "Automatische Auswahl des besten Winkels"
+        "title": "Top-Down, SideCam und NetCam für echte Spielszenen",
+        "description": "ÉliteReplay kombiniert mehrere Kameraperspektiven zu einem klaren Match-Erlebnis: Top-Down für Spielübersicht, SideCam für Dynamik und NetCam für emotionale Momente am Netz.",
+        "list1": "Top-Down als stabile Match-Perspektive",
+        "list2": "SideCam und NetCam für emotionale Highlights",
+        "list3": "Automatische Auswahl starker Spielszenen"
       },
       "smartHighlight": {
-        "title": "Intelligente Highlight-Erstellung",
-        "description": "Unsere fortschrittliche KI erkennt automatisch Schlüsselmomente in deinem Spiel und erstellt personalisierte Highlight-Videos in Echtzeit, sodass du deine besten Aktionen nie verpasst.",
-        "list1": "Automatische Erkennung von Schlüsselmomenten",
-        "list2": "Spieler- und Ballverfolgung",
-        "list3": "Personalisierte Highlight-Erstellung"
-      },"seamlessExperience": {
-        "title": "Nahtlose Erfahrung",
-        "description": "Scanne einfach einen QR-Code auf dem Platz, um deine Aufnahmesitzung zu starten und deine professionellen Highlights sofort auf deinem Gerät zu erhalten.",
-        "list1": "Sitzungsstart mit einem Scan",
-        "list2": "Sofortige Lieferung an dein Gerät",
-        "list3": "Einfaches Teilen in sozialen Medien"
+        "title": "Top-Down erklärt den Punkt",
+        "description": "Die Top-Down-Perspektive zeigt den kompletten Ballwechsel: Positionen, Laufwege, Raumgewinn und den Moment, in dem der Punkt entschieden wird.",
+        "list1": "Ballwechsel und Spielerbewegung verstehen",
+        "list2": "Rally-Struktur und Match-Momente erkennen",
+        "list3": "Grundlage für Highlights, MatchFacts und Coach Reviews"
+      },
+      "seamlessExperience": {
+        "title": "Session starten, Consent erfassen, Highlights zuordnen",
+        "description": "Spieler scannen einen QR-Code am Court, geben ihre Freigabe und erhalten später Zugriff auf ihre Highlights. Einfach, verständlich und ohne komplizierte App.",
+        "list1": "QR-Check-in am Court",
+        "list2": "Consent- und Spielerzuordnung",
+        "list3": "Download- oder Freigabelink nach dem Match"
       },
       "instantProcessing": {
-        "title": "Sofortige Verarbeitung",
-        "description": "Unsere vor Ort installierten NVIDIA Jetson Orin-Geräte verarbeiten dein Video lokal in Echtzeit und gewährleisten eine sofortige, hochqualitative Videogenerierung ohne Verzögerungen oder Cloud-Abhängigkeiten.",
-        "list1": "Echtzeit-Videoverarbeitung",
-        "list2": "Hochleistungsfähige KI-Computing",
-        "list3": "Keine Cloud-Hochladung erforderlich"
+        "title": "Privacy-first. Direkt am Court.",
+        "description": "ÉliteReplay verarbeitet echte Match-Momente dort, wo sie entstehen: am Platz. Das macht den Workflow schneller, kontrollierbarer und vertrauenswürdiger – besonders für Clubs, Camps, Trainer und Jugendformate.",
+        "list1": "Lokale Highlight-Verarbeitung",
+        "list2": "Weniger Uploads, mehr Kontrolle",
+        "list3": "Bereit für Club-, Camp- und Trainingsbetrieb"
       },
-      "journey":{
-        "title": "Your Journey with Élitetreplay"
+      "journey": {
+        "title": "Deine ÉliteReplay-Reise"
       },
-    "cta": "Scannen. Spielen. Teilen."
-  },
-  "journey": {
-      "title": "Deine Highlight-Reise",
+      "cta": "Spielen musst du schon selbst. Den Moment sichern wir."
+    },
+    "journey": {
+      "title": "Von QR-Start bis Highlight-Link",
       "step1": {
-        "heading": "Spiele Dein Spiel",
-        "description": "Konzentriere dich auf das, was du am besten kannst – dein Herz auf dem Platz zu lassen."
+        "heading": "QR scannen",
+        "description": "Spieler öffnen die Court-Seite, tragen sich ein und geben ihre Freigabe."
       },
       "step2": {
-        "heading": "Wir Erfassen Alles",
-        "description": "Unsere Kameras und KI verfolgen alle Aktionen, während du spielst."
+        "heading": "Match spielen",
+        "description": "Die Kameras nehmen die Session auf – ohne dass Spieler während des Spiels etwas bedienen müssen."
       },
       "step3": {
-        "heading": "Erhalte Deine Highlights",
-        "description": "Erhalte dein personalisiertes Highlight-Video sofort nach dem Spiel."
+        "heading": "Highlights erzeugen",
+        "description": "ÉliteReplay analysiert die Aufnahme und erstellt starke Szenen, Rally-Clips und optional MatchFacts."
       },
       "step4": {
-        "heading": "Teile und Feiere",
-        "description": "Zeige deine Fähigkeiten Freunden, Familie, Trainern und Scouts."
+        "heading": "Teilen oder downloaden",
+        "description": "Spieler erhalten ihre Highlights als Link oder Download – bereit für WhatsApp, Instagram, Trainer oder Team."
       }
     },
     "start": {
-      "title": "Starte in Sekunden",
-      "description": "Das Erhalten deiner Highlights ist so einfach wie das Scannen eines Codes. Keine komplizierte Einrichtung, kein Warten – nur sofortiger Zugriff auf deine größten Momente.",
+      "title": "QR-Start direkt am Court",
+      "description": "Der Ablauf bleibt bewusst schlank: QR-Code scannen, Session zuordnen, Freigabe erfassen und spielen. Danach werden die Aufnahmen lokal verarbeitet und den passenden Spielern oder Gruppen zugeordnet.",
       "testimonial": {
-        "quote": "Ich habe den QR-Code vor unserem Spiel gescannt, und nach dem Match waren meine Highlights direkt da. Das fühlt sich an wie ein eigenes Highlight-Video.",
-        "author": "- Spieler, Fuerteventura"
+        "quote": "Der QR-Start ist bewusst einfach gehalten: verständlich für Spieler, praktisch für Camps und klar im Consent-Prozess.",
+        "author": "- ÉliteReplay Pilot-Workflow"
       }
     },
     "action": {
-      "title": "Sieh Es In Aktion",
-      "description": "Erlebe, wie unsere KI Rohaufnahmen in beeindruckende Highlight-Videos verwandelt",
-      "cta": "Sitzung Jetzt Starten"
+      "title": "Court als Bühne",
+      "description": "Ein ruhiger Blick auf das Prinzip: echter Padel-Court, mehrere Perspektiven, lokale Verarbeitung und ein Moment, der später als Highlight wieder auftaucht.",
+      "cta": "Moment ansehen"
     },
-    "community": {
-      "title": "Community-Highlights",
-      "description": "Tritt Tausenden von Spielern bei, die bereits unvergessliche Momente schaffen",
-      "highlights": {
-        "highlight1": {
-          "title": ""Starker Punkt am Netz"
+    "pilot": {
+      "title": "Gebaut für Padel-Camps, Clubs und Demo-Days",
+      "description": "ÉliteReplay ist als Pilot- und MVP-System für echte Court-Situationen gedacht: Camps, Turniere, Club-Events und Trainer-Sessions. Ziel ist kein Show-Video aus dem Labor, sondern ein System, das auf echten Plätzen funktioniert.",
+      "cards": {
+        "players": {
+          "title": "Für Spieler",
+          "description": "Eigene Highlights ohne manuelles Schneiden."
         },
-        "highlight2": {
-          "title": ""Spektakulärer Smash""
+        "coaches": {
+          "title": "Für Trainer",
+          "description": "Szenen für Feedback, Technik und Matchanalyse."
         },
-        "highlight3": {
-          "title": "Defensive Leistung des Jahres"
+        "clubs": {
+          "title": "Für Clubs",
+          "description": "Premium-Erlebnis, neue Angebote und hochwertige Inhalte aus echten Matches."
         }
       }
     },
+    "productModules": {
+      "eyebrow": "ÉliteReplay System",
+      "title": "Vom Match-Moment zum fertigen Produkt",
+      "intro": "ÉliteReplay verbindet Kamera-Perspektiven, lokale Erkennung und klare Ausgaben: Highlights, MultiView-Replays, Coach-Feedback und hochwertige Match-Memories.",
+      "closing": "Der Spieler bekommt nicht nur ein Video. Er bekommt seinen Moment — verständlich, teilbar und wiedererkennbar.",
+      "highlightDetection": {
+        "title": "Highlight Detection",
+        "label": "Rallys · Momente · Timing",
+        "text": "Starke Ballwechsel, emotionale Szenen und klare Match-Momente werden aus langen Aufnahmen herausgefiltert."
+      },
+      "multiView": {
+        "title": "MultiView Replay",
+        "label": "Top-Down · SideView · NetView",
+        "text": "Top-Down zeigt den Spielaufbau. SideView und NetView bringen Nähe, Tempo und Emotion in den Clip."
+      },
+      "coachReview": {
+        "title": "Coach Review",
+        "label": "Feedback · Fokus · Übung",
+        "text": "Aus einem Highlight wird ein konkreter Trainingsimpuls: was war gut, was ist der Fokus, was ist die nächste Übung."
+      },
+      "matchFacts": {
+        "title": "MatchFacts",
+        "label": "Zonen · Muster · Entwicklung",
+        "text": "Kompakte Fakten aus dem Match: Zonen, Präsenz, Rally-Struktur und wiederkehrende Muster."
+      }
+    },
+    "cards": {
+      "eyebrow": "Premium Match Memories",
+      "title": "Player Cards, Team Cards, Club Cards",
+      "text": "Aus Highlights entstehen digitale Erinnerungsstücke — für Spieler, Teams, Clubs und Camps.",
+      "subtext": "Nicht als Deko. Sondern als teilbares Ergebnis eines echten Match-Moments.",
+      "cta": "Optionales Premium-Add-on",
+      "playerAlt": "ÉliteReplay Player Card Beispiel",
+      "teamAlt": "ÉliteReplay Team Card Beispiel",
+      "clubAlt": "ÉliteReplay Club Card Beispiel",
+      "player": {
+        "title": "Player Card",
+        "chip": "Dein Moment als digitales Sammlerstück",
+        "text": "Ein persönliches digitales Sammlerstück mit Name, Club, Match-Moment und QR-Zugang zum Highlight."
+      },
+      "team": {
+        "title": "Team Card",
+        "chip": "Für Doppel, Camps und Turniere",
+        "text": "Für Doppel, Camp-Teams oder Event-Sieger: zwei Spieler, ein Moment, ein hochwertiger Look."
+      },
+      "club": {
+        "title": "Club Card",
+        "chip": "Der Court als Bühne",
+        "text": "Der Court als Bühne: Clubs können ihre Anlage, Events und Highlights sichtbar als Premium-Erlebnis präsentieren."
+      }
+    },
     "partners": {
-      "title": "Für Platzbetreiber & Partner",
-      "description": "Verwandle deine Einrichtung mit ÉliteReplay-Technologie in ein Premium-Ziel",
+      "title": "Für Clubs, Coaches und Padel-Camps",
+      "description": "ÉliteReplay erweitert den Court um Highlights, Replay-Produkte, Coach Reviews, Player Cards und neue Sponsoring-Flächen – ohne den Spielablauf zu stören.",
       "monetization": {
-        "title": "Monetarisierung",
-        "description": "Erzeuge neue Einnahmequellen, indem du Premium-Highlight-Pakete für Spieler und Teams anbietest. Erhöhe die Platzbuchungen mit einzigartigen Wertvorschlägen."
+        "title": "Neue Umsatzmöglichkeiten",
+        "description": "Highlight-Pakete, Camp-Produkte, Coach Reviews und Event-Add-ons."
       },
       "clubBranding": {
-        "title": "Club-Branding",
-        "description": "Passen Sie Videos mit der Marke, Logos und Farben Ihres Clubs an, um ein professionelles Aussehen zu erzielen. Verbessern Sie den Ruf Ihrer Einrichtung und die Marketingreichweite."
+        "title": "Premium Club Experience",
+        "description": "Der Court fühlt sich für Spieler, Trainer und Gäste hochwertiger an, ohne zum Show-Format zu werden."
       },
       "communityFeatures": {
-        "title": "Community-Funktionen",
-        "description": "Bauen Sie eine stärkere Gemeinschaft auf, indem Sie Spielern ermöglichen, ihre Highlights in sozialen Medien zu teilen. Fördern Sie Engagement und ziehen Sie neue Mitglieder an."
+        "title": "Privacy-first aufgebaut",
+        "description": "QR-Consent, lokale Verarbeitung und klare Freigabeprozesse statt unkontrollierter Uploads."
       },
-      "applyButton": "Als Pilotplatz Bewerben"
+      "applyButton": "Pilotprojekt besprechen"
     }
   },
   "Footer":{
-  "text":"KI-gestützte Sport-Highlights",
-  "copyright":"© 2025 Élitetreplay. Alle Rechte vorbehalten.",
+  "text":"Padel-Highlights direkt vom Court",
+  "copyright":"© 2026 ÉliteReplay. Alle Rechte vorbehalten.",
   "contact":"Kontakt",
   "imprint" :"Impressum",
   "privacy":"Datenschutz"
  },
  "ContactPage": {
-    "title": "Kontaktiere Uns",
-    "description": "Bereit, Ihre Sporteinrichtung mit KI-gestützten Highlights zu transformieren? Lassen Sie uns besprechen, wie ÉliteReplay Ihr Geschäft steigern kann.",
+    "title": "Kontakt",
+    "description": "Du möchtest ÉliteReplay auf einem Court, in einem Club oder bei einem Camp testen? Schreib uns kurz, worum es geht.",
     "contactInfo": {
       "title": "Kontaktdaten",
       "email": "E-Mail",
@@ -125,10 +180,10 @@
     "partnershipOpportunities": {
       "title": "Partnerschaftsmöglichkeiten",
       "options": {
-        "list1": "Sporteinrichtungen & Plätze",
-        "list2": "Athletische Clubs & Fitnessstudios",
-        "list3": "Schulen & Universitäten",
-        "list4": "Technologie-Integratoren"
+        "list1": "Padel-Clubs & Courts",
+        "list2": "Coaches & Academies",
+        "list3": "Camps & Demo-Days",
+        "list4": "Turniere & Club-Events"
       }
     },
     "form": {
@@ -164,14 +219,14 @@
       "subtitle": "Rechtliche Informationen und Unternehmensdetails",
       "company": {
         "title": "Unternehmensinformationen",
-        "name": "ÉliteReplay Inc.",
-        "address": "123 Innovation Drive, San Francisco, CA 94105, Vereinigte Staaten"
+        "name": "ÉliteReplay",
+        "address": "Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España"
       },
       "contact": {
         "title": "Kontaktdaten",
-        "email": "kontakt@elitereplay.com",
-        "phone": "+1 (555) 123-4567",
-        "website": "www.elitereplay.com"
+        "email": "info@elitereplay.es",
+        "phone": "",
+        "website": "elitereplay.vercel.app"
       },
       "legal": {
         "title": "Rechtsvertreter",
@@ -188,10 +243,10 @@
       },
       "responsible": {
         "title": "Verantwortlich für den Inhalt",
-        "name": "Oliver Schmidt",
-        "position": "CEO, ÉliteReplay Inc.",
-        "address": "123 Innovation Drive, San Francisco, CA 94105",
-        "email": "oliver@elitereplay.com"
+        "name": "ÉliteReplay",
+        "position": "Padel Highlight System",
+        "address": "Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España",
+        "email": "info@elitereplay.es"
       },
       "disclaimer": {
         "title": "Haftungsausschluss",
@@ -291,7 +346,7 @@
           "item4": "Portabilität Ihrer Daten",
           "item5": "Widerspruch gegen die Verarbeitung",
           "item6": "Widerruf der Zustimmung",
-          "contact": "Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter privacy@elitereplay.com."
+          "contact": "Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter info@elitereplay.es."
         },
         "internationalTransfers": {
           "title": "9. Internationale Datenübertragungen",
@@ -309,11 +364,14 @@
           "title": "12. Kontaktieren Sie uns",
           "text": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder unseren Datenschutzpraktiken haben, kontaktieren Sie uns bitte:",
           "address": {
-            "company": "ÉliteReplay Inc.",
-            "line1": "123 Innovation Drive",
-            "line2": "San Francisco, CA 94105",
-            "email": "privacy@elitereplay.com",
-            "phone": "+1 (555) 123-4567"
+            "company": "ÉliteReplay",
+            "line1": "Calle Tarabilla 1",
+            "line2": "C 48",
+            "line3": "35660 Corralejo",
+            "line4": "Las Palmas",
+            "line5": "España",
+            "email": "info@elitereplay.es",
+            "phone": ""
           }
         }
       }
@@ -581,7 +639,7 @@
           "scannedMessage": "Weiterleitung zur Sitzungsstartseite...",
           "courtInfo": {
             "courtId": "Court-ID: ABC123",
-            "location": "Ort: Innenstadt-Basketballplatz"
+            "location": "Ort: Padel Demo Court"
           }
         }
       }

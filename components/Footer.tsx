@@ -35,18 +35,18 @@ const Footer = () => {
                 href={`/${locale}/imprint`}
                 className="text-gray-400 hover:text-[#F5BE2D] transition-colors text-lg font-medium"
               >
-                Imprint
+                {t('imprint')}
               </Link>
               <Link
                 href={`/${locale}/privacy`}
                 className="text-gray-400 hover:text-[#F5BE2D] transition-colors text-lg font-medium"
               >
-                Privacy
+                {t('privacy')}
               </Link>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500">
-            © {new Date().getFullYear()} {t('copyright')}
+            {t('copyright')}
           </div>
         </div>
       </footer>

@@ -89,6 +89,57 @@
         }
       }
     },
+    "productModules": {
+      "eyebrow": "Sistema ÉliteReplay",
+      "title": "Del momento de partido al producto final",
+      "intro": "ÉliteReplay conecta perspectivas de cámara, detección local y resultados claros: highlights, MultiView replays, feedback de coach y match memories premium.",
+      "closing": "El jugador no recibe solo un video. Recibe su momento: claro, compartible y reconocible.",
+      "highlightDetection": {
+        "title": "Highlight Detection",
+        "label": "Rallys · Momentos · Timing",
+        "text": "Rallys fuertes, escenas emocionales y momentos claros del partido se filtran desde grabaciones largas."
+      },
+      "multiView": {
+        "title": "MultiView Replay",
+        "label": "Top-Down · SideView · NetView",
+        "text": "Top-Down muestra la construcción del punto. SideView y NetView aportan cercanía, ritmo y emoción al clip."
+      },
+      "coachReview": {
+        "title": "Coach Review",
+        "label": "Feedback · Foco · Ejercicio",
+        "text": "Un highlight se convierte en un impulso de entrenamiento: qué funcionó, cuál es el foco y qué practicar después."
+      },
+      "matchFacts": {
+        "title": "MatchFacts",
+        "label": "Zonas · Patrones · Evolución",
+        "text": "Datos compactos del partido: zonas, presencia, estructura de rally y patrones recurrentes."
+      }
+    },
+    "cards": {
+      "eyebrow": "Premium Match Memories",
+      "title": "Player Cards, Team Cards, Club Cards",
+      "text": "Los highlights se convierten en recuerdos digitales para jugadores, equipos, clubes y camps.",
+      "subtext": "No es decoración. Es un resultado compartible de un momento real de partido.",
+      "cta": "Premium add-on opcional",
+      "playerAlt": "Ejemplo de ÉliteReplay Player Card",
+      "teamAlt": "Ejemplo de ÉliteReplay Team Card",
+      "clubAlt": "Ejemplo de ÉliteReplay Club Card",
+      "player": {
+        "title": "Player Card",
+        "chip": "Tu momento como recuerdo digital",
+        "text": "Una tarjeta digital personal desde un momento real del partido."
+      },
+      "team": {
+        "title": "Team Card",
+        "chip": "Para dobles, camps y torneos",
+        "text": "Dos jugadores, un momento, un resultado cuidado."
+      },
+      "club": {
+        "title": "Club Card",
+        "chip": "La pista como escenario",
+        "text": "Un marco premium para clubes, pistas y eventos."
+      }
+    },
     "partners": {
       "title": "Para Operadores de Canchas y Socios",
       "description": "Transforma tu instalación en un destino premium con la tecnología ÉliteReplay",

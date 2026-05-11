@@ -72,7 +72,7 @@ export default function VideoPlayer() {
                 <p className="text-white font-bold text-lg md:text-xl md:mb-2">
                   Demo Highlight Reel
                 </p>
-                <p className="text-gray-300">Basketball Session - 2:34</p>
+                <p className="text-gray-300">Padel Session - 2:34</p>
               </div>
             )}
           </div>

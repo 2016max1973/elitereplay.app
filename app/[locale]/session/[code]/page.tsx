@@ -30,19 +30,19 @@ import { useLocale, useTranslations } from "next-intl";
 const videoSessions = {
   demo123: {
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    title: "Basketball Highlights - May 22, 2025",
+    title: "Padel Highlights - May 22, 2025",
     date: "May 22, 2025",
     duration: "2:34",
     likes: 24,
     comments: 5,
-    court: "Downtown Basketball Court",
+    court: "Padel Demo Court",
     player: "Guest Player",
     aiAnalysis: {
       detectedMoments: [
-        { time: "0:12", description: "Fast break leading to layup", confidence: 0.94 },
-        { time: "0:45", description: "Three-point shot from corner", confidence: 0.89 },
-        { time: "1:23", description: "Defensive block", confidence: 0.92 },
-        { time: "1:58", description: "Slam dunk after assist", confidence: 0.98 },
+        { time: "0:12", description: "Long rally with pressure at the net", confidence: 0.94 },
+        { time: "0:45", description: "Strong bandeja into open space", confidence: 0.89 },
+        { time: "1:23", description: "Defensive recovery after glass return", confidence: 0.92 },
+        { time: "1:58", description: "Winning volley after coordinated attack", confidence: 0.98 },
       ],
       playerStats: {
         movementIntensity: 8.7,

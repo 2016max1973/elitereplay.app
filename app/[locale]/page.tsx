@@ -8,24 +8,44 @@ import {
   Zap,
   Server,
   QrCode,
-  Play,
-  Users,
   TrendingUp,
   Award,
+  ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import VideoPlayer from "@/components/VideoPlayer";
+import PlayerCardsSection from "@/components/PlayerCardsSection";
+import ProductModulesSection from "@/components/ProductModulesSection";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+
+function PadelCourtPreview() {
+  return (
+    <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-[#F5BE2D]/20 bg-black shadow-[0_8px_32px_rgba(245,190,45,0.12)]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(245,190,45,0.24),transparent_28%),linear-gradient(180deg,rgba(5,25,55,0.72),rgba(0,0,0,0.96))]" />
+      <div className="absolute left-[8%] top-[12%] h-[76%] w-[84%] rounded-sm border-2 border-[#F5BE2D]/60 shadow-[0_0_32px_rgba(245,190,45,0.18)]">
+        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-[#F5BE2D]/50" />
+        <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-[#F5BE2D]/40" />
+        <div className="absolute left-[12%] top-[18%] h-[64%] w-[76%] border border-white/20" />
+        <div className="absolute left-[32%] top-[18%] h-[64%] w-px bg-white/18" />
+        <div className="absolute right-[32%] top-[18%] h-[64%] w-px bg-white/18" />
+      </div>
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 text-left">
+        <p className="text-xs font-semibold tracking-[0.35em] text-[#F5BE2D]">
+          MATCH MOMENT
+        </p>
+        <p className="mt-2 text-sm text-gray-300">Padel Highlight Preview</p>
+      </div>
+    </div>
+  );
+}
 
 export default function LandingPage() {
   const locale = useLocale();
   const t = useTranslations("HomePage");
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
-      {/* 1. Hero Section with Full-screen Video */}
+      {/* 1. Hero Section */}
       <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        {/* Background Video */}
         <div className="absolute inset-0 z-0">
           
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-blue-800/10 to-black/80"></div>
@@ -89,23 +109,8 @@ export default function LandingPage() {
               size="lg"
               className="bg-[#F5BE2D] hover:bg-[#F5BE2D]/90 text-black font-semibold rounded-full px-10 py-4 shadow-2xl shadow-[#F5BE2D]/30 hover:shadow-[#F5BE2D]/50 transition-all duration-300 hover:scale-105"
             >
-              <Link
-                href={{
-                  pathname: `/${locale}/start`,
-                  query: { court: "demo123" },
-                }}
-              >
-                {t("button2")} <Play className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-2 !bg-transparent border-white text-white hover:text-white hover:bg-white/10 rounded-full px-10 py-4 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-            >
-              <Link href={`/${locale}/session/demo123`}>
-                {t("button3")} <ArrowRight className="ml-2 h-5 w-5" />
+              <Link href="#journey">
+                {t("button2")} <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -206,7 +211,7 @@ export default function LandingPage() {
             <div className="text-center mb-20 relative">
               <div className="inline-block">
                 <span className="text-xs font-semibold tracking-widest uppercase text-[#F5BE2D] bg-[#F5BE2D]/10 px-4 py-2 rounded-full mb-4 inline-block">
-                  Elite Features
+                  ÉliteReplay Court System
                 </span>
                 <h2 className="text-4xl md:text-6xl font-bold mt-4 mb-6 relative">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#F5BE2D]">
@@ -229,8 +234,8 @@ export default function LandingPage() {
                     <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#F5BE2D]/10">
                       <div className="aspect-[16/9]">
                         <Image
-                          src="/images/replay-wall-card-bg.png"
-                          alt="Replay Wall"
+                          src="/images/replay-wall.jpg"
+                          alt="ÉliteReplay Replay Wall"
                           fill
                           className="object-cover"
                         />
@@ -279,6 +284,42 @@ export default function LandingPage() {
                 </div>
               </div>
 
+              {/* MultiView Replay Teaser */}
+              <div className="feature-card-wrapper mb-16 md:mb-32">
+                <div className="mx-auto max-w-6xl">
+                  <div className="rounded-[28px] border border-[#F5BE2D]/35 bg-gradient-to-br from-[#050507] via-black to-[#09111f] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.55),0_0_36px_rgba(245,190,45,0.10)] md:p-5">
+                    <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                      <div>
+                        <span className="inline-flex rounded-full border border-[#F5BE2D]/25 bg-[#F5BE2D]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F5BE2D]">
+                          TopView · SideCam · NetCam
+                        </span>
+                        <h3 className="mt-3 text-2xl font-bold text-white md:text-3xl">
+                          MultiView Replay
+                        </h3>
+                      </div>
+                      <div className="max-w-xl text-sm leading-relaxed text-gray-300 md:text-right">
+                        <p>
+                          Top-Down erklärt den Punkt. SideCam und NetCam machen ihn emotional.
+                        </p>
+                        <p className="mt-1 text-xs text-gray-500 md:text-sm">
+                          Ein Ballwechsel. Drei Perspektiven. Ein fertiger Highlight-Moment.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="overflow-hidden rounded-[22px] bg-black">
+                      <Image
+                        src="/images/elitereplay-court-intelligence.jpg"
+                        alt="ÉliteReplay Court Intelligence mit NetCam, TopDown und SideCam"
+                        width={1536}
+                        height={1024}
+                        sizes="(min-width: 1280px) 1120px, calc(100vw - 32px)"
+                        className="block h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Feature 2 - AI Detection */}
               <div className="feature-card-wrapper mb-16 md:mb-32">
                 <div className="flex flex-col md:flex-row-reverse items-center">
@@ -286,8 +327,8 @@ export default function LandingPage() {
                     <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#F5BE2D]/10">
                       <div className="aspect-[16/9]">
                         <Image
-                          src="/images/ai-detection-feature.png"
-                          alt="AI Detection"
+                          src="/images/MatchDown.jpg"
+                          alt="Top-Down Match View"
                           fill
                           className="object-cover"
                         />
@@ -296,7 +337,7 @@ export default function LandingPage() {
                       <div className="absolute bottom-0 right-0 w-full p-6 md:p-10 text-right">
                         <div className="flex items-center justify-end">
                           <h3 className="text-3xl font-bold text-white mr-5">
-                            AI Detection
+                            Top-Down Match View
                           </h3>
                           <div className="bg-[#F5BE2D]/20 backdrop-blur-md p-4 rounded-full">
                             <Zap className="h-8 w-8 text-[#F5BE2D]" />
@@ -355,7 +396,7 @@ export default function LandingPage() {
                             <Server className="h-8 w-8 text-[#F5BE2D]" />
                           </div>
                           <h3 className="text-3xl font-bold text-white">
-                            Edge Processing
+                            Local Edge Processing
                           </h3>
                         </div>
                       </div>
@@ -447,30 +488,12 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
-            {/* Demo Section */}
-            <div className="mt-24 text-center relative">
-              <div className="absolute -top-40 left-1/2 transform -translate-x-1/2 w-px h-40 bg-gradient-to-b from-transparent to-[#F5BE2D]/30"></div>
-              <Button
-                asChild
-                size="lg"
-                className="relative bg-black hover:bg-black/80 text-[#F5BE2D] border-2 border-[#F5BE2D] rounded-full px-10 py-6 shadow-xl shadow-[#F5BE2D]/10 hover:shadow-[#F5BE2D]/30 transition-all duration-500 hover:scale-105 group"
-              >
-                <Link href={`/${locale}/demo`} className="flex items-center">
-                  <span className="mr-3 text-lg font-semibold">
-                    {t("Features.cta")}
-                  </span>
-                  <div className="w-10 h-10 rounded-full bg-[#F5BE2D] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    <Play className="h-5 w-5 text-black ml-1" />
-                  </div>
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Player Journey Section  */}
-      <section className="relative bg-gradient-to-b from-blue-800/30 to-black/90 py-8 sm:py-12">
+      <section id="journey" className="relative bg-gradient-to-b from-blue-800/30 to-black/90 py-8 sm:py-12 scroll-mt-24">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12">
             {t("journey.title")}
@@ -565,14 +588,8 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden shadow-[0_8px_16px_rgba(0,0,0,0.3),0_0_20px_rgba(255,193,7,0.2)]">
-              <Image
-                width={60}
-                height={60}
-                src="/images/player-avatar.jpg"
-                alt="Player watching highlights"
-                className="w-full h-auto transition-transform duration-500 hover:scale-103"
-              />
+            <div className="relative overflow-hidden">
+              <PadelCourtPreview />
               <div className="absolute bottom-8 right-8 bg-black/70 p-4 rounded-lg flex flex-col items-center glow-yellow-box rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300">
                 <Image
                   width={60}
@@ -582,7 +599,7 @@ export default function LandingPage() {
                   className="w-24 h-24 mb-2 border-2 bg-white border-[#ffc107]"
                 />
                 <span className=" text-[#ffc107] text-sm uppercase tracking-wider">
-                  Scan to Start
+                  QR starten
                 </span>
               </div>
             </div>
@@ -590,7 +607,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 3. Demo CTA / Highlight Preview - UPDATED WITH AI IMAGE */}
+      {/* 3. Static Highlight Preview */}
       <div className="py-24 bg-gradient-to-b from-blue-800/30 to-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto text-center">
@@ -602,107 +619,54 @@ export default function LandingPage() {
             <p className="text-xl text-gray-400 mb-16 max-w-4xl mx-auto">
               {t("action.description")}
             </p>
-            <VideoPlayer />
-
-            {/* Start Session Now Button */}
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#F5BE2D] hover:bg-[#F5BE2D]/90 text-black font-bold rounded-full px-16 py-6 text-lg shadow-2xl shadow-[#F5BE2D]/30 hover:shadow-[#F5BE2D]/50 transition-all duration-300 hover:scale-105"
-            >
-              <Link href={`/${locale}/start?court=demo123`}>
-                {t("action.cta")} <ArrowRight className="ml-3 h-6 w-6" />
-              </Link>
-            </Button>
+            <div className="mx-auto max-w-4xl">
+              <PadelCourtPreview />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Community Showcase Section  */}
+      {/* Pilot Use Cases Section  */}
       <section className="relative py-20 bg-gradient-to-b from-[#051937]/70 to-black/90">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className=" font-bold text-4xl text-center text-white mb-4 glow-yellow">
-            {t("community.title")}
+            {t("pilot.title")}
           </h2>
           <p className="text-center text-[#aaa] text-lg mb-12 max-w-2xl mx-auto">
-            {t("community.description")}
+            {t("pilot.description")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-[#0a1128]/70 rounded-xl overflow-hidden shadow-[0_4px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3),0_0_20px_rgba(255,193,7,0.2)] hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  width={60}
-                  height={60}
-                  src="/images/community-highlight1.jpg"
-                  alt="Community highlight"
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <div className="play-button absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#ffc107]/90 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,193,7,0.5)] hover:scale-110 hover:shadow-[0_0_30px_rgba(255,193,7,0.7)] transition-all duration-300 ">
-                  <Play className="h-8 w-8 text-white" />
-                </div>
-              </div>
               <div className="p-6">
                 <p className="font-bold text-lg text-white mb-2">
-                  {t("community.highlights.highlight1.title")}
+                  {t("pilot.cards.players.title")}
                 </p>
-                <p className="text-[#aaa] text-sm mb-4">by Michael J.</p>
-                <div className="flex justify-between text-[#ffc107] text-sm">
-                  <span>2.4K views</span>
-                  <span>347 likes</span>
-                </div>
+                <p className="text-[#aaa] text-sm">{t("pilot.cards.players.description")}</p>
               </div>
             </div>
             <div className="bg-[#0a1128]/70 rounded-xl overflow-hidden shadow-[0_4px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3),0_0_20px_rgba(255,193,7,0.2)] hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  width={60}
-                  height={60}
-                  src="/images/community-highlight2.jpg"
-                  alt="Community highlight"
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <div className="play-button absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#ffc107]/90 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,193,7,0.5)] hover:scale-110 hover:shadow-[0_0_30px_rgba(255,193,7,0.7)] transition-all duration-300 ">
-                  <Play className="h-8 w-8 text-white" />
-                </div>
-              </div>
               <div className="p-6">
                 <p className="font-bold text-lg text-white mb-2">
-                  {t("community.highlights.highlight2.title")}
+                  {t("pilot.cards.coaches.title")}
                 </p>
-                <p className="text-[#aaa] text-sm mb-4">by Eastside Ballers</p>
-                <div className="flex justify-between text-[#ffc107] text-sm">
-                  <span>1.8K views</span>
-                  <span>293 likes</span>
-                </div>
+                <p className="text-[#aaa] text-sm">{t("pilot.cards.coaches.description")}</p>
               </div>
             </div>
             <div className="bg-[#0a1128]/70 rounded-xl overflow-hidden shadow-[0_4px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3),0_0_20px_rgba(255,193,7,0.2)] hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  width={60}
-                  height={60}
-                  src="/images/community-highlight3.jpg"
-                  alt="Community highlight"
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <div className="play-button absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#ffc107]/90 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,193,7,0.5)] hover:scale-110 hover:shadow-[0_0_30px_rgba(255,193,7,0.7)] transition-all duration-300 ">
-                  <Play className="h-8 w-8 text-white" />
-                </div>
-              </div>
               <div className="p-6">
                 <p className="font-bold text-lg text-white mb-2">
-                  {t("community.highlights.highlight3.title")}
+                  {t("pilot.cards.clubs.title")}
                 </p>
-                <p className="text-[#aaa] text-sm mb-4">by Sarah K.</p>
-                <div className="flex justify-between text-[#ffc107] text-sm">
-                  <span>3.1K views</span>
-                  <span>512 likes</span>
-                </div>
+                <p className="text-[#aaa] text-sm">{t("pilot.cards.clubs.description")}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <ProductModulesSection />
+
+      <PlayerCardsSection />
 
       {/* 4. Court Operators & Partner Section */}
       <div
@@ -726,7 +690,6 @@ export default function LandingPage() {
                 <TrendingUp className="h-8 w-8 text-[#F5BE2D]" />
               </div>
               <h3 className="text-2xl font-semibold mb-6 group-hover:text-[#F5BE2D] transition-colors">
-                Monetization
                 {t("partners.monetization.title")}
               </h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
@@ -752,7 +715,7 @@ export default function LandingPage() {
             {/* Community Features */}
             <div className="group bg-gradient-to-br from-black to-gray-900 p-10 rounded-2xl border border-gray-800 hover:border-[#F5BE2D] transition-all duration-300 hover:shadow-2xl hover:shadow-[#F5BE2D]/20 hover:scale-105">
               <div className="bg-[#F5BE2D]/20 p-4 rounded-full w-fit mb-8 group-hover:bg-[#F5BE2D]/30 transition-all duration-300">
-                <Users className="h-8 w-8 text-[#F5BE2D]" />
+                <ShieldCheck className="h-8 w-8 text-[#F5BE2D]" />
               </div>
               <h3 className="text-2xl font-semibold mb-6 group-hover:text-[#F5BE2D] transition-colors">
                 {t("partners.communityFeatures.title")}
