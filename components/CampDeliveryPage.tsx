@@ -17,6 +17,8 @@ export default function CampDeliveryPage({
   hasAccess,
   locale,
 }: CampDeliveryPageProps) {
+  const [heroHighlight, ...gridHighlights] = highlights;
+
   return (
     <main className="min-h-screen bg-[#050505] text-white">
       <header className="border-b border-white/10 bg-black/80">
@@ -81,13 +83,50 @@ export default function CampDeliveryPage({
               </p>
             </div>
           ) : highlights.length > 0 ? (
-            <div className="grid gap-6 lg:grid-cols-2">
-              {highlights.map((highlight) => (
-                <CampHighlightCard
-                  key={`${highlight.sort_order}-${highlight.title}`}
-                  highlight={highlight}
-                />
-              ))}
+            <div className="space-y-10">
+              {heroHighlight ? (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D6B25E]">
+                        Hero Highlight
+                      </p>
+                      <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
+                        Erster Match-Moment
+                      </h2>
+                    </div>
+                  </div>
+                  <CampHighlightCard highlight={heroHighlight} variant="hero" />
+                </div>
+              ) : null}
+
+              {gridHighlights.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D6B25E]">
+                        Weitere Highlights
+                      </p>
+                      <h2 className="mt-2 text-xl font-semibold text-white md:text-2xl">
+                        Kompakte Uebersicht
+                      </h2>
+                    </div>
+                    <p className="text-sm text-gray-500">
+                      {gridHighlights.length} weitere Clips
+                    </p>
+                  </div>
+
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {gridHighlights.map((highlight) => (
+                      <CampHighlightCard
+                        key={`${highlight.sort_order}-${highlight.title}`}
+                        highlight={highlight}
+                        variant="grid"
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
           ) : (
             <div className="mx-auto max-w-2xl rounded-2xl border border-white/10 bg-[#111111] p-8 text-center">
