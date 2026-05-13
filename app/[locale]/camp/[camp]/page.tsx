@@ -33,11 +33,19 @@ export default async function CampPage({ params, searchParams }: CampPageProps) 
 
   // Temporary privacy gate only. This is not real authentication.
   const hasAccess = key === getCampAccessKey(camp);
+  const visibleHighlights = hasAccess
+    ? getVisibleCampHighlights(camp).map((highlight) => ({
+        ...highlight,
+        download: `/api/camp-download?camp=${camp.slug}&index=${highlight.sort_order}&key=${encodeURIComponent(
+          key || "",
+        )}`,
+      }))
+    : [];
 
   return (
     <CampDeliveryPage
       camp={camp}
-      highlights={hasAccess ? getVisibleCampHighlights(camp) : []}
+      highlights={visibleHighlights}
       hasAccess={hasAccess}
       locale={locale}
     />

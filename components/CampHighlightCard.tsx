@@ -89,8 +89,6 @@ export default function CampHighlightCard({
             <a
               href={highlight.download}
               download
-              target="_blank"
-              rel="noopener noreferrer"
               className={`inline-flex items-center justify-center rounded-xl bg-[#D6B25E] font-bold text-black transition-colors hover:bg-[#D6B25E]/90 ${
                 isHero ? "flex-1 px-4 py-3 text-sm" : "px-3 py-2.5 text-sm"
               }`}
