@@ -25,8 +25,8 @@ export type CampArchive = {
 export const camps: Record<CampSlug, CampArchive> = {
   "camp-1": {
     slug: "camp-1",
-    label: "Camp 1",
-    title: "Camp 1 – private Highlights",
+    label: "Camp 1 · 08.03.2026 – 15.03.2026",
+    title: "Camp 1 · 08.03.2026 – 15.03.2026",
     description: "Ausgewählte Match-Momente aus Camp 1.",
     accessEnvVar: "CAMP1_PRIVATE_KEY",
     highlights: camp1Highlights satisfies CampHighlight[],
