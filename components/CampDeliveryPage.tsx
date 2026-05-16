@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, LockKeyhole } from "lucide-react";
+import { LockKeyhole } from "lucide-react";
 import type { CampArchive, CampHighlight } from "@/data/camps";
 import CampHighlightCard from "@/components/CampHighlightCard";
 
@@ -15,24 +14,39 @@ export default function CampDeliveryPage({
   camp,
   highlights,
   hasAccess,
-  locale,
+  locale: _locale,
 }: CampDeliveryPageProps) {
   const [heroHighlight, ...gridHighlights] = highlights;
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white">
-      <header className="border-b border-white/10 bg-black/80">
+    <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            main[data-private-camp-page="true"] + footer {
+              display: none;
+            }
+          `,
+        }}
+      />
+      <main
+        className="min-h-screen bg-[#050505] text-white"
+        data-private-camp-page="true"
+      >
+        <header className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto flex items-center justify-between px-4 py-5">
-          <Link href={`/${locale}`} className="group flex items-center">
-            <ArrowLeft className="mr-3 h-5 w-5 text-gray-400 transition-colors group-hover:text-[#D6B25E]" />
+          <div
+            className="flex items-center"
+            aria-label="ÉliteReplay private camp archive"
+          >
             <Image
               src="/images/elitereplay-logo.png"
               alt="ÉliteReplay Logo"
               width={150}
               height={75}
-              className="transition-opacity group-hover:opacity-85"
+              className="select-none"
             />
-          </Link>
+          </div>
           <span className="hidden rounded-full border border-[#D6B25E]/30 bg-[#D6B25E]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#D6B25E] sm:inline-flex">
             Private Archive
           </span>
@@ -146,7 +160,8 @@ export default function CampDeliveryPage({
             info@elitereplay.es
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

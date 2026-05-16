@@ -18,8 +18,7 @@ export type CampArchive = {
   label: string;
   title: string;
   description: string;
-  accessEnvVar: "CAMP_1_ACCESS_KEY" | "CAMP_2_ACCESS_KEY";
-  temporaryFallbackKey: string;
+  accessEnvVar: "CAMP1_PRIVATE_KEY" | "CAMP2_PRIVATE_KEY";
   highlights: CampHighlight[];
 };
 
@@ -29,23 +28,21 @@ export const camps: Record<CampSlug, CampArchive> = {
     label: "Camp 1",
     title: "Camp 1 – private Highlights",
     description: "Ausgewählte Match-Momente aus Camp 1.",
-    accessEnvVar: "CAMP_1_ACCESS_KEY",
-    temporaryFallbackKey: "CAMP1_PRIVATE_7KQ4",
+    accessEnvVar: "CAMP1_PRIVATE_KEY",
     highlights: camp1Highlights satisfies CampHighlight[],
   },
   "camp-2": {
     slug: "camp-2",
-    label: "Camp 2",
-    title: "Camp 2 – private Highlights",
+    label: "Camp 2 · 15.03.2026 – 22.03.2026",
+    title: "Camp 2 · 15.03.2026 – 22.03.2026",
     description: "Ausgewählte Match-Momente aus Camp 2.",
-    accessEnvVar: "CAMP_2_ACCESS_KEY",
-    temporaryFallbackKey: "CAMP2_PRIVATE_M9X2",
+    accessEnvVar: "CAMP2_PRIVATE_KEY",
     highlights: camp2Highlights satisfies CampHighlight[],
   },
 };
 
 export function getCampAccessKey(camp: CampArchive) {
-  return process.env[camp.accessEnvVar] || camp.temporaryFallbackKey;
+  return process.env[camp.accessEnvVar] || "";
 }
 
 export function getVisibleCampHighlights(camp: CampArchive) {

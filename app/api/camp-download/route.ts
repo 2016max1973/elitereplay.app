@@ -9,8 +9,13 @@ import {
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-function buildDownloadFilename(sortOrder: number) {
-  return `EliteReplay_Highlight_${String(sortOrder).padStart(2, "0")}.mp4`;
+function buildDownloadFilename(campSlug: "camp-1" | "camp-2", sortOrder: number) {
+  const sequence = String(sortOrder).padStart(2, "0");
+  if (campSlug === "camp-2") {
+    return `EliteReplay_Training_Moment_${sequence}.mp4`;
+  }
+
+  return `EliteReplay_Highlight_${sequence}.mp4`;
 }
 
 function buildContentDisposition(filename: string) {
@@ -24,7 +29,7 @@ function getAuthorizedHighlight(request: NextRequest) {
   const indexParam = searchParams.get("index") || "";
   const sortOrder = Number.parseInt(indexParam, 10);
 
-  if (!isCampSlug(campParam) || campParam !== "camp-1") {
+  if (!isCampSlug(campParam)) {
     return { error: new Response("Not found", { status: 404 }) };
   }
 
@@ -48,7 +53,7 @@ function getAuthorizedHighlight(request: NextRequest) {
 
   return {
     highlight,
-    filename: buildDownloadFilename(sortOrder),
+    filename: buildDownloadFilename(camp.slug, sortOrder),
   };
 }
 
