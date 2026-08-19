@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 :root {
+  --elite-gold: #f5be2d;
+  --elite-gold-soft: #f7cc58;
+  --elite-black: #050505;
+  --elite-ink: #08111e;
+  --elite-panel: rgba(255, 255, 255, 0.04);
+  --elite-border: rgba(255, 255, 255, 0.1);
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
@@ -50,6 +56,17 @@
 body {
   background-color: black;
   color: white;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+::selection {
+  background: var(--elite-gold);
+  color: black;
 }
 
 @layer base {
@@ -93,4 +110,40 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
+}
+
+/* Club landing page: premium system typography and restrained scroll reveals. */
+html:has(.club-home) {
+  scroll-padding-top: 76px;
+}
+
+.club-home {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", sans-serif;
+}
+
+.club-home video::-webkit-media-controls-play-button {
+  background-color: rgba(245, 190, 45, 0.82);
+}
+
+@keyframes club-home-reveal {
+  from {
+    opacity: 0.001;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .club-home .home-reveal {
+      animation-name: club-home-reveal;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 4% cover 28%;
+    }
+  }
 }

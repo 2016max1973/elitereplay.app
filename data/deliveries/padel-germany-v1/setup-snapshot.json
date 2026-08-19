@@ -1,0 +1,22 @@
+{
+  "schema_version": "setup_snapshot_v1",
+  "source": "matchboard_setup",
+  "match_id": "match_Rj1_sYTR4Y",
+  "team_a_name": "Oliver & Basti",
+  "team_b_name": "Philipp & Pascal",
+  "players": {
+    "team_a": [
+      "Oliver",
+      "Basti"
+    ],
+    "team_b": [
+      "Philipp",
+      "Pascal"
+    ]
+  },
+  "club": "PADEL GERMANY",
+  "court": "CENTER COURT",
+  "match_mode": "best_of_3",
+  "created_at": "2026-06-17T00:15:12.865Z",
+  "updated_at": "2026-06-17T00:15:12.865Z"
+}

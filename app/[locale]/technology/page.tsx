@@ -1,8 +1,7 @@
 'use client'
 import Link from "next/link"
-import { ArrowLeft, Cpu, Brain, Zap, Camera, Server, Film, Clock, Award } from "lucide-react"
+import { Cpu, Brain, Zap, Camera, Server, Film, Clock, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 
@@ -10,16 +9,7 @@ export default function TechnologyPage() {
   const locale = useLocale();
   const t = useTranslations('technology');
   return (
-    <div className="min-h-screen bg-black text-white">
-      <header className="py-6 border-b border-gray-800">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="flex items-center">
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            <Image src="/images/elitereplay-logo.png" alt="ÉliteReplay Logo" width={120} height={60} />
-          </Link>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-black pt-[76px] text-white">
       <main>
         {/* Hero Section */}
         <div className="py-16 md:py-24 bg-gradient-to-b from-black to-gray-900">
@@ -274,31 +264,9 @@ export default function TechnologyPage() {
                 {t('results.description')}
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <div className="bg-gray-900 p-6 rounded-xl">
-                  <div className="text-4xl font-bold text-[#F5BE2D] mb-2">{t('results.metrics.accuracy.value')}</div>
-                  <div className="text-gray-300 font-semibold">{t('results.metrics.accuracy.label')}</div>
-                </div>
-
-                <div className="bg-gray-900 p-6 rounded-xl">
-                  <div className="text-4xl font-bold text-[#F5BE2D] mb-2">{t('results.metrics.time.value')}</div>
-                  <div className="text-gray-300 font-semibold">{t('results.metrics.time.label')}</div>
-                </div>
-
-                <div className="bg-gray-900 p-6 rounded-xl">
-                  <div className="text-4xl font-bold text-[#F5BE2D] mb-2">{t('results.metrics.quality.value')}</div>
-                  <div className="text-gray-300 font-semibold">{t('results.metrics.quality.label')}</div>
-                </div>
-
-                <div className="bg-gray-900 p-6 rounded-xl">
-                  <div className="text-4xl font-bold text-[#F5BE2D] mb-2">{t('results.metrics.satisfaction.value')}</div>
-                  <div className="text-gray-300 font-semibold">{t('results.metrics.satisfaction.label')}</div>
-                </div>
-              </div>
-
               <div className="flex justify-center">
-                <Link href={`/${locale}/start?court=demo123`}>
-                  <Button size="lg" className="bg-[#F5BE2D] hover:bg-[#F5BE2D]/90 text-white">
+                <Link href={`/${locale}/contact`}>
+                  <Button size="lg" className="bg-[#F5BE2D] hover:bg-[#F5BE2D]/90 text-black">
                     {t('results.cta')} <Award className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

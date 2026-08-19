@@ -2,9 +2,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft, Camera, Zap, Server, QrCode, Play, RefreshCw, CheckCircle, Loader2 } from "lucide-react"
+import { Camera, Zap, Server, QrCode, Play, RefreshCw, CheckCircle, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
@@ -54,7 +52,7 @@ export default function DemoPage() {
       if (progress === 90) {
         setDetectedObjects((prev) => [
           ...prev,
-          { type: "key_moment", description: "Three-point shot detected", confidence: 0.97 },
+          { type: "key_moment", description: "Padel rally marked", confidence: 0.91 },
         ])
       }
 
@@ -62,8 +60,8 @@ export default function DemoPage() {
         clearInterval(interval)
         setIsProcessing(false)
         toast({
-          title: "AI Detection Complete",
-          description: "Found 2 players, 1 ball, and 1 key moment",
+          title: "Demo Analysis Complete",
+          description: "The sample rally has been marked for review",
         })
       }
     }, 200)
@@ -79,8 +77,8 @@ export default function DemoPage() {
       setTimeout(() => {
         setEdgeDeviceStatus("complete")
         toast({
-          title: "Edge Processing Complete",
-          description: "Video processed locally in 4.2 seconds",
+          title: "Local Demo Complete",
+          description: "The simulated processing flow has finished",
         })
       }, 4000)
     }, 1000)
@@ -237,23 +235,7 @@ export default function DemoPage() {
   }, [detectedObjects, activeDemo])
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="py-6 border-b border-gray-800">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="flex items-center group">
-            <ArrowLeft className="h-5 w-5 mr-3 group-hover:text-[#F5BE2D] transition-colors" />
-            <Image
-              src="/images/elitereplay-logo.png"
-              alt="ÉliteReplay Logo"
-              width={150}
-              height={75}
-              className="group-hover:opacity-80 transition-opacity"
-            />
-          </Link>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-black pt-[76px] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           {/* Title */}
@@ -544,24 +526,9 @@ export default function DemoPage() {
                           <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
                           <h3 className="text-lg font-semibold">Processing Complete</h3>
                         </div>
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                          <div>
-                            <span className="text-gray-400">Total Time:</span>
-                            <span className="ml-2 font-semibold">4.2 seconds</span>
-                          </div>
-                          <div>
-                            <span className="text-gray-400">Frames Processed:</span>
-                            <span className="ml-2 font-semibold">7,240</span>
-                          </div>
-                          <div>
-                            <span className="text-gray-400">Highlights Found:</span>
-                            <span className="ml-2 font-semibold">5</span>
-                          </div>
-                          <div>
-                            <span className="text-gray-400">Output Quality:</span>
-                            <span className="ml-2 font-semibold">4K 60fps</span>
-                          </div>
-                        </div>
+                        <p className="text-sm leading-6 text-gray-300">
+                          This interface demonstrates the local processing sequence. It does not represent a measured production benchmark.
+                        </p>
                       </div>
                     )}
                   </div>

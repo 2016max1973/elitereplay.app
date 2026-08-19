@@ -1,0 +1,10 @@
+{
+  "delivery_version": "v1",
+  "match_id": "padel-germany-v1",
+  "delivery_id": "padel-germany-v1-main",
+  "title": "ÉliteReplay MatchBoard & Highlights",
+  "club": "PADEL GERMANY",
+  "court": "CENTER COURT",
+  "source": "PadelGermany_Full_Run_v3_warmup_replay_quality_guard",
+  "share_qr_src": "/images/qr-code.png"
+}

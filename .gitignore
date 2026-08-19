@@ -26,3 +26,28 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# macOS and local tooling
+.DS_Store
+/.codex-phase1-backups/
+/.next.broken-*/
+/.playwright-cli/
+/output/
+/tmp/
+**/__pycache__/
+*.py[cod]
+
+# Local audits, reports, and upload results
+/AUDIT_*.md
+/*_REPORT.md
+/data/camps/*.backup-*.json
+/data/camps/*-upload-result.json
+/data/replay-sessions/sessions.json
+
+# Local-only media preparation and explicit test fixtures
+/scripts/render_camp_overlays.py
+/scripts/upload-camp1-to-vercel-blob.mjs
+/public/camp-assets/camp-1/
+/app/*/netcam-compare-test/
+/public/netcam-compare-test/*.mp4
+/components/VideoCompareSlider.tsx

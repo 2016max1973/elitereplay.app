@@ -1,13 +1,235 @@
 {
+  "ClubLanding": {
+    "meta": {
+      "title": "ÉliteReplay SmartCourt para clubes de pádel",
+      "description": "ÉliteReplay reúne marcador en vivo, MatchBoard, replay multicámara y momentos compartibles en una experiencia premium en pista para clubes de pádel.",
+      "imageAlt": "Una pista de pádel real con el MatchBoard de ÉliteReplay"
+    },
+    "hero": {
+      "eyebrow": "ÉLITEREPLAY SMARTCOURT",
+      "title": "Haz que tu pista sea inolvidable.",
+      "subtitle": "Convierte cada partido en una experiencia de pádel premium.",
+      "features": "Marcador en vivo. MatchBoard. Replays multicámara. Highlights de jugadores. Torneos. Momentos para patrocinadores.",
+      "statement": "ÉliteReplay convierte tu pista de pádel actual en una SmartCourt y crea más valor para jugadores, clubes y colaboradores.",
+      "primary": "Llevar ÉliteReplay a mi club",
+      "secondary": "Verlo en acción",
+      "trust": "Creado para pistas de pádel reales. Diseñado para experiencias de club premium.",
+      "imageAlt": "Jugadores en una pista de pádel real durante un partido con ÉliteReplay"
+    },
+    "contentStory": {
+      "eyebrow": "EL CONTENIDO YA EXISTE",
+      "title": "Tu mejor contenido ya está ocurriendo.",
+      "everyDay": "Cada día.",
+      "onCourts": "En tus pistas.",
+      "moments": ["Grandes puntos.", "Puntos de partido.", "Ganadores.", "Celebraciones.", "Remontadas."],
+      "disappears": "La mayor parte desaparece en cuanto termina el partido.",
+      "courtsCreate": "Tus pistas ya crean el contenido.",
+      "together": "Juntos, lo capturamos.",
+      "text": "ÉliteReplay convierte partidos reales en experiencias en vivo, replays, highlights de jugadores y contenido preparado para patrocinadores.",
+      "videoLabel": "Momento de partido multicámara de ÉliteReplay"
+    },
+    "clubValue": {
+      "eyebrow": "VALOR PARA TU CLUB",
+      "title": "Una pista. Más razones para jugar.",
+      "benefits": [
+        {"title": "Atraer a nuevos jugadores", "text": "Dales una razón para elegir tu club incluso antes de reservar una pista."},
+        {"title": "Crear fidelidad", "text": "Convierte los partidos habituales en experiencias memorables que los jugadores quieran repetir."},
+        {"title": "Ofrecer una experiencia premium", "text": "Reúne marcador en vivo, replays y momentos personales directamente en la pista."},
+        {"title": "Abrir nuevas oportunidades de patrocinio", "text": "Ofrece momentos de máxima atención para una integración cuidada de colaboradores."}
+      ]
+    },
+    "action": {
+      "eyebrow": "LA EXPERIENCIA",
+      "title": "Un partido. Una experiencia completa.",
+      "text": "Desde el primer saque hasta un momento ganador listo para compartir, ÉliteReplay conecta todo el partido en una historia clara.",
+      "steps": [
+        {"label": "01 · EMPIEZA EL PARTIDO", "title": "MatchBoard y el marcador en vivo están listos."},
+        {"label": "02 · SUBE LA TENSIÓN", "title": "Golden Point y Match Point se convierten en momentos visibles."},
+        {"label": "03 · MYMOMENT", "title": "Un punto se captura como replay multicámara."},
+        {"label": "04 · MOMENTO GANADOR", "title": "El clip queda listo para compartir al terminar."}
+      ],
+      "videoLabel": "Vídeo de la experiencia ÉliteReplay en pista",
+      "board": {
+        "court": "Pista 01",
+        "live": "En vivo",
+        "time": "Tiempo de juego",
+        "set": "Set 3",
+        "club": "Experiencia de club"
+      }
+    },
+    "products": {
+      "eyebrow": "LA PLATAFORMA",
+      "title": "Mucho más que replay.",
+      "items": [
+        {"label": "MATCHBOARD", "title": "El marcador forma parte de la experiencia.", "text": "Una vista clara y premium ofrece a jugadores y espectadores un punto de atención común desde el primer saque."},
+        {"label": "REPLAY MULTICÁMARA", "title": "Un punto. Varias perspectivas.", "text": "TopDown, SideCam y NetCam convierten un punto decisivo en un momento que merece volver a verse."},
+        {"label": "EXPERIENCIA DE TORNEO", "title": "Más emoción. Más atención. Más visibilidad.", "text": "Una experiencia conectada puede reunir pistas, horarios, resultados y momentos decisivos.", "detail": "Las funciones de torneo se configuran según el formato y la instalación técnica del club piloto."},
+        {"label": "MYMOMENT", "title": "Deja que los jugadores se lleven el momento.", "text": "Los momentos personales pueden convertirse en highlights que mantienen viva la experiencia del club después del último punto.", "detail": "La forma de compartir y entregar los clips se define con el club durante el piloto."}
+      ],
+      "tournamentImageAlt": "Partido de torneo con el MatchBoard de ÉliteReplay",
+      "tournamentStatus": "Torneo en vivo",
+      "tournamentCourt": "Pista central",
+      "tournamentNext": "Próximo partido · 18:30",
+      "myMomentImageAlt": "MyMoment de ÉliteReplay capturado desde la NetCam"
+    },
+    "sponsor": {
+      "eyebrow": "MOMENTOS PARA PATROCINADORES",
+      "title": "Hazte dueño del momento.",
+      "text": "El patrocinio tradicional pone un logo junto a la acción. ÉliteReplay puede integrar a un colaborador en momentos seleccionados: Golden Point. Match Point. Momento ganador. Replay.",
+      "closing": "Haz que la marca forme parte del momento.",
+      "presentedBy": "Momento ganador presentado por",
+      "exampleBrand": "CUPRA",
+      "exampleMoment": "Match Point · Pista central",
+      "pilotNote": "Ejemplo de integración para un piloto de club.",
+      "imageAlt": "Partido de pádel real usado para mostrar un momento patrocinado de ÉliteReplay"
+    },
+    "how": {
+      "eyebrow": "SENCILLO POR DISEÑO",
+      "title": "De la pista al contenido.",
+      "steps": [
+        {"number": "01", "title": "Instalar", "text": "Conectamos ÉliteReplay a la pista y adaptamos el piloto a la configuración del club."},
+        {"number": "02", "title": "Jugar", "text": "Los jugadores usan la pista mientras el marcador y los momentos se integran en la experiencia."},
+        {"number": "03", "title": "Compartir", "text": "Los momentos seleccionados pueden convertirse en contenido para jugadores y comunicación útil para el club."}
+      ]
+    },
+    "pilot": {
+      "eyebrow": "PILOTO DE CLUB",
+      "title": "Tus pistas ya están creando momentos.",
+      "text": "Hagamos que formen parte de tu club.",
+      "primary": "Iniciar un piloto de club",
+      "secondary": "Ver ÉliteReplay en una pista real",
+      "brandClaim": "Your score. Your story. Your brand.",
+      "trophyClaim": "WIN IT. DEFEND IT.",
+      "imageAlt": "MatchBoard de ÉliteReplay en una pista de pádel real"
+    }
+  },
   "HomePage": {
-    "title": "Tu juego. Tu escenario. Escanea la pista – empieza tu show.",
-    "description": "Con Élitetreplay, cada punto se convierte en un momento épico. Nuestra IA detecta automáticamente tus mejores jugadas y crea highlights profesionales listos para compartir. Sin app. Sin instalación. Solo tú – y tu juego.",
-    "button1": "Aplicar como cancha piloto",
-    "button2": "Escanea y empieza ya",
+    "title": "Tu juego. Tu momento.",
+    "description": "ÉliteReplay convierte partidos reales de pádel en una experiencia premium — con marcador en vivo, MatchBoard, momentos trophy, highlights, player cards y acceso por QR directamente en la pista.",
+    "button1": "Solicitar acceso piloto",
+    "button2": "Cómo funciona ÉliteReplay",
     "button3": "¿Acabas de jugar?",
+    "landing": {
+      "hero": {
+        "logoAlt": "Logo de ÉliteReplay"
+      },
+      "featureRail": {
+        "liveScore": "Live Score",
+        "trophy": "Trophy",
+        "highlights": "Highlights",
+        "playerCards": "Player Cards",
+        "qrAccess": "QR Access"
+      },
+      "matchboard": {
+        "eyebrow": "MatchBoard",
+        "title": "El MatchBoard convierte la pista en un escenario",
+        "text": "ÉliteReplay no empieza después del partido. Mientras se juega, el MatchBoard muestra equipos, marcador, tiempo de partido y el momento en que un punto cuenta. Así, cada highlight posterior tiene contexto real.",
+        "visualAlt": "ÉliteReplay MatchBoard",
+        "visualTitle": "La pista como escenario",
+        "liveBadge": "Live",
+        "visualScoreEyebrow": "Live Score",
+        "visualScoreTitle": "Team Left 30 - 15 Team Right",
+        "visualScoreText": "Warm-up. Ready. Live. El punto se ve justo cuando importa.",
+        "visualFact1Label": "Tiempo",
+        "visualFact1Value": "32:18",
+        "visualFact2Label": "Modo",
+        "visualFact2Value": "LIVE",
+        "visualFact3Label": "Contexto",
+        "visualFact3Value": "Point 32",
+        "points": {
+          "point1": "Marcador en vivo para jugadores y espectadores",
+          "point2": "Modo Warm-up / Ready / Live",
+          "point3": "Tiempo de partido y contexto de marcador",
+          "point4": "Look broadcast premium para clubs y eventos",
+          "point5": "Base para highlights y MatchFacts posteriores"
+        }
+      },
+      "trophy": {
+        "eyebrow": "Trophy",
+        "title": "Win it. Defend it.",
+        "text": "Una victoria se convierte en mucho más que un resultado. ÉliteReplay puede crear momentos trophy digitales, winner cards e historial de partido — ideal para clubs, camps, torneos y rivalidades.",
+        "visualBadge": "Winner Moment",
+        "visualText": "Una victoria se convierte en una historia visible con trophy, momento ganador e historial de partido.",
+        "visualFact1Label": "Trophy",
+        "visualFact1Value": "Trofeo digital itinerante",
+        "visualFact2Label": "History",
+        "visualFact2Value": "Memoria de equipo y club",
+        "points": {
+          "point1": "Trofeo digital itinerante",
+          "point2": "Winner moment después del partido",
+          "point3": "Historia de equipo y club",
+          "point4": "Más regreso, más historia, más emoción"
+        }
+      },
+      "qr": {
+        "eyebrow": "QR Access",
+        "title": "Acceso directo en la pista",
+        "text": "El QR no es el corazón de la historia, pero sí la entrada más limpia. Los jugadores inician su sesión con claridad, dan su consentimiento y después reciben acceso al highlight, la player card y la memoria del partido.",
+        "visualAlt": "Acceso QR directamente en la pista",
+        "visualText": "Un escaneo. Un partido. Un momento para recordar después.",
+        "cards": {
+          "card1": "QR en la pista",
+          "card2": "Consent en el flujo",
+          "card3": "Un enlace, no caos"
+        }
+      },
+      "multiview": {
+        "eyebrow": "MultiView",
+        "title": "Así nace el momento",
+        "text": "Replay Wall, TopDown, SideCam y NetCam siguen siendo importantes — pero como origen de una mejor experiencia de partido. TopDown explica el punto. SideCam aporta dinamismo. NetCam aporta emoción. El MatchBoard da significado al clip.",
+        "visualAlt": "MultiView replay con TopDown, SideCam y NetCam",
+        "cards": {
+          "card1Title": "TopDown explica el punto.",
+          "card1Text": "Espacio ganado, trayectorias, estructura del rally y el momento en que el punto cambia.",
+          "card2Title": "SideCam aporta dinamismo.",
+          "card2Text": "Más ritmo, más cercanía y más energía para highlights y coach reviews.",
+          "card3Title": "NetCam aporta emoción.",
+          "card3Text": "En la red, un rally se convierte en un momento que los jugadores quieren conservar."
+        }
+      },
+      "clubs": {
+        "eyebrow": "Clubs, Camps, Coaches",
+        "title": "Más experiencia por pista",
+        "text": "ÉliteReplay ofrece a los clubs una propuesta premium nueva: partidos visibles, highlights compartibles, formatos trophy, superficies para patrocinio, coach reviews y productos para camps.",
+        "benefits": {
+          "point1": "Experiencia premium sin interrumpir el juego",
+          "point2": "Nuevas oportunidades de ingresos",
+          "point3": "Social sharing desde partidos reales",
+          "point4": "Superficies de patrocinio en el MatchBoard",
+          "point5": "Ideal para camps, demo days y torneos"
+        },
+        "cards": {
+          "card1Title": "Experiencia premium",
+          "card1Text": "Partidos visibles, highlights reales y un momento de pista más valioso para jugadores y espectadores.",
+          "card2Title": "Superficies para sponsors",
+          "card2Text": "MatchBoard, enlaces de highlights y replay products crean nuevas superficies visibles para socios y eventos.",
+          "card3Title": "Formatos para camps y eventos",
+          "card3Text": "Ideal para demo days, camps, torneos y formatos de coaching que deben ofrecer más que una simple grabación."
+        }
+      },
+      "technology": {
+        "eyebrow": "Technology & Privacy",
+        "title": "La tecnología abajo. La confianza arriba.",
+        "text": "Cámaras, edge processing, consentimiento y privacidad siguen siendo importantes — pero como prueba de confianza. La historia emocional principal es la experiencia del partido. La tecnología garantiza que todo funcione de forma limpia.",
+        "cards": {
+          "processing": {
+            "title": "Procesamiento local",
+            "text": "Los highlights, los momentos del partido y los replay products se crean en un flujo controlado en pista en lugar de depender de una cadena de subida confusa."
+          },
+          "consent": {
+            "title": "Consent por QR con estructura",
+            "text": "Los jugadores reciben una entrada clara a la experiencia sin interrumpir el flow del partido ni necesitar una app complicada."
+          },
+          "privacy": {
+            "title": "Privacidad como prueba de confianza",
+            "text": "La tecnología, los permisos y la entrega están planteados para que clubs, camps y familias entiendan qué ocurre y por qué."
+          }
+        }
+      }
+    },
     "Features": {
     "headline": "Descubre tu juego – como nunca antes.",
-    "description": "Élitetreplay transforma tu partido en un highlight profesional. Tú juegas – nosotros grabamos, analizamos y editamos con IA avanzada.",
+    "description": "ÉliteReplay conecta marcador, momentos señalados y perspectivas de vídeo disponibles en una experiencia de pista controlada.",
       "replayWall": {
         "title": "Configuración de Múltiples Cámaras",
         "description": "Nuestro avanzado sistema de múltiples cámaras captura cada ángulo de tu juego, asegurando que ningún momento se pierda. Las cámaras sincronizadas trabajan juntas para proporcionar una cobertura completa y perspectivas cinematográficas.",
@@ -37,7 +259,7 @@
         "list3": "No se requiere carga en la nube"
       },
       "journey":{
-        "title": "Your Journey with Élitetreplay"
+        "title": "Tu recorrido con ÉliteReplay"
       },
     "cta": "Escanea. Juega. Comparte."
   },
@@ -90,84 +312,265 @@
       }
     },
     "productModules": {
-      "eyebrow": "Sistema ÉliteReplay",
-      "title": "Del momento de partido al producto final",
-      "intro": "ÉliteReplay conecta perspectivas de cámara, detección local y resultados claros: highlights, MultiView replays, feedback de coach y match memories premium.",
-      "closing": "El jugador no recibe solo un video. Recibe su momento: claro, compartible y reconocible.",
+      "eyebrow": "Score-aware Highlights",
+      "title": "No solo clips. Match moments.",
+      "intro": "Un highlight es más fuerte cuando sabes cuándo ocurrió: break point, set point, match point o comeback. ÉliteReplay conecta el video con el contexto del marcador y lo convierte en un verdadero momento de partido.",
+      "closing": "El video no solo muestra el rally. El MatchBoard le da significado.",
       "highlightDetection": {
-        "title": "Highlight Detection",
-        "label": "Rallys · Momentos · Timing",
-        "text": "Rallys fuertes, escenas emocionales y momentos claros del partido se filtran desde grabaciones largas."
+        "title": "Highlights con marcador y significado",
+        "label": "Break point · Match point · Comeback",
+        "text": "El video y el contexto del partido se mantienen unidos, para que el clip tenga más fuerza porque su momento y su significado siguen visibles."
       },
       "multiView": {
-        "title": "MultiView Replay",
-        "label": "Top-Down · SideView · NetView",
-        "text": "Top-Down muestra la construcción del punto. SideView y NetView aportan cercanía, ritmo y emoción al clip."
+        "title": "Replay desde los ángulos correctos",
+        "label": "TopDown · SideCam · NetCam",
+        "text": "TopDown explica el punto. SideCam aporta ritmo. NetCam aporta emoción. Juntos crean un momento de partido en lugar de simple metraje."
       },
       "coachReview": {
-        "title": "Coach Review",
-        "label": "Feedback · Foco · Ejercicio",
-        "text": "Un highlight se convierte en un impulso de entrenamiento: qué funcionó, cuál es el foco y qué practicar después."
+        "title": "Coach review con contexto",
+        "label": "Timing · Patrones · Foco",
+        "text": "El entrenador no ve solo la escena, sino también cuándo ocurrió en el partido y por qué fue importante."
       },
       "matchFacts": {
-        "title": "MatchFacts",
-        "label": "Zonas · Patrones · Evolución",
-        "text": "Datos compactos del partido: zonas, presencia, estructura de rally y patrones recurrentes."
+        "title": "MatchFacts y match memory",
+        "label": "Score · Story · Memory",
+        "text": "Del partido nacen MatchFacts compactos, player cards y recuerdos que no solo muestran el punto, sino que lo enmarcan."
       }
     },
     "cards": {
-      "eyebrow": "Premium Match Memories",
-      "title": "Player Cards, Team Cards, Club Cards",
-      "text": "Los highlights se convierten en recuerdos digitales para jugadores, equipos, clubes y camps.",
-      "subtext": "No es decoración. Es un resultado compartible de un momento real de partido.",
-      "cta": "Premium add-on opcional",
+      "eyebrow": "Match Memories",
+      "title": "Los momentos se convierten en recuerdos",
+      "text": "Después del partido, los highlights se convierten en recuerdos digitales: player cards, team cards, club cards y MatchFacts compactos.",
+      "subtext": "No como decoración, sino como resultado de un momento real: visible, compartible y memorable.",
+      "cta": "Player Cards · Team Cards · Club Cards",
       "playerAlt": "Ejemplo de ÉliteReplay Player Card",
       "teamAlt": "Ejemplo de ÉliteReplay Team Card",
       "clubAlt": "Ejemplo de ÉliteReplay Club Card",
       "player": {
         "title": "Player Card",
-        "chip": "Tu momento como recuerdo digital",
+        "chip": "Tu highlight como recuerdo visible",
         "text": "Una tarjeta digital personal desde un momento real del partido."
       },
       "team": {
         "title": "Team Card",
-        "chip": "Para dobles, camps y torneos",
+        "chip": "Para equipos, rivalidades y momentos de camp",
         "text": "Dos jugadores, un momento, un resultado cuidado."
       },
       "club": {
         "title": "Club Card",
-        "chip": "La pista como escenario",
+        "chip": "La pista se vuelve un escenario premium",
         "text": "Un marco premium para clubes, pistas y eventos."
       }
     },
     "partners": {
-      "title": "Para Operadores de Canchas y Socios",
-      "description": "Transforma tu instalación en un destino premium con la tecnología ÉliteReplay",
+      "title": "Más experiencia por pista",
+      "description": "ÉliteReplay da a los clubs una nueva propuesta premium: partidos visibles, highlights compartibles, formatos trophy, superficies de patrocinio, coach reviews y productos para camps.",
       "monetization": {
-        "title": "Monetización",
-        "description": "Crea nuevas fuentes de ingresos ofreciendo paquetes de momentos destacados premium a jugadores y equipos. Aumenta las reservas de canchas con propuestas de valor únicas."
+        "title": "Nuevas oportunidades de ingresos",
+        "description": "Paquetes de highlights, productos de camp, coach reviews, extras para eventos y experiencias digitales visibles del partido."
       },
       "clubBranding": {
-        "title": "Branding del Club",
-        "description": "Personaliza videos con la marca, logotipos y colores de tu club para un aspecto profesional. Mejora la reputación de tu instalación y el alcance de marketing."
+        "title": "Experiencia premium en la pista",
+        "description": "El partido se siente más valioso para jugadores, invitados y socios porque marcador, momento e highlight aparecen juntos."
       },
       "communityFeatures": {
-        "title": "Características de la Comunidad",
-        "description": "Construye una comunidad más fuerte permitiendo que los jugadores compartan sus momentos destacados en redes sociales. Fomenta el compromiso y atrae nuevos miembros."
+        "title": "Ideal para camps y torneos",
+        "description": "Desde un demo day hasta la final de un camp, el formato une emoción, review y shareability."
       },
-      "applyButton": "Solicitar como Cancha Piloto"
+      "applyButton": "Hablar sobre un piloto"
+    },
+    "marketing": {
+      "meta": {
+        "title": "ÉliteReplay – Smart Court, contenido de club y experiencia de pádel",
+        "description": "ÉliteReplay une marcador en directo, momentos especiales, contenido de club y espacios digitales para patrocinadores en una nueva experiencia para clubes de pádel y sus jugadores.",
+        "imageAlt": "MatchBoard de ÉliteReplay en una pista real"
+      },
+      "hero": {
+        "eyebrow": "THE CLUB CONTENT & COURT EXPERIENCE SYSTEM",
+        "title": "Haz que cada partido aporte más a tu club.",
+        "description": "ÉliteReplay combina marcador en directo, momentos especiales, branding de club y espacios digitales para patrocinadores en una nueva experiencia dentro y fuera de la pista.",
+        "primaryCta": "Solicitar un piloto para el club",
+        "secondaryCta": "Ver ÉliteReplay en acción",
+        "brandClaim": "Your score. Your focus. Your moment.",
+        "imageAlt": "MatchBoard de ÉliteReplay en una pista de pádel"
+      },
+      "benefits": {
+        "experience": { "title": "Experiencia premium", "text": "Ofrece a tus jugadores una experiencia de partido que continúa más allá de la pista." },
+        "content": { "title": "Contenido de club", "text": "Convierte la actividad diaria de las pistas en la base de contenidos con tu marca." },
+        "sponsor": { "title": "Espacios para patrocinadores", "text": "Integra a tus partners de forma visible dentro y fuera de la pista." }
+      },
+      "potential": {
+        "eyebrow": "Potencial diario",
+        "title": "Cada día ocurre en tus pistas mucho más de lo que se ve online.",
+        "text": "En la pista nacen victorias, emociones, puntos especiales e historias. Muchos de esos momentos desaparecen tras el partido, mientras los clubes necesitan contenido nuevo, experiencias atractivas y espacios visibles para sus partners.",
+        "points": {
+          "moments": "Dar visibilidad a los grandes momentos",
+          "stories": "Ofrecer un valor personal a cada jugador",
+          "content": "Crear contenido de club desde la actividad real",
+          "partners": "Integrar a los partners de forma natural"
+        }
+      },
+      "flow": {
+        "eyebrow": "Cómo funciona",
+        "title": "Del partido a la experiencia digital del club.",
+        "intro": "ÉliteReplay conecta lo que ocurre en la pista con una experiencia digital para jugadores, club y partners.",
+        "steps": {
+          "match": { "title": "El partido está en juego", "text": "MatchBoard acompaña el marcador en directo, el tiempo y el desarrollo del partido." },
+          "moment": { "title": "El jugador marca su momento", "text": "MyMoment permite señalar de forma intencionada una situación especial." },
+          "connection": { "title": "Datos y momentos se conectan", "text": "Marcador, ganadores, contexto y contenido disponible forman una experiencia coherente." },
+          "visibility": { "title": "El club sigue visible", "text": "Logo, pista, partners y llamadas a la acción pueden formar parte de la experiencia y del contenido resultante." }
+        }
+      },
+      "player": {
+        "eyebrow": "La experiencia del jugador como motor",
+        "title": "Los jugadores lo comparten porque es su momento.",
+        "text": "Los jugadores reciben algo personal de su partido para verlo, recordarlo y compartirlo. El branding del club y sus patrocinadores puede acompañarlo de forma natural.",
+        "clubEffect": "El valor emocional pertenece al jugador. Para el club, crea un escenario reconocible para la pista, la marca y sus partners.",
+        "features": {
+          "matchboard": { "title": "MatchBoard", "text": "Marcador, equipos y tiempo de partido se hacen visibles junto a la pista." },
+          "myMoment": { "title": "MyMoment", "text": "Los jugadores marcan un momento destacado de su partido." },
+          "scoreFlash": { "title": "Score Flash", "text": "El marcador y el contexto pueden formar parte de la presentación visual." },
+          "winner": { "title": "Winner Screen", "text": "El final del partido recibe un momento visible para los ganadores." },
+          "summary": { "title": "Resumen del partido", "text": "La información disponible se reúne en una vista compacta y clara." },
+          "highlight": { "title": "Highlight", "text": "Los momentos marcados crean la base para clips relevantes." },
+          "trophy": { "title": "Trofeo digital", "text": "Un momento especial se convierte en un recuerdo digital personal." },
+          "cards": { "title": "Player y Team Cards", "text": "Jugadores, equipos, pista y club reciben un marco visual cuidado." }
+        }
+      },
+      "contentEngine": {
+        "eyebrow": "Club Content Engine",
+        "title": "Convierte cada partido en visibilidad para tu club.",
+        "text": "ÉliteReplay aporta la base técnica y creativa para transformar la actividad diaria en contenido con marca listo para compartir.",
+        "steps": {
+          "court": "Actividad en pista",
+          "experience": "Experiencia del jugador",
+          "moments": "Datos y momentos marcados",
+          "assets": "Contenido con marca",
+          "sharing": "Compartido por jugador o club",
+          "visibility": "Visibilidad adicional"
+        },
+        "note": "La publicación sigue bajo tu control: ÉliteReplay prepara los materiales y el contexto, pero no publica automáticamente en redes sociales sin aprobación."
+      },
+      "sponsoring": {
+        "eyebrow": "Espacios digitales para patrocinadores",
+        "title": "Tu pista se convierte en un espacio digital de marca.",
+        "text": "Los partners pueden aparecer en puntos relevantes de la experiencia, de acuerdo con el club, la pista y el formato.",
+        "statement": "ÉliteReplay abre nuevos espacios digitales para patrocinadores y ayuda a los clubes a dar más visibilidad a sus acuerdos actuales.",
+        "touchpoints": {
+          "idle": "Idle screen",
+          "warmup": "Warm-up",
+          "matchboard": "MatchBoard",
+          "score": "Gráficas de marcador",
+          "winner": "Winner screen",
+          "highlight": "Intro y outro del highlight",
+          "qr": "Código QR",
+          "cta": "Call to action"
+        }
+      },
+      "useCases": {
+        "eyebrow": "Casos de uso",
+        "title": "Un sistema para distintas experiencias de pista.",
+        "items": {
+          "clubs": "Clubes de pádel",
+          "courts": "Pistas premium",
+          "tournaments": "Torneos",
+          "camps": "Camps",
+          "hotels": "Hoteles y resorts",
+          "sponsorEvents": "Eventos de patrocinadores",
+          "activations": "Activaciones de marca"
+        }
+      },
+      "technology": {
+        "eyebrow": "Tecnología y confianza",
+        "title": "Diseñado para la operación real de una pista.",
+        "text": "La tecnología queda en segundo plano. El club obtiene un funcionamiento controlable, una experiencia clara y procesos comprensibles.",
+        "points": {
+          "local": { "title": "Local-first", "text": "Las funciones centrales están diseñadas para operar sin dependencia permanente de la nube." },
+          "configuration": { "title": "Configuración de club y pista", "text": "La experiencia se adapta a cada ubicación y caso de uso." },
+          "branding": { "title": "Branding controlable", "text": "La presencia del club y sus partners forma parte de un diseño gestionado conscientemente." },
+          "privacy": { "title": "Privacidad y consentimiento", "text": "Acceso, consentimiento y uso deben ser comprensibles para el club y los jugadores." },
+          "modular": { "title": "Diseño modular", "text": "Los módulos de producto pueden combinarse según el uso real." },
+          "prepared": { "title": "Preparado para el futuro", "text": "La arquitectura contempla una futura gestión central sin presentarla hoy como una función terminada." }
+        }
+      },
+      "pilot": {
+        "eyebrow": "Founding Court Pilot",
+        "title": "Convierte tu pista en una ÉliteReplay Founding Court.",
+        "text": "Un piloto comienza con tu operación real. Entendemos el caso de uso, revisamos los requisitos y diseñamos juntos la experiencia adecuada.",
+        "cta": "Solicitar un piloto para el club",
+        "steps": {
+          "discover": "Conocer el club y el caso de uso",
+          "check": "Revisar la pista y los requisitos técnicos",
+          "setup": "Configurar el branding y el piloto",
+          "evaluate": "Probar en operación real y evaluar juntos"
+        },
+        "services": {
+          "setup": "Configuración",
+          "branding": "Branding de club",
+          "testing": "Prueba conjunta",
+          "analysis": "Evaluación del uso real",
+          "formats": "Formatos de contenido y patrocinio",
+          "influence": "Influencia directa en el desarrollo"
+        }
+      },
+      "finalCta": {
+        "title": "¿Preparado para una nueva experiencia en tu pista?",
+        "text": "Veamos cómo puede encajar ÉliteReplay en tu club, instalación o próximo evento.",
+        "cta": "Solicitar un piloto para el club"
+      }
+    },
+    "pilot": {
+      "title": "Diseñado para camps, clubs y demo days de pádel",
+      "description": "ÉliteReplay está pensado para situaciones reales de pista: camps, torneos, eventos de club y sesiones de coaching. No es una demo de laboratorio, sino un sistema creado para funcionar donde los partidos realmente ocurren.",
+      "cards": {
+        "players": {
+          "title": "Para jugadores",
+          "description": "Sus propios highlights y recuerdos del partido sin edición manual."
+        },
+        "coaches": {
+          "title": "Para coaches",
+          "description": "Clips con contexto para feedback, review y el siguiente paso del entrenamiento."
+        },
+        "clubs": {
+          "title": "Para clubs",
+          "description": "Una experiencia premium de partido con valor compartible para eventos, camps y sponsors."
+        }
+      }
     }
   },
+ "MarketingNav": {
+  "homeLabel": "Inicio de ÉliteReplay",
+  "navigationLabel": "Navegación principal",
+  "mobileNavigationLabel": "Navegación principal móvil",
+  "product": "Producto",
+  "clubs": "Para clubes",
+  "experience": "Experiencia",
+  "highlights": "Highlights",
+  "how": "Cómo funciona",
+  "players": "Experiencia del jugador",
+  "content": "Contenido",
+  "sponsoring": "Patrocinio",
+  "technology": "Tecnología",
+  "pilot": "Proyecto piloto",
+  "cta": "Solicitar proyecto piloto",
+  "languageLabel": "Elegir idioma",
+  "openMenu": "Abrir menú",
+  "closeMenu": "Cerrar menú"
+ },
  "Footer":{
-  "text":"Resúmenes deportivos impulsados por IA",
-  "copyright":"Élitetreplay. Todos los derechos reservados.",
+  "text":"El sistema de experiencia de partido y contenido para clubes de pádel, instalaciones y organizadores.",
+  "copyright":"© 2026 ÉliteReplay. Todos los derechos reservados.",
+  "navigationLabel":"Navegación del pie de página",
+  "clubs":"Para clubes",
+  "content":"Contenido",
+  "pilot":"Proyecto piloto",
   "contact":"Contacto",
   "imprint" :"Imprenta",
   "privacy":"Privacidad"
  },
  "ContactPage": {
-    "title": "Contáctenos",
-    "description": "¿Listo para transformar su instalación deportiva con momentos destacados impulsados por IA? Hablemos de cómo ÉliteReplay puede elevar su negocio.",
+    "title": "Solicitar un piloto para el club",
+    "description": "Hablemos sobre tu club de pádel, instalación o próximo evento.",
     "contactInfo": {
       "title": "Información de Contacto",
       "email": "Correo Electrónico",
@@ -186,9 +589,63 @@
     },
     "form": {
       "title": "Envíenos un Mensaje",
-      "successMessage": "Gracias por contactarnos. Le responderemos dentro de 24 horas.",
+      "successMessage": "El borrador de correo está preparado y todavía debe enviarse desde su aplicación de correo.",
       "submit": "Enviar Mensaje",
         "reset": "Enviar otro mensaje"
+    },
+    "meta": {
+      "title": "Solicitar un piloto para el club",
+      "description": "Habla con ÉliteReplay sobre un piloto para tu club de pádel, pista, hotel, torneo o camp."
+    },
+    "clubForm": {
+      "back": "Volver al proceso piloto",
+      "pageEyebrow": "Solicitar un piloto",
+      "pageTitle": "Hablemos de tu pista.",
+      "pageDescription": "Cuéntanos brevemente sobre tu club, instalación o evento para valorar juntos el caso de uso y los requisitos técnicos.",
+      "directTitle": "Contacto directo",
+      "directText": "También puedes enviar tu consulta directamente por correo electrónico.",
+      "useCaseTitle": "Adecuado para",
+      "privacyNote": "Los datos del formulario no se almacenan en esta web. Al enviarlo se abre un borrador preparado en tu aplicación de correo local.",
+      "eyebrow": "Consulta de piloto",
+      "title": "Tu club. Tu caso de uso.",
+      "intro": "Solo nombre, club y correo son obligatorios. El resto nos ayuda a entender mejor tu consulta.",
+      "name": "Nombre",
+      "namePlaceholder": "Nombre y apellidos",
+      "club": "Club o instalación",
+      "clubPlaceholder": "Nombre del club o la instalación",
+      "role": "Cargo",
+      "rolePlaceholder": "Por ejemplo, propietario o gerente",
+      "email": "Correo electrónico",
+      "location": "Ubicación",
+      "locationPlaceholder": "Ciudad o región",
+      "courts": "Número de pistas",
+      "courtsPlaceholder": "Por ejemplo 6",
+      "useCase": "Caso de uso deseado",
+      "useCasePlaceholder": "Selecciona una opción",
+      "useCases": {
+        "club": "Club de pádel",
+        "clubs": "Clubes de pádel",
+        "premiumCourt": "Pista premium",
+        "courts": "Pistas premium",
+        "tournament": "Torneo",
+        "tournaments": "Torneos",
+        "camp": "Camp",
+        "camps": "Camps",
+        "hotel": "Hotel o resort",
+        "hotels": "Hoteles y resorts",
+        "sponsorEvent": "Evento de patrocinador o activación",
+        "sponsorEvents": "Eventos de patrocinadores y activaciones"
+      },
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Qué te gustaría conseguir con ÉliteReplay en tu pista?",
+      "privacyPrefix": "He leído la ",
+      "privacyLink": "política de privacidad",
+      "privacySuffix": " y acepto que contacten conmigo.",
+      "submit": "Abrir borrador de correo",
+      "deliveryNote": "No se envía ni almacena nada automáticamente en la web.",
+      "draftOpened": "Tu aplicación de correo se ha abierto. Envía el borrador preparado. Si no se ha abierto, escribe a ",
+      "emailIntro": "Hola ÉliteReplay, me interesa un piloto para el club.",
+      "emailSubject": "Consulta de piloto – {club}"
     }
   },
   "recording": {
@@ -361,13 +818,16 @@
         "contactUs": {
           "title": "12. Contáctanos",
           "text": "Si tienes alguna pregunta sobre esta Política de Privacidad o nuestras prácticas de privacidad, por favor contáctanos:",
-          "address": {
-            "company": "ÉliteReplay Inc.",
-            "line1": "123 Innovation Drive",
-            "line2": "San Francisco, CA 94105",
-            "email": "privacy@elitereplay.com",
-            "phone": "+1 (555) 123-4567"
-          }
+        "address": {
+          "company": "ÉliteReplay Inc.",
+          "line1": "123 Innovation Drive",
+          "line2": "San Francisco, CA 94105",
+          "line3": "35660 Corralejo",
+          "line4": "Las Palmas",
+          "line5": "España",
+          "email": "privacy@elitereplay.com",
+          "phone": "+1 (555) 123-4567"
+        }
         }
       }
     },
@@ -476,15 +936,15 @@
         "title": "Pila de Tecnología de IA",
         "visionModels": {
           "title": "Modelos de Visión por Computadora",
-          "description": "Nuestros modelos personalizados, entrenados en horas extensas de metraje deportivo, detectan jugadores, rastrean el movimiento del balón y comprenden las dinámicas del juego.",
+          "description": "Módulos configurables de visión artificial aportan la base para evaluar localmente jugadores, movimiento del balón y situaciones del partido.",
           "features": {
             "objectDetection": {
               "title": "Detección de Objetos",
-              "description": "Identifica y rastrea jugadores, balones y elementos del juego con un 99.7% de precisión"
+              "description": "Ayuda a detectar jugadores, balones y elementos relevantes sin afirmar una precisión no verificada."
             },
             "actionRecognition": {
               "title": "Reconocimiento de Acciones",
-              "description": "Clasifica acciones deportivas específicas como mates, tiros o jugadas destacadas"
+              "description": "Ayuda a marcar situaciones relevantes de pádel para su posterior revisión y contexto."
             },
             "poseEstimation": {
               "title": "Estimación de Postura",
@@ -498,7 +958,7 @@
         },
         "highlightEngine": {
           "title": "Motor de Generación de Highlights",
-          "description": "Más allá de la detección, nuestra IA evalúa qué define un gran highlight y crea videos atractivos automáticamente.",
+          "description": "El proceso conecta momentos marcados, contexto y perspectivas disponibles como base para clips de highlights.",
           "features": {
             "excitementScore": {
               "title": "Algoritmo de Puntuación de Excitación",
@@ -524,7 +984,7 @@
         },
         "realTimePipeline": {
           "title": "Pipeline de Procesamiento en Tiempo Real",
-          "description": "Entrega highlights en minutos mediante un proceso optimizado.",
+          "description": "Un proceso local estructurado conecta captura, análisis, selección, edición y entrega controlada.",
           "steps": {
             "capture": {
               "title": "Captura de Video",
@@ -554,27 +1014,27 @@
         }
       },
       "results": {
-        "title": "Resultados Inigualables",
-        "description": "Nuestra IA ofrece un rendimiento excepcional en métricas clave",
+        "title": "Diseñado para operar en la pista",
+        "description": "ÉliteReplay conecta procesamiento local, contexto y entrega controlada sin promesas de rendimiento no verificadas.",
         "metrics": {
           "accuracy": {
-            "value": "99.7%",
-            "label": "Precisión de Detección"
+            "value": "Local",
+            "label": "Procesamiento en pista"
           },
           "time": {
-            "value": "<5 min",
-            "label": "Tiempo de Procesamiento"
+            "value": "Modular",
+            "label": "Adaptado al uso"
           },
           "quality": {
-            "value": "4K",
-            "label": "Calidad de Video"
+            "value": "Controlado",
+            "label": "Branding y aprobación"
           },
           "satisfaction": {
-            "value": "95%",
-            "label": "Satisfacción del Usuario"
+            "value": "Transparente",
+            "label": "Privacidad y consentimiento"
           }
         },
-        "cta": "Pruébalo Tú Mismo"
+        "cta": "Solicitar un piloto"
       }
     },
     "demo": {

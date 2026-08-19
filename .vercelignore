@@ -1,0 +1,15 @@
+# Repository and dependency state
+.git/
+.vercel/
+node_modules/
+.next/
+.env*
+
+# Local Codex, browser, cache, and audit artifacts
+.codex-phase1-backups/
+.next.broken-padelhouse-cache/
+.playwright-cli/
+output/
+tmp/
+scripts/__pycache__/
+.DS_Store

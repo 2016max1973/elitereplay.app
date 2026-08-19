@@ -1,83 +1,62 @@
-"use client";
+import { ImageIcon, MonitorPlay, Sparkles, Target } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-import { BarChart3, Camera, ClipboardCheck, PanelsTopLeft } from "lucide-react";
-import { useTranslations } from "next-intl";
+import PlayerCardsSection from "@/components/PlayerCardsSection";
 
 const modules = [
-  { key: "highlightDetection", icon: Camera, step: "01" },
-  { key: "multiView", icon: PanelsTopLeft, step: "02" },
-  { key: "coachReview", icon: ClipboardCheck, step: "03" },
-  { key: "matchFacts", icon: BarChart3, step: "04" },
+  { key: "highlightDetection", icon: MonitorPlay, step: "01" },
+  { key: "multiView", icon: Target, step: "02" },
+  { key: "coachReview", icon: Sparkles, step: "03" },
+  { key: "matchFacts", icon: ImageIcon, step: "04" },
 ] as const;
 
-export default function ProductModulesSection() {
-  const t = useTranslations("HomePage.productModules");
+export default async function ProductModulesSection({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "HomePage.productModules" });
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-black via-[#04142d]/60 to-[#030712] py-10 md:py-12">
+    <section id="experience" className="relative scroll-mt-24 overflow-hidden bg-gradient-to-b from-black via-[#061226] to-[#030712] py-20 sm:py-28">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#F5BE2D]/35 to-transparent" />
-        <div className="absolute right-1/4 top-10 h-48 w-48 rounded-full bg-[#F5BE2D]/7 blur-3xl" />
+        <div className="absolute right-[8%] top-20 h-72 w-72 rounded-full bg-[#F5BE2D]/[0.07] blur-3xl" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-          <div className="max-w-xl">
-            <span className="mb-3 inline-block rounded-full bg-[#F5BE2D]/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#F5BE2D]">
+      <div className="relative z-10 mx-auto max-w-[1480px] px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+          <div className="max-w-2xl lg:sticky lg:top-28">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#F5BE2D]">
               {t("eyebrow")}
-            </span>
-            <h2 className="text-3xl font-bold text-white md:text-4xl">
-              <span className="bg-gradient-to-r from-white via-[#F5BE2D] to-white bg-clip-text text-transparent">
-                {t("title")}
-              </span>
+            </p>
+            <h2 className="mt-4 text-balance text-3xl font-semibold tracking-[-0.03em] text-white sm:text-5xl">
+              {t("title")}
             </h2>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-gray-400 md:text-base">
+            <p className="mt-5 text-pretty text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
               {t("intro")}
             </p>
-            <p className="mt-5 border-l border-[#F5BE2D]/35 pl-4 text-sm leading-relaxed text-gray-300">
+            <p className="mt-7 border-l-2 border-[#F5BE2D] pl-5 text-sm leading-6 text-white/75">
               {t("closing")}
             </p>
           </div>
 
-          <div className="relative">
-            <div className="absolute bottom-8 left-5 top-8 hidden w-px bg-gradient-to-b from-[#F5BE2D]/0 via-[#F5BE2D]/35 to-[#F5BE2D]/0 sm:block" />
-            <div className="space-y-3">
-            {modules.map((module) => {
-              const Icon = module.icon;
-
-              return (
-                <article
-                  key={module.key}
-                  className="group relative flex gap-4 overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015))] p-4 shadow-xl shadow-black/25 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F5BE2D]/35 sm:ml-10"
-                >
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#F5BE2D]/35 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <div className="flex shrink-0 flex-col items-center gap-2">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#F5BE2D]/20 bg-black text-[#F5BE2D] shadow-lg shadow-black/30">
-                      <Icon size={18} strokeWidth={1.8} />
-                    </span>
-                    <span className="text-[10px] font-semibold text-[#F5BE2D]/70">
-                      {module.step}
-                    </span>
-                  </div>
-                  <div className="min-w-0">
-                    <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-                      <h3 className="text-base font-semibold text-white md:text-lg">
-                        {t(`${module.key}.title`)}
-                      </h3>
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#F5BE2D]/75">
-                      {t(`${module.key}.label`)}
-                      </span>
-                    </div>
-                    <p className="text-sm leading-relaxed text-gray-400">
-                      {t(`${module.key}.text`)}
-                    </p>
-                  </div>
-                </article>
-              );
-            })}
-            </div>
+          <div className="grid overflow-hidden rounded-[24px] border border-white/10 bg-white/10 sm:grid-cols-2">
+            {modules.map(({ key, icon: Icon, step }) => (
+              <article key={key} className="min-h-64 bg-[linear-gradient(145deg,#0B1322,#050505)] p-6 sm:p-7">
+                <div className="flex items-center justify-between">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F5BE2D] text-black">
+                    <Icon aria-hidden="true" className="h-5 w-5" />
+                  </span>
+                  <span className="text-xs font-bold tracking-[0.16em] text-white/30">{step}</span>
+                </div>
+                <p className="mt-7 text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[#F5BE2D]/80">
+                  {t(`${key}.label`)}
+                </p>
+                <h3 className="mt-2 text-xl font-semibold text-white">{t(`${key}.title`)}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/58">{t(`${key}.text`)}</p>
+              </article>
+            ))}
           </div>
         </div>
+
+        <PlayerCardsSection locale={locale} />
       </div>
     </section>
   );

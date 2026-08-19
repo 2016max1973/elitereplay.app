@@ -1,56 +1,77 @@
-'use client';
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { useLocale, useTranslations } from 'next-intl';
-const Footer = () => {
-      const locale = useLocale();
-      const t = useTranslations("Footer");
-  return (
-      <footer className="py-16 bg-black border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            {/* Logo */}
-            <div className="mb-8 md:mb-0 text-center md:text-left">
-              <Image
-                src="/images/elitereplay-logo.png"
-                alt="ÉliteReplay Logo"
-                width={250}
-                height={125}
-                className="mx-auto md:mx-0 mb-4"
-              />
-              <p className="text-gray-400 text-lg">
-                {t('text')}
-              </p>
-            </div>
-            {/* Contact, Imprint, Privacy links */}
-            <div className="flex flex-col sm:flex-row gap-8 text-center">
-              <Link
-                href={`/${locale}/contact`}
-                className="text-gray-400 hover:text-[#F5BE2D] transition-colors text-lg font-medium"
-              >
-                {t('contact')}
-              </Link>
-              <Link
-                href={`/${locale}/imprint`}
-                className="text-gray-400 hover:text-[#F5BE2D] transition-colors text-lg font-medium"
-              >
-                {t('imprint')}
-              </Link>
-              <Link
-                href={`/${locale}/privacy`}
-                className="text-gray-400 hover:text-[#F5BE2D] transition-colors text-lg font-medium"
-              >
-                {t('privacy')}
-              </Link>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500">
-            {t('copyright')}
-          </div>
-        </div>
-      </footer>
-  )
-}
+"use client";
 
-export default Footer
+import Image from "next/image";
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+
+import { isMarketingChromeExcluded } from "@/lib/marketing-chrome";
+
+export default function Footer() {
+  const locale = useLocale();
+  const t = useTranslations("Footer");
+  const navigationT = useTranslations("MarketingNav");
+  const pathname = usePathname();
+
+  if (isMarketingChromeExcluded(pathname)) {
+    return null;
+  }
+
+  return (
+    <footer className="border-t border-white/10 bg-black py-14 text-white">
+      <div className="mx-auto max-w-[1480px] px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div>
+            <Image
+              src="/images/elitereplay-logo.png"
+              alt="ÉliteReplay"
+              width={190}
+              height={95}
+              className="h-auto w-[155px]"
+            />
+            <p className="mt-4 max-w-xl text-base leading-7 text-white/52">
+              {t("text")}
+            </p>
+          </div>
+
+          <nav
+            aria-label={t("navigationLabel")}
+            className="grid grid-cols-2 gap-x-6 gap-y-4 text-sm font-semibold text-white/62 sm:grid-cols-3 lg:justify-items-end"
+          >
+            <Link href={`/${locale}#matchboard`} className="hover:text-[#F5BE2D]">
+              {navigationT("product")}
+            </Link>
+            <Link href={`/${locale}#clubs`} className="hover:text-[#F5BE2D]">
+              {t("clubs")}
+            </Link>
+            <Link href={`/${locale}#experience`} className="hover:text-[#F5BE2D]">
+              {navigationT("experience")}
+            </Link>
+            <Link href={`/${locale}#highlights`} className="hover:text-[#F5BE2D]">
+              {navigationT("highlights")}
+            </Link>
+            <Link href={`/${locale}#content-engine`} className="hover:text-[#F5BE2D]">
+              {t("content")}
+            </Link>
+            <Link href={`/${locale}#pilot`} className="hover:text-[#F5BE2D]">
+              {t("pilot")}
+            </Link>
+            <Link href={`/${locale}/contact`} className="hover:text-[#F5BE2D]">
+              {t("contact")}
+            </Link>
+            <Link href={`/${locale}/imprint`} className="hover:text-[#F5BE2D]">
+              {t("imprint")}
+            </Link>
+            <Link href={`/${locale}/privacy`} className="hover:text-[#F5BE2D]">
+              {t("privacy")}
+            </Link>
+          </nav>
+        </div>
+
+        <div className="mt-10 border-t border-white/10 pt-6 text-sm text-white/38">
+          {t("copyright")}
+        </div>
+      </div>
+    </footer>
+  );
+}

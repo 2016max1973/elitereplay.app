@@ -1,746 +1,449 @@
-"use client";
-
-import Link from "next/link";
+import type { Metadata } from "next";
 import Image from "next/image";
-import {
-  ArrowRight,
-  Camera,
-  Zap,
-  Server,
-  QrCode,
-  TrendingUp,
-  Award,
-  ShieldCheck,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import PlayerCardsSection from "@/components/PlayerCardsSection";
-import ProductModulesSection from "@/components/ProductModulesSection";
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
+import Link from "next/link";
+import { ArrowRight, CirclePlay } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-function PadelCourtPreview() {
+import MatchBoardVisual from "@/components/MatchBoardVisual";
+import { Button } from "@/components/ui/button";
+
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+type ClubBenefit = {
+  title: string;
+  text: string;
+};
+
+type ExperienceStep = {
+  label: string;
+  title: string;
+};
+
+type ProductModule = {
+  label: string;
+  title: string;
+  text: string;
+  detail?: string;
+};
+
+type HowStep = {
+  number: string;
+  title: string;
+  text: string;
+};
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ClubLanding" });
+  const url = `https://elitereplay.de/${locale}`;
+
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    keywords: [
+      "Padel SmartCourt",
+      "Padel MatchBoard",
+      "Padel Club Experience",
+      "Padel Multi-Camera Replay",
+      "Padel Club Content",
+      "Padel Sponsorship",
+    ],
+    alternates: {
+      canonical: url,
+      languages: {
+        de: "https://elitereplay.de/de",
+        en: "https://elitereplay.de/en",
+        es: "https://elitereplay.de/es",
+      },
+    },
+    openGraph: {
+      type: "website",
+      url,
+      siteName: "ÉliteReplay",
+      locale: locale === "de" ? "de_DE" : locale === "es" ? "es_ES" : "en_US",
+      title: t("meta.title"),
+      description: t("meta.description"),
+      images: [
+        {
+          url: "/images/matchboard-real-reference.jpg",
+          width: 1920,
+          height: 1080,
+          alt: t("meta.imageAlt"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("meta.title"),
+      description: t("meta.description"),
+      images: ["/images/matchboard-real-reference.jpg"],
+    },
+  };
+}
+
+export default async function LandingPage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ClubLanding" });
+  const benefits = t.raw("clubValue.benefits") as ClubBenefit[];
+  const experienceSteps = t.raw("action.steps") as ExperienceStep[];
+  const products = t.raw("products.items") as ProductModule[];
+  const howSteps = t.raw("how.steps") as HowStep[];
+
   return (
-    <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-[#F5BE2D]/20 bg-black shadow-[0_8px_32px_rgba(245,190,45,0.12)]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(245,190,45,0.24),transparent_28%),linear-gradient(180deg,rgba(5,25,55,0.72),rgba(0,0,0,0.96))]" />
-      <div className="absolute left-[8%] top-[12%] h-[76%] w-[84%] rounded-sm border-2 border-[#F5BE2D]/60 shadow-[0_0_32px_rgba(245,190,45,0.18)]">
-        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-[#F5BE2D]/50" />
-        <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-[#F5BE2D]/40" />
-        <div className="absolute left-[12%] top-[18%] h-[64%] w-[76%] border border-white/20" />
-        <div className="absolute left-[32%] top-[18%] h-[64%] w-px bg-white/18" />
-        <div className="absolute right-[32%] top-[18%] h-[64%] w-px bg-white/18" />
+    <main id="content" className="club-home min-h-screen overflow-hidden bg-[#050505] pt-[76px] text-white">
+      <section className="relative isolate min-h-[calc(100svh-76px)] overflow-hidden border-b border-white/10">
+        <Image
+          src="/images/elitereplay/sidecam-moment.jpg"
+          alt={t("hero.imageAlt")}
+          fill
+          priority
+          sizes="100vw"
+          className="-z-30 object-cover object-[58%_center]"
+        />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(3,4,6,0.98)_0%,rgba(3,4,6,0.92)_42%,rgba(3,4,6,0.42)_76%,rgba(3,4,6,0.52)_100%),linear-gradient(0deg,#050505_0%,transparent_45%)]" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-36 bg-gradient-to-t from-[#050505] to-transparent" />
+
+        <div className="mx-auto flex min-h-[calc(100svh-76px)] max-w-[1480px] items-end px-4 pb-14 pt-24 sm:px-6 sm:pb-20 lg:items-center lg:px-8 lg:py-24">
+          <div className="home-reveal max-w-4xl">
+            <Eyebrow>{t("hero.eyebrow")}</Eyebrow>
+            <h1 className="mt-6 max-w-4xl text-balance text-[clamp(3.2rem,8vw,7.6rem)] font-semibold leading-[0.88] tracking-[-0.065em]">
+              {t("hero.title")}
+            </h1>
+            <p className="mt-7 max-w-2xl text-pretty text-xl font-medium leading-8 text-white/88 sm:text-2xl sm:leading-9">
+              {t("hero.subtitle")}
+            </p>
+            <p className="mt-6 max-w-3xl text-sm font-semibold leading-7 text-white/58 sm:text-base">
+              {t("hero.features")}
+            </p>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-white/48 sm:text-base sm:leading-7">
+              {t("hero.statement")}
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <PrimaryButton href={`/${locale}/contact`}>{t("hero.primary")}</PrimaryButton>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="h-[52px] rounded-full border-white/24 bg-black/30 px-7 font-bold text-white backdrop-blur-md hover:border-white/50 hover:bg-white/10 hover:text-white"
+              >
+                <Link href={`/${locale}#experience`}>
+                  <CirclePlay aria-hidden="true" className="h-4 w-4" />
+                  {t("hero.secondary")}
+                </Link>
+              </Button>
+            </div>
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.13em] text-white/38">{t("hero.trust")}</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="content-engine" className="border-b border-white/10 bg-[#050505] py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="home-reveal max-w-6xl">
+            <Eyebrow>{t("contentStory.eyebrow")}</Eyebrow>
+            <h2 className="mt-6 text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-semibold leading-[0.92] tracking-[-0.06em]">
+              {t("contentStory.title")}
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-14 sm:mt-16 lg:mt-20 lg:grid-cols-[0.62fr_1.38fr] lg:items-end">
+            <div className="home-reveal space-y-2 text-[clamp(1.5rem,3.3vw,3rem)] font-semibold leading-[1.15] tracking-[-0.035em] text-white/30">
+              <p className="text-white">{t("contentStory.everyDay")}</p>
+              <p className="text-white/78">{t("contentStory.onCourts")}</p>
+              <div className="pt-7">
+                {(t.raw("contentStory.moments") as string[]).map((moment) => (
+                  <p key={moment}>{moment}</p>
+                ))}
+              </div>
+            </div>
+
+            <div className="home-reveal overflow-hidden rounded-[1.75rem] border border-white/10 bg-black shadow-[0_40px_130px_rgba(0,0,0,0.58)]">
+              <video
+                className="aspect-video w-full bg-black object-cover"
+                src="/deliveries/padel-germany-v1/final-highlights/h03_point_12_interleaved_match_moments_v5_final.mp4"
+                poster="/deliveries/padel-germany-v1/posters/h03_last_topdown_frame.png"
+                muted
+                loop
+                playsInline
+                autoPlay
+                preload="metadata"
+                aria-label={t("contentStory.videoLabel")}
+              />
+            </div>
+          </div>
+
+          <div className="home-reveal mt-16 max-w-5xl border-t border-white/12 pt-12 sm:mt-20 sm:pt-16 lg:mt-24">
+            <p className="text-balance text-2xl font-medium leading-tight tracking-[-0.03em] text-white/48 sm:text-4xl">
+              {t("contentStory.disappears")}
+            </p>
+            <p className="mt-10 text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.05em] sm:mt-12 sm:text-6xl">
+              {t("contentStory.courtsCreate")}
+            </p>
+            <p className="mt-3 text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-[#F5BE2D] sm:text-6xl">
+              {t("contentStory.together")}
+            </p>
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/56">{t("contentStory.text")}</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="clubs" className="bg-[#F1F0EB] py-20 text-[#101114] sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="home-reveal max-w-5xl">
+            <Eyebrow dark>{t("clubValue.eyebrow")}</Eyebrow>
+            <h2 className="mt-6 text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-semibold leading-[0.92] tracking-[-0.06em]">
+              {t("clubValue.title")}
+            </h2>
+          </div>
+
+          <div className="mt-14 border-t border-black/15 sm:mt-20">
+            {benefits.map((benefit, index) => (
+              <article key={benefit.title} className="home-reveal grid gap-5 border-b border-black/15 py-8 sm:py-10 lg:grid-cols-[120px_0.75fr_1.25fr] lg:items-start lg:gap-10">
+                <span className="text-xs font-bold tracking-[0.2em] text-black/35">0{index + 1}</span>
+                <h3 className="text-2xl font-semibold tracking-[-0.035em] sm:text-3xl">{benefit.title}</h3>
+                <p className="max-w-2xl text-base leading-7 text-black/58 sm:text-lg sm:leading-8">{benefit.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" className="border-y border-white/10 bg-[#08090B] py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="home-reveal max-w-5xl">
+            <Eyebrow>{t("action.eyebrow")}</Eyebrow>
+            <h2 className="mt-6 text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-semibold leading-[0.92] tracking-[-0.06em]">
+              {t("action.title")}
+            </h2>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/58">{t("action.text")}</p>
+          </div>
+
+          <div className="home-reveal mx-auto mt-12 sm:mt-16">
+            <MatchBoardVisual
+              courtLabel={t("action.board.court")}
+              liveLabel={t("action.board.live")}
+              matchTimeLabel={t("action.board.time")}
+              setLabel={t("action.board.set")}
+              clubLabel={t("action.board.club")}
+            />
+          </div>
+
+          <ol className="home-reveal mx-auto mt-10 grid border-y border-white/12 md:grid-cols-4 md:divide-x md:divide-white/10">
+            {experienceSteps.map((step, index) => (
+              <li key={step.label} className="border-b border-white/10 py-7 last:border-b-0 md:border-b-0 md:px-6 md:first:pl-0 md:last:pr-0">
+                <p className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-[#F5BE2D]">{step.label}</p>
+                <p className="mt-3 text-lg font-semibold leading-6 tracking-[-0.025em]">{step.title}</p>
+                {index < experienceSteps.length - 1 ? <ArrowRight aria-hidden="true" className="mt-5 hidden h-4 w-4 text-white/18 md:block" /> : null}
+              </li>
+            ))}
+          </ol>
+
+          <div className="home-reveal mx-auto mt-14 overflow-hidden rounded-[1.5rem] border border-white/10 sm:mt-20 sm:rounded-[2rem]">
+            <video
+              className="block aspect-video w-full object-cover"
+              src="/videos/elitereplay-match-highlights.mp4"
+              muted
+              loop
+              playsInline
+              autoPlay
+              preload="metadata"
+              aria-label={t("action.videoLabel")}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="matchboard" className="bg-[#050505] py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="home-reveal max-w-5xl">
+            <Eyebrow>{t("products.eyebrow")}</Eyebrow>
+            <h2 className="mt-6 text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-semibold leading-[0.92] tracking-[-0.06em]">
+              {t("products.title")}
+            </h2>
+          </div>
+
+          <div className="mt-14 space-y-20 sm:mt-20 sm:space-y-24 lg:space-y-28">
+            {products.map((product, index) => (
+              <article
+                id={index === 1 ? "highlights" : undefined}
+                key={product.label}
+                className="home-reveal grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16"
+              >
+                <div className={index % 2 === 1 ? "lg:order-2" : undefined}>
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#F5BE2D]">{product.label}</p>
+                  <h3 className="mt-5 text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-6xl">{product.title}</h3>
+                  <p className="mt-6 max-w-xl text-lg leading-8 text-white/58">{product.text}</p>
+                  {product.detail ? <p className="mt-6 max-w-xl border-l border-[#F5BE2D]/60 pl-5 text-sm leading-6 text-white/40">{product.detail}</p> : null}
+                </div>
+                <ProductVisual index={index} t={t} />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative isolate min-h-[85svh] overflow-hidden border-y border-white/10">
+        <Image
+          src="/images/elitereplay/sidecam-moment.jpg"
+          alt={t("sponsor.imageAlt")}
+          fill
+          sizes="100vw"
+          className="-z-30 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(3,3,3,0.95),rgba(3,3,3,0.64)_55%,rgba(3,3,3,0.4)),linear-gradient(0deg,#050505,transparent_45%,rgba(0,0,0,0.28))]" />
+
+        <div className="mx-auto grid min-h-[85svh] max-w-[1480px] items-center gap-16 px-4 py-24 sm:px-6 lg:grid-cols-[0.82fr_1.18fr] lg:px-8">
+          <div className="home-reveal">
+            <Eyebrow>{t("sponsor.eyebrow")}</Eyebrow>
+            <h2 className="mt-6 text-balance text-[clamp(3.2rem,7vw,6.8rem)] font-semibold leading-[0.9] tracking-[-0.06em]">
+              {t("sponsor.title")}
+            </h2>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-white/62">{t("sponsor.text")}</p>
+            <p className="mt-8 max-w-xl text-2xl font-semibold leading-8 tracking-[-0.03em]">{t("sponsor.closing")}</p>
+          </div>
+
+          <div className="home-reveal lg:justify-self-end">
+            <div className="border-y border-[#F5BE2D]/55 py-8 text-center sm:px-14 sm:py-12">
+              <p className="text-xs font-bold uppercase tracking-[0.34em] text-white/48">{t("sponsor.presentedBy")}</p>
+              <p className="mt-5 text-4xl font-black tracking-[0.12em] sm:text-6xl">{t("sponsor.exampleBrand")}</p>
+              <p className="mt-8 text-xs font-bold uppercase tracking-[0.28em] text-[#F5BE2D]">{t("sponsor.exampleMoment")}</p>
+            </div>
+            <p className="mt-4 text-center text-[0.62rem] uppercase tracking-[0.16em] text-white/32">{t("sponsor.pilotNote")}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F1F0EB] py-20 text-[#101114] sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="home-reveal max-w-5xl">
+            <Eyebrow dark>{t("how.eyebrow")}</Eyebrow>
+            <h2 className="mt-6 text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-semibold leading-[0.92] tracking-[-0.06em]">{t("how.title")}</h2>
+          </div>
+          <ol className="mt-14 grid border-y border-black/15 sm:mt-20 lg:grid-cols-3 lg:divide-x lg:divide-black/15">
+            {howSteps.map((step) => (
+              <li key={step.number} className="home-reveal border-b border-black/15 py-8 last:border-b-0 lg:border-b-0 lg:px-10 lg:py-10 lg:first:pl-0 lg:last:pr-0">
+                <span className="text-xs font-bold tracking-[0.2em] text-black/35">{step.number}</span>
+                <h3 className="mt-8 text-3xl font-semibold tracking-[-0.04em]">{step.title}</h3>
+                <p className="mt-4 text-base leading-7 text-black/58">{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="pilot" className="relative isolate overflow-hidden py-28 text-center sm:py-40 lg:py-52">
+        <Image
+          src="/images/matchboard-real-reference.jpg"
+          alt={t("pilot.imageAlt")}
+          fill
+          sizes="100vw"
+          className="-z-30 object-cover object-center opacity-48"
+        />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(0deg,rgba(3,3,3,0.98),rgba(3,3,3,0.68)_52%,rgba(3,3,3,0.94))]" />
+        <div className="home-reveal mx-auto max-w-6xl px-4 sm:px-6">
+          <Eyebrow>{t("pilot.eyebrow")}</Eyebrow>
+          <h2 className="mt-6 text-balance text-[clamp(3.1rem,7.2vw,7rem)] font-semibold leading-[0.91] tracking-[-0.06em]">{t("pilot.title")}</h2>
+          <p className="mx-auto mt-7 max-w-2xl text-xl leading-8 text-white/64 sm:text-2xl sm:leading-9">{t("pilot.text")}</p>
+          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+            <PrimaryButton href={`/${locale}/contact`}>{t("pilot.primary")}</PrimaryButton>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="h-[52px] rounded-full border-white/24 bg-black/30 px-7 font-bold text-white backdrop-blur-md hover:border-white/50 hover:bg-white/10 hover:text-white"
+            >
+              <Link href={`/${locale}#experience`}>{t("pilot.secondary")}</Link>
+            </Button>
+          </div>
+          <div className="mt-16 flex flex-col items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-white/34 sm:flex-row sm:gap-8">
+            <span>{t("pilot.brandClaim")}</span>
+            <span className="hidden h-px w-8 bg-white/20 sm:block" />
+            <span>{t("pilot.trophyClaim")}</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function ProductVisual({ index, t }: { index: number; t: Awaited<ReturnType<typeof getTranslations>> }) {
+  if (index === 0) {
+    return (
+      <div>
+        <MatchBoardVisual
+          compact
+          courtLabel={t("action.board.court")}
+          liveLabel={t("action.board.live")}
+          matchTimeLabel={t("action.board.time")}
+          setLabel={t("action.board.set")}
+          clubLabel={t("action.board.club")}
+        />
       </div>
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 text-left">
-        <p className="text-xs font-semibold tracking-[0.35em] text-[#F5BE2D]">
-          MATCH MOMENT
-        </p>
-        <p className="mt-2 text-sm text-gray-300">Padel Highlight Preview</p>
+    );
+  }
+
+  if (index === 1) {
+    const views = [
+      ["/deliveries/padel-germany-v1/posters/h03_last_topdown_frame.png", "TopDown"],
+      ["/images/elitereplay/sidecam-moment.jpg", "NetCam"],
+      ["/images/elitereplay/netcam-moment.jpg", "SideCam"],
+    ] as const;
+
+    return (
+      <div className="grid grid-cols-3 gap-2 sm:gap-3">
+        {views.map(([src, label]) => (
+          <div key={label} className="relative overflow-hidden rounded-[1rem] border border-white/10">
+            <div className="relative aspect-[3/5]">
+              <Image src={src} alt={label} fill sizes="(min-width: 1024px) 16vw, 33vw" className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/15" />
+              <span className="absolute bottom-4 left-4 text-[0.58rem] font-bold uppercase tracking-[0.18em] text-[#F5BE2D]">{label}</span>
+            </div>
+          </div>
+        ))}
       </div>
+    );
+  }
+
+  if (index === 2) {
+    return (
+      <div className="relative aspect-[16/11] overflow-hidden rounded-[1.5rem] border border-white/10">
+        <Image src="/images/MatchDown.jpg" alt={t("products.tournamentImageAlt")} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/5 to-black/20" />
+        <div className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4 sm:inset-x-7 sm:bottom-7">
+          <div>
+            <p className="text-[0.58rem] font-bold uppercase tracking-[0.18em] text-[#F5BE2D]">{t("products.tournamentStatus")}</p>
+            <p className="mt-2 text-xl font-semibold sm:text-2xl">{t("products.tournamentCourt")}</p>
+          </div>
+          <p className="text-right text-xs font-semibold text-white/55">{t("products.tournamentNext")}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative aspect-[16/11] overflow-hidden rounded-[1.5rem] border border-white/10">
+      <Image src="/images/elitereplay/netcam-moment.jpg" alt={t("products.myMomentImageAlt")} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/15" />
+      <span className="absolute bottom-5 left-5 rounded-full border border-[#F5BE2D]/40 bg-black/60 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#F5BE2D] backdrop-blur-md sm:bottom-7 sm:left-7">
+        MyMoment
+      </span>
     </div>
   );
 }
 
-export default function LandingPage() {
-  const locale = useLocale();
-  const t = useTranslations("HomePage");
+function Eyebrow({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
+  return <p className={`text-xs font-bold uppercase tracking-[0.22em] ${dark ? "text-[#8A6712]" : "text-[#F5BE2D]"}`}>{children}</p>;
+}
+
+function PrimaryButton({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white">
-      {/* 1. Hero Section */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-blue-800/10 to-black/80"></div>
-        </div>
-
-        {/* Animated particles overlay */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          {Array.from({ length: 15 }).map((_, i) => (
-            <div
-              key={i}
-              className="particle absolute rounded-full bg-[#F5BE2D]/30"
-              style={{
-                width: `${Math.random() * 8 + 4}px`,
-                height: `${Math.random() * 8 + 4}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 20 + 15}s`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            ></div>
-          ))}
-        </div>
-
-        <div className="container mx-auto px-4 z-10 text-center">
-          {/* Centered Logo */}
-          <div className="mb-12 animate-fade-in">
-            <Image
-              src="/images/elitereplay-logo.png"
-              alt="ÉliteReplay Logo"
-              width={450}
-              height={225}
-              className="mx-auto drop-shadow-2xl"
-              priority
-            />
-          </div>
-
-          {/* Slogan */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight animate-slide-up">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-[#F5BE2D] to-white">
-              {t("title")}
-            </span>
-          </h1>
-
-          <p className="text-md md:text-2xl max-w-5xl mx-auto mb-12 text-gray-200 animate-fade-in-delay">
-            {t("description")}
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up-delay">
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#F5BE2D] hover:bg-[#F5BE2D]/90 text-black font-semibold rounded-full px-10 py-4 shadow-2xl shadow-[#F5BE2D]/30 hover:shadow-[#F5BE2D]/50 transition-all duration-300 hover:scale-105"
-            >
-              <Link href="#apply">
-                {t("button1")} <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#F5BE2D] hover:bg-[#F5BE2D]/90 text-black font-semibold rounded-full px-10 py-4 shadow-2xl shadow-[#F5BE2D]/30 hover:shadow-[#F5BE2D]/50 transition-all duration-300 hover:scale-105"
-            >
-              <Link href="#journey">
-                {t("button2")} <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-0 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-          <div className="w-8 h-12 rounded-full border-2 border-white/40 flex items-start justify-center p-1">
-            <div className="w-1 h-3 bg-[#F5BE2D] rounded-full animate-pulse"></div>
-          </div>
-        </div>
-
-        <style jsx>{`
-          @keyframes float-up {
-            0% {
-              transform: translateY(0) rotate(0deg);
-              opacity: 0;
-            }
-            10% {
-              opacity: 1;
-            }
-            90% {
-              opacity: 0.5;
-            }
-            100% {
-              transform: translateY(-100vh) rotate(360deg);
-              opacity: 0;
-            }
-          }
-          .particle {
-            animation: float-up linear infinite;
-          }
-          @keyframes fade-in {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          @keyframes slide-up {
-            from {
-              opacity: 0;
-              transform: translateY(40px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          .animate-fade-in {
-            animation: fade-in 1s ease-out;
-          }
-          .animate-fade-in-delay {
-            animation: fade-in 1s ease-out 0.3s both;
-          }
-          .animate-slide-up {
-            animation: slide-up 1s ease-out 0.5s both;
-          }
-          .animate-slide-up-delay {
-            animation: slide-up 1s ease-out 0.8s both;
-          }
-        `}</style>
-      </div>
-
-      {/* 2. Player Features - REDESIGNED */}
-      <div className="py-24 bg-gradient-to-b from-black/90 to-blue-800/30 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute -top-[300px] -left-[300px] w-[600px] h-[600px] rounded-full bg-blue-700/10 blur-3xl"></div>
-          <div className="absolute -bottom-[200px] -right-[200px] w-[500px] h-[500px] rounded-full bg-blue-700/5 blur-3xl"></div>
-          <div className="absolute top-1/4 right-1/4 w-[200px] h-[200px] rounded-full bg-blue-700/5 blur-3xl"></div>
-
-          {/* Grid lines */}
-          <div className="absolute inset-0 grid grid-cols-6 opacity-10">
-            {Array.from({ length: 7 }).map((_, i) => (
-              <div
-                key={`v-${i}`}
-                className="h-full w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"
-                style={{ left: `${(i / 6) * 100}%` }}
-              ></div>
-            ))}
-            {Array.from({ length: 7 }).map((_, i) => (
-              <div
-                key={`h-${i}`}
-                className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                style={{ top: `${(i / 6) * 100}%` }}
-              ></div>
-            ))}
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            {/* Section Header */}
-            <div className="text-center mb-20 relative">
-              <div className="inline-block">
-                <span className="text-xs font-semibold tracking-widest uppercase text-[#F5BE2D] bg-[#F5BE2D]/10 px-4 py-2 rounded-full mb-4 inline-block">
-                  ÉliteReplay Court System
-                </span>
-                <h2 className="text-4xl md:text-6xl font-bold mt-4 mb-6 relative">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#F5BE2D]">
-                    {t("Features.headline")}
-                  </span>
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#F5BE2D]"></div>
-                </h2>
-              </div>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto mt-8">
-                {t("Features.description")}
-              </p>
-            </div>
-
-            {/* Features - Staggered Layout */}
-            <div className="relative">
-              {/* Feature 1 - Replay Wall */}
-              <div className="feature-card-wrapper mb-16 md:mb-32">
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="feature-image-container md:w-3/5 relative mb-8 md:mb-0">
-                    <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#F5BE2D]/10">
-                      <div className="aspect-[16/9]">
-                        <Image
-                          src="/images/replay-wall.jpg"
-                          alt="ÉliteReplay Replay Wall"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 w-full p-6 md:p-10">
-                        <div className="flex items-center">
-                          <div className="bg-[#F5BE2D]/20 backdrop-blur-md p-4 rounded-full mr-5">
-                            <Camera className="h-8 w-8 text-[#F5BE2D]" />
-                          </div>
-                          <h3 className="text-3xl font-bold text-white">
-                            Replay Wall
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative elements */}
-                    <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-[#F5BE2D]/30 rounded-full"></div>
-                    <div className="absolute -top-6 -left-6 w-20 h-20 border border-[#F5BE2D]/20 rounded-full"></div>
-                  </div>
-                  <div className="feature-content md:w-2/5 md:pl-16">
-                    <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 border border-gray-800 transform md:translate-x-[-80px] hover:border-[#F5BE2D]/30 transition-all duration-500 shadow-lg">
-                      <h4 className="text-2xl font-semibold mb-4 text-white">
-                        {t("Features.replayWall.title")}
-                      </h4>
-                      <p className="text-gray-300 leading-relaxed mb-6">
-                        {t("Features.replayWall.description")}
-                      </p>
-                      <ul className="space-y-3">
-                        
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.replayWall.list1")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.replayWall.list2")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.replayWall.list3")}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* MultiView Replay Teaser */}
-              <div className="feature-card-wrapper mb-16 md:mb-32">
-                <div className="mx-auto max-w-6xl">
-                  <div className="rounded-[28px] border border-[#F5BE2D]/35 bg-gradient-to-br from-[#050507] via-black to-[#09111f] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.55),0_0_36px_rgba(245,190,45,0.10)] md:p-5">
-                    <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-                      <div>
-                        <span className="inline-flex rounded-full border border-[#F5BE2D]/25 bg-[#F5BE2D]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F5BE2D]">
-                          TopView · SideCam · NetCam
-                        </span>
-                        <h3 className="mt-3 text-2xl font-bold text-white md:text-3xl">
-                          MultiView Replay
-                        </h3>
-                      </div>
-                      <div className="max-w-xl text-sm leading-relaxed text-gray-300 md:text-right">
-                        <p>
-                          Top-Down erklärt den Punkt. SideCam und NetCam machen ihn emotional.
-                        </p>
-                        <p className="mt-1 text-xs text-gray-500 md:text-sm">
-                          Ein Ballwechsel. Drei Perspektiven. Ein fertiger Highlight-Moment.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="overflow-hidden rounded-[22px] bg-black">
-                      <Image
-                        src="/images/elitereplay-court-intelligence.jpg"
-                        alt="ÉliteReplay Court Intelligence mit NetCam, TopDown und SideCam"
-                        width={1536}
-                        height={1024}
-                        sizes="(min-width: 1280px) 1120px, calc(100vw - 32px)"
-                        className="block h-auto w-full object-contain"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 2 - AI Detection */}
-              <div className="feature-card-wrapper mb-16 md:mb-32">
-                <div className="flex flex-col md:flex-row-reverse items-center">
-                  <div className="feature-image-container md:w-3/5 relative mb-8 md:mb-0">
-                    <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#F5BE2D]/10">
-                      <div className="aspect-[16/9]">
-                        <Image
-                          src="/images/MatchDown.jpg"
-                          alt="Top-Down Match View"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-tl from-black/80 via-black/40 to-transparent"></div>
-                      <div className="absolute bottom-0 right-0 w-full p-6 md:p-10 text-right">
-                        <div className="flex items-center justify-end">
-                          <h3 className="text-3xl font-bold text-white mr-5">
-                            Top-Down Match View
-                          </h3>
-                          <div className="bg-[#F5BE2D]/20 backdrop-blur-md p-4 rounded-full">
-                            <Zap className="h-8 w-8 text-[#F5BE2D]" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative elements */}
-                    <div className="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-[#F5BE2D]/30 rounded-full"></div>
-                    <div className="absolute -top-6 -right-6 w-20 h-20 border border-[#F5BE2D]/20 rounded-full"></div>
-                  </div>
-                  <div className="feature-content md:w-2/5 md:pr-16">
-                    <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 border border-gray-800 transform md:translate-x-[80px] hover:border-[#F5BE2D]/30 transition-all duration-500 shadow-lg">
-                      <h4 className="text-2xl font-semibold mb-4 text-white">
-                        {t("Features.smartHighlight.title")}
-                      </h4>
-                      <p className="text-gray-300 leading-relaxed mb-6">
-                        {t("Features.smartHighlight.description")}
-                      </p>
-                      <ul className="space-y-3">
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.smartHighlight.list1")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.smartHighlight.list2")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.smartHighlight.list3")}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 3 - Edge Processing */}
-              <div className="feature-card-wrapper mb-16 md:mb-32">
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="feature-image-container md:w-3/5 relative mb-8 md:mb-0">
-                    <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#F5BE2D]/10">
-                      <div className="aspect-[16/9]">
-                        <Image
-                          src="/images/edge-processing-feature.png"
-                          alt="Edge Processing"
-                          fill
-                          className="object-cover"
-                          />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 w-full p-6 md:p-10">
-                        <div className="flex items-center">
-                          <div className="bg-[#F5BE2D]/20 backdrop-blur-md p-4 rounded-full mr-5">
-                            <Server className="h-8 w-8 text-[#F5BE2D]" />
-                          </div>
-                          <h3 className="text-3xl font-bold text-white">
-                            Local Edge Processing
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative elements */}
-                    <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-[#F5BE2D]/30 rounded-full"></div>
-                    <div className="absolute -top-6 -left-6 w-20 h-20 border border-[#F5BE2D]/20 rounded-full"></div>
-                  </div>
-                  <div className="feature-content md:w-2/5 md:pl-16">
-                    <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 border border-gray-800 transform md:translate-x-[-80px] hover:border-[#F5BE2D]/30 transition-all duration-500 shadow-lg">
-                      <h4 className="text-2xl font-semibold mb-4 text-white">
-                          {t("Features.instantProcessing.title")}
-                      </h4>
-                      <p className="text-gray-300 leading-relaxed mb-6">
-                        {t("Features.instantProcessing.description")}
-                      </p>
-                      <ul className="space-y-3">
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.instantProcessing.list1")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.instantProcessing.list2")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.instantProcessing.list3")}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 4 - QR Access */}
-              <div className="feature-card-wrapper">
-                <div className="flex flex-col md:flex-row-reverse items-center">
-                  <div className="feature-image-container md:w-3/5 relative mb-8 md:mb-0">
-                    <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#F5BE2D]/10">
-                      <div className="aspect-[16/9]">
-                        <Image
-                          src="/images/seamless-experience-qr.png"
-                          alt="QR Access"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-tl from-black/80 via-black/40 to-transparent"></div>
-                      <div className="absolute bottom-0 right-0 w-full p-6 md:p-10 text-right">
-                        <div className="flex items-center justify-end">
-                          <h3 className="text-3xl font-bold text-white mr-5">
-                            QR Access
-                          </h3>
-                          <div className="bg-[#F5BE2D]/20 backdrop-blur-md p-4 rounded-full">
-                            <QrCode className="h-8 w-8 text-[#F5BE2D]" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative elements */}
-                    <div className="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-[#F5BE2D]/30 rounded-full"></div>
-                    <div className="absolute -top-6 -right-6 w-20 h-20 border border-[#F5BE2D]/20 rounded-full"></div>
-                  </div>
-                  <div className="feature-content md:w-2/5 md:pr-16">
-                    <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 border border-gray-800 transform md:translate-x-[80px] hover:border-[#F5BE2D]/30 transition-all duration-500 shadow-lg">
-                      <h4 className="text-2xl font-semibold mb-4 text-white">
-                        {t("Features.seamlessExperience.title")}
-                      </h4>
-                      <p className="text-gray-300 leading-relaxed mb-6">
-                        {t("Features.seamlessExperience.description")}
-                      </p>
-                      <ul className="space-y-3">
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.seamlessExperience.list1")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.seamlessExperience.list2")}
-                        </li>
-                        <li className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-[#F5BE2D] rounded-full mr-3"></div>
-                          {t("Features.seamlessExperience.list3")}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Player Journey Section  */}
-      <section id="journey" className="relative bg-gradient-to-b from-blue-800/30 to-black/90 py-8 sm:py-12 scroll-mt-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12">
-            {t("journey.title")}
-          </h2>
-          <div className="relative flex flex-col sm:flex-row justify-between mt-8 sm:mt-12 px-0 sm:px-4 gap-8 sm:gap-0">
-            <div className="hidden sm:block absolute top-10 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 z-0"></div>
-            <div className="flex flex-row sm:flex-col items-start sm:items-center w-full sm:w-1/5 relative z-10">
-              <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-lg sm:text-2xl font-bold text-black mr-4 sm:mr-0 sm:mb-4 shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl relative group">
-                1
-                <div className="absolute inset-0 rounded-full border-2 border-yellow-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              </div>
-              <div className="text-left sm:text-center">
-                <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
-                  {t("journey.step1.heading")}
-                </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
-                  {t("journey.step1.description")}
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row sm:flex-col items-start sm:items-center w-full sm:w-1/5 relative z-10">
-              <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-lg sm:text-2xl font-bold text-black mr-4 sm:mr-0 sm:mb-4 shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl relative group">
-                2
-                <div className="absolute inset-0 rounded-full border-2 border-yellow-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              </div>
-              <div className="text-left sm:text-center">
-                <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
-                  {t("journey.step2.heading")}
-                </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
-                  {t("journey.step2.description")}
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row sm:flex-col items-start sm:items-center w-full sm:w-1/5 relative z-10">
-              <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-lg sm:text-2xl font-bold text-black mr-4 sm:mr-0 sm:mb-4 shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl relative group">
-                3
-                <div className="absolute inset-0 rounded-full border-2 border-yellow-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              </div>
-              <div className="text-left sm:text-center">
-                <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
-                  {t("journey.step3.heading")}
-                </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
-                  {t("journey.step3.description")}
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row sm:flex-col items-start sm:items-center w-full sm:w-1/5 relative z-10">
-              <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-lg sm:text-2xl font-bold text-black mr-4 sm:mr-0 sm:mb-4 shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl relative group">
-                4
-                <div className="absolute inset-0 rounded-full border-2 border-yellow-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              </div>
-              <div className="text-left sm:text-center">
-                <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
-                  {t("journey.step4.heading")}
-                </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
-                  {t("journey.step4.description")}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Experience Section */}
-      <section className="relative py-20 bg-gradient-to-r from-black/90 to-[#051937]/70 ">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className=" font-bold text-4xl text-white mb-8 relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-20 after:h-[3px] after:bg-gradient-to-r after:from-[#ffc107] after:to-[#fff7b00] after:shadow-[0_0_10px_rgba(255,193,7,0.5)]">
-                {t("start.title")}
-              </h2>
-              <p className="text-[#aaa] text-lg mb-8">
-                {t("start.description")}
-              </p>
-              <div className="bg-[#0a1128]/70 rounded-xl p-6 shadow-[0_8px_16px_rgba(0,0,0,0.3)] flex flex-col md:flex-row items-center text-center md:text-left">
-                <Image
-                  width={60}
-                  height={60}
-                  src="/images/player-avatar.jpg"
-                  alt="Player Avatar"
-                  className="w-16 h-16 rounded-full object-cover mr-0 md:mr-4 mb-4 md:mb-0 border-2 border-[#ffc107] shadow-[0_0_10px_rgba(255,193,7,0.3)]"
-                />
-                <div>
-                  <p className="text-white italic mb-2">
-                    {t("start.testimonial.quote")}
-                  </p>
-                  <p className="text-[#ffc107] font-medium text-sm not-italic">
-                    {t("start.testimonial.author")}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden">
-              <PadelCourtPreview />
-              <div className="absolute bottom-8 right-8 bg-black/70 p-4 rounded-lg flex flex-col items-center glow-yellow-box rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300">
-                <Image
-                  width={60}
-                  height={60}
-                  src="/images/qr-code.png"
-                  alt="QR —Access"
-                  className="w-24 h-24 mb-2 border-2 bg-white border-[#ffc107]"
-                />
-                <span className=" text-[#ffc107] text-sm uppercase tracking-wider">
-                  QR starten
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Static Highlight Preview */}
-      <div className="py-24 bg-gradient-to-b from-blue-800/30 to-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#F5BE2D]">
-                {t("action.title")}
-              </span>
-            </h2>
-            <p className="text-xl text-gray-400 mb-16 max-w-4xl mx-auto">
-              {t("action.description")}
-            </p>
-            <div className="mx-auto max-w-4xl">
-              <PadelCourtPreview />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Pilot Use Cases Section  */}
-      <section className="relative py-20 bg-gradient-to-b from-[#051937]/70 to-black/90">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className=" font-bold text-4xl text-center text-white mb-4 glow-yellow">
-            {t("pilot.title")}
-          </h2>
-          <p className="text-center text-[#aaa] text-lg mb-12 max-w-2xl mx-auto">
-            {t("pilot.description")}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-[#0a1128]/70 rounded-xl overflow-hidden shadow-[0_4px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3),0_0_20px_rgba(255,193,7,0.2)] hover:-translate-y-1 transition-all duration-300">
-              <div className="p-6">
-                <p className="font-bold text-lg text-white mb-2">
-                  {t("pilot.cards.players.title")}
-                </p>
-                <p className="text-[#aaa] text-sm">{t("pilot.cards.players.description")}</p>
-              </div>
-            </div>
-            <div className="bg-[#0a1128]/70 rounded-xl overflow-hidden shadow-[0_4px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3),0_0_20px_rgba(255,193,7,0.2)] hover:-translate-y-1 transition-all duration-300">
-              <div className="p-6">
-                <p className="font-bold text-lg text-white mb-2">
-                  {t("pilot.cards.coaches.title")}
-                </p>
-                <p className="text-[#aaa] text-sm">{t("pilot.cards.coaches.description")}</p>
-              </div>
-            </div>
-            <div className="bg-[#0a1128]/70 rounded-xl overflow-hidden shadow-[0_4px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3),0_0_20px_rgba(255,193,7,0.2)] hover:-translate-y-1 transition-all duration-300">
-              <div className="p-6">
-                <p className="font-bold text-lg text-white mb-2">
-                  {t("pilot.cards.clubs.title")}
-                </p>
-                <p className="text-[#aaa] text-sm">{t("pilot.cards.clubs.description")}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ProductModulesSection />
-
-      <PlayerCardsSection />
-
-      {/* 4. Court Operators & Partner Section */}
-      <div
-        id="apply"
-        className="py-24 bg-gradient-to-b from-black to-blue-800/30"
-      >
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#F5BE2D]">
-              {t("partners.title")}
-            </span>
-          </h2>
-          <p className="text-xl text-center text-gray-400 max-w-4xl mx-auto mb-20">
-            {t("partners.description")}
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-            {/* Monetization */}
-            <div className="group bg-gradient-to-br from-black to-gray-900 p-10 rounded-2xl border border-gray-800 hover:border-[#F5BE2D] transition-all duration-300 hover:shadow-2xl hover:shadow-[#F5BE2D]/20 hover:scale-105">
-              <div className="bg-[#F5BE2D]/20 p-4 rounded-full w-fit mb-8 group-hover:bg-[#F5BE2D]/30 transition-all duration-300">
-                <TrendingUp className="h-8 w-8 text-[#F5BE2D]" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-6 group-hover:text-[#F5BE2D] transition-colors">
-                {t("partners.monetization.title")}
-              </h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                {t("partners.monetization.description")}
-              </p>
-              <div className="h-1 w-24 bg-[#F5BE2D] rounded-full group-hover:w-40 transition-all duration-500"></div>
-            </div>
-
-            {/* Club Branding */}
-            <div className="group bg-gradient-to-br from-black to-gray-900 p-10 rounded-2xl border border-gray-800 hover:border-[#F5BE2D] transition-all duration-300 hover:shadow-2xl hover:shadow-[#F5BE2D]/20 hover:scale-105">
-              <div className="bg-[#F5BE2D]/20 p-4 rounded-full w-fit mb-8 group-hover:bg-[#F5BE2D]/30 transition-all duration-300">
-                <Award className="h-8 w-8 text-[#F5BE2D]" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-6 group-hover:text-[#F5BE2D] transition-colors">
-                {t("partners.clubBranding.title")}
-              </h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                {t("partners.clubBranding.description")}
-              </p>
-              <div className="h-1 w-24 bg-[#F5BE2D] rounded-full group-hover:w-40 transition-all duration-500"></div>
-            </div>
-
-            {/* Community Features */}
-            <div className="group bg-gradient-to-br from-black to-gray-900 p-10 rounded-2xl border border-gray-800 hover:border-[#F5BE2D] transition-all duration-300 hover:shadow-2xl hover:shadow-[#F5BE2D]/20 hover:scale-105">
-              <div className="bg-[#F5BE2D]/20 p-4 rounded-full w-fit mb-8 group-hover:bg-[#F5BE2D]/30 transition-all duration-300">
-                <ShieldCheck className="h-8 w-8 text-[#F5BE2D]" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-6 group-hover:text-[#F5BE2D] transition-colors">
-                {t("partners.communityFeatures.title")}
-              </h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                {t("partners.communityFeatures.description")}
-              </p>
-              <div className="h-1 w-24 bg-[#F5BE2D] rounded-full group-hover:w-40 transition-all duration-500"></div>
-            </div>
-          </div>
-
-          {/* Partner CTA */}
-          <div className="text-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#F5BE2D] hover:bg-[#F5BE2D]/90 text-black font-bold rounded-full px-12 py-6 text-lg shadow-2xl shadow-[#F5BE2D]/30 hover:shadow-[#F5BE2D]/50 transition-all duration-300 hover:scale-105"
-              >
-              <Link href={`/${locale}/contact`}>
-              {t("partners.applyButton")} <ArrowRight className="ml-3 h-6 w-6" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Button asChild size="lg" className="h-[52px] rounded-full bg-[#F5BE2D] px-7 font-bold text-black hover:bg-[#F7CC58]">
+      <Link href={href}>
+        {children}
+        <ArrowRight aria-hidden="true" className="h-4 w-4" />
+      </Link>
+    </Button>
   );
 }

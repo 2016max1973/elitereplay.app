@@ -1,30 +1,11 @@
 'use client'
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft } from "lucide-react"
 import {  useTranslations } from "next-intl"
 
 export default function ImprintPage() {
   const t = useTranslations("imprint")
    const currentYear = new Date().getFullYear()
   return (
-     <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="py-6 border-b border-gray-800">
-        <div className="container mx-auto px-4">
-          <Link href="/" className="flex items-center group">
-            <ArrowLeft className="h-5 w-5 mr-3 group-hover:text-[#F5BE2D] transition-colors" />
-            <Image
-              src="/images/elitereplay-logo.png"
-              alt={t('company.name')}
-              width={150}
-              height={75}
-              className="group-hover:opacity-80 transition-opacity"
-            />
-          </Link>
-        </div>
-      </header>
-
+     <div className="min-h-screen bg-black pt-[76px] text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
