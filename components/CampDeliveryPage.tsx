@@ -74,7 +74,7 @@ export default function CampDeliveryPage({
             </p>
             <p className="mt-5 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-relaxed text-gray-400">
               Wenn du ein Video entfernen lassen möchtest, schreibe an
-              info@elitereplay.es.
+              contact@elitereplay.de.
             </p>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function CampDeliveryPage({
           <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-gray-500">
             Diese Seite ist nur für Teilnehmer mit Direktlink gedacht. Bitte
             teile private Downloadlinks nicht öffentlich. Kontakt:
-            info@elitereplay.es
+            contact@elitereplay.de
           </p>
         </div>
         </section>

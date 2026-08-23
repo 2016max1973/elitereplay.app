@@ -64,10 +64,10 @@ export default async function ContactPage({ params }: PageProps) {
               <h2 className="mt-5 text-lg font-semibold">{t("clubForm.directTitle")}</h2>
               <p className="mt-2 text-sm leading-6 text-white/52">{t("clubForm.directText")}</p>
               <a
-                href="mailto:info@elitereplay.es"
+                href="mailto:contact@elitereplay.de"
                 className="mt-4 inline-block font-semibold text-[#F5BE2D] underline decoration-[#F5BE2D]/35 underline-offset-4"
               >
-                info@elitereplay.es
+                contact@elitereplay.de
               </a>
             </div>
 

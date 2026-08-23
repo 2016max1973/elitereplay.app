@@ -66,7 +66,7 @@ export default async function CampHighlightsPage({
 
           <div className="mx-auto mt-10 max-w-5xl rounded-2xl border border-[#F5BE2D]/30 bg-[#F5BE2D]/10 p-6 text-gray-200">
             Bitte teile private Downloadlinks nicht öffentlich. Wenn du ein
-            Video entfernen lassen möchtest, schreibe an info@elitereplay.es.
+            Video entfernen lassen möchtest, schreibe an contact@elitereplay.de.
           </div>
 
           <div className="mt-12 text-center">

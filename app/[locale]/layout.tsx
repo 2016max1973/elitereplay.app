@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import LocaleHtmlLangSync from "@/components/LocaleHtmlLangSync";
 import MarketingHeader from "@/components/MarketingHeader";
 import { locales, type Locale } from "@/i18n/config";
 import { NextIntlClientProvider } from "next-intl";
@@ -27,6 +28,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <LocaleHtmlLangSync locale={locale} />
       <MarketingHeader />
       {children}
       <Footer />

@@ -38,7 +38,7 @@ export default function ClubContactForm() {
       String(data.get("message") || "-"),
     ];
     const subject = t("emailSubject", { club: club || "ÉliteReplay" });
-    const mailto = `mailto:info@elitereplay.es?subject=${encodeURIComponent(
+    const mailto = `mailto:contact@elitereplay.de?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(lines.join("\n"))}`;
 
@@ -199,10 +199,10 @@ export default function ClubContactForm() {
             <Mail aria-hidden="true" className="mr-2 inline h-4 w-4 text-[#F5BE2D]" />
             {t("draftOpened")} {" "}
             <a
-              href="mailto:info@elitereplay.es"
+              href="mailto:contact@elitereplay.de"
               className="font-semibold text-[#F5BE2D] underline underline-offset-4"
             >
-              info@elitereplay.es
+              contact@elitereplay.de
             </a>
             .
           </div>

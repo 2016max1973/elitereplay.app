@@ -5,6 +5,7 @@ import { ArrowRight, CirclePlay } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 import MatchBoardVisual from "@/components/MatchBoardVisual";
+import PlayerButtonControlVisual from "@/components/PlayerButtonControlVisual";
 import { Button } from "@/components/ui/button";
 
 type PageProps = {
@@ -31,6 +32,19 @@ type ProductModule = {
 type HowStep = {
   number: string;
   title: string;
+  text: string;
+};
+
+type SimplicityItem = {
+  number: string;
+  label: string;
+  title: string;
+  text: string;
+};
+
+type PilotItem = {
+  number: string;
+  label: string;
   text: string;
 };
 
@@ -90,6 +104,8 @@ export default async function LandingPage({ params }: PageProps) {
   const experienceSteps = t.raw("action.steps") as ExperienceStep[];
   const products = t.raw("products.items") as ProductModule[];
   const howSteps = t.raw("how.steps") as HowStep[];
+  const simplicityItems = t.raw("simplicity.items") as SimplicityItem[];
+  const pilotItems = t.raw("pilot.items") as PilotItem[];
 
   return (
     <main id="content" className="club-home min-h-screen overflow-hidden bg-[#050505] pt-[76px] text-white">
@@ -276,8 +292,20 @@ export default async function LandingPage({ params }: PageProps) {
                   <h3 className="mt-5 text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-6xl">{product.title}</h3>
                   <p className="mt-6 max-w-xl text-lg leading-8 text-white/58">{product.text}</p>
                   {product.detail ? <p className="mt-6 max-w-xl border-l border-[#F5BE2D]/60 pl-5 text-sm leading-6 text-white/40">{product.detail}</p> : null}
+                  {index === 0 ? (
+                    <Button
+                      asChild
+                      size="lg"
+                      className="mt-7 h-[48px] rounded-full bg-[#F5BE2D] px-6 font-bold text-black hover:bg-[#F7CC58]"
+                    >
+                      <Link href={`/${locale}/matchboard`}>
+                        {t("products.matchboardCta")}
+                        <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                  ) : null}
                 </div>
-                <ProductVisual index={index} t={t} />
+                {index === 0 ? <PlayerButtonControlVisual locale={locale} /> : <ProductVisual index={index} t={t} />}
               </article>
             ))}
           </div>
@@ -307,7 +335,17 @@ export default async function LandingPage({ params }: PageProps) {
           <div className="home-reveal lg:justify-self-end">
             <div className="border-y border-[#F5BE2D]/55 py-8 text-center sm:px-14 sm:py-12">
               <p className="text-xs font-bold uppercase tracking-[0.34em] text-white/48">{t("sponsor.presentedBy")}</p>
-              <p className="mt-5 text-4xl font-black tracking-[0.12em] sm:text-6xl">{t("sponsor.exampleBrand")}</p>
+              <div className="mt-5 flex items-center justify-center gap-3 sm:gap-4">
+                <span
+                  aria-hidden="true"
+                  className="relative h-7 w-7 shrink-0 rotate-45 border border-white/70 sm:h-9 sm:w-9"
+                >
+                  <span className="absolute inset-[5px] border border-white/35 sm:inset-[7px]" />
+                </span>
+                <p className="whitespace-nowrap text-[clamp(1.65rem,7.8vw,3.75rem)] font-black tracking-[0.1em]">
+                  {t("sponsor.exampleBrand")}
+                </p>
+              </div>
               <p className="mt-8 text-xs font-bold uppercase tracking-[0.28em] text-[#F5BE2D]">{t("sponsor.exampleMoment")}</p>
             </div>
             <p className="mt-4 text-center text-[0.62rem] uppercase tracking-[0.16em] text-white/32">{t("sponsor.pilotNote")}</p>
@@ -333,7 +371,47 @@ export default async function LandingPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section id="pilot" className="relative isolate overflow-hidden py-28 text-center sm:py-40 lg:py-52">
+      <section className="border-y border-white/10 bg-[#070A10] py-20 sm:py-28 lg:py-32">
+          <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-20">
+              <div>
+                <Eyebrow>{t("simplicity.eyebrow")}</Eyebrow>
+                <h2 className="mt-6 text-balance text-[clamp(3rem,6vw,6.2rem)] font-semibold leading-[0.9] tracking-[-0.06em]">
+                  {t("simplicity.title")}
+                </h2>
+              </div>
+              <div className="lg:pb-2">
+                <p className="text-balance text-2xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-3xl">
+                  {t("simplicity.subline")}
+                </p>
+                <p className="mt-5 max-w-2xl text-base leading-7 text-white/58 sm:text-lg sm:leading-8">
+                  {t("simplicity.intro")}
+                </p>
+              </div>
+            </div>
+
+            <ol className="mt-14 grid border-t border-white/12 sm:mt-20 md:grid-cols-2 md:gap-x-10 xl:grid-cols-4">
+              {simplicityItems.map((item) => (
+                <li key={item.number} className="border-b border-white/12 py-8 sm:py-10">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/48">
+                    <span className="text-[#F5BE2D]">{item.number}</span>
+                    <span aria-hidden="true"> — </span>
+                    {item.label}
+                  </p>
+                  <h3 className="mt-7 text-2xl font-semibold leading-tight tracking-[-0.035em] text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-6 text-white/56 sm:text-base sm:leading-7">{item.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+      </section>
+
+      <section
+        id="pilot"
+        className="relative isolate overflow-hidden border-t border-white/10 py-20 sm:py-28 lg:py-32"
+      >
         <Image
           src="/images/matchboard-real-reference.jpg"
           alt={t("pilot.imageAlt")}
@@ -341,27 +419,54 @@ export default async function LandingPage({ params }: PageProps) {
           sizes="100vw"
           className="-z-30 object-cover object-center opacity-48"
         />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(0deg,rgba(3,3,3,0.98),rgba(3,3,3,0.68)_52%,rgba(3,3,3,0.94))]" />
-        <div className="home-reveal mx-auto max-w-6xl px-4 sm:px-6">
-          <Eyebrow>{t("pilot.eyebrow")}</Eyebrow>
-          <h2 className="mt-6 text-balance text-[clamp(3.1rem,7.2vw,7rem)] font-semibold leading-[0.91] tracking-[-0.06em]">{t("pilot.title")}</h2>
-          <p className="mx-auto mt-7 max-w-2xl text-xl leading-8 text-white/64 sm:text-2xl sm:leading-9">{t("pilot.text")}</p>
-          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-            <PrimaryButton href={`/${locale}/contact`}>{t("pilot.primary")}</PrimaryButton>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="h-[52px] rounded-full border-white/24 bg-black/30 px-7 font-bold text-white backdrop-blur-md hover:border-white/50 hover:bg-white/10 hover:text-white"
-            >
-              <Link href={`/${locale}#experience`}>{t("pilot.secondary")}</Link>
-            </Button>
-          </div>
-          <div className="mt-16 flex flex-col items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-white/34 sm:flex-row sm:gap-8">
-            <span>{t("pilot.brandClaim")}</span>
-            <span className="hidden h-px w-8 bg-white/20 sm:block" />
-            <span>{t("pilot.trophyClaim")}</span>
-          </div>
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(3,4,7,0.98)_0%,rgba(3,4,7,0.91)_58%,rgba(3,4,7,0.76)_100%),linear-gradient(0deg,rgba(3,3,3,0.98),transparent_48%,rgba(3,3,3,0.92))]" />
+
+        <div className="home-reveal mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end lg:gap-20">
+              <div>
+                <Eyebrow>{t("pilot.eyebrow")}</Eyebrow>
+                <h2 className="mt-6 max-w-4xl text-balance text-[clamp(3rem,6vw,6.3rem)] font-semibold leading-[0.9] tracking-[-0.06em]">
+                  {t("pilot.title")}
+                </h2>
+              </div>
+              <p className="max-w-2xl text-base leading-7 text-white/64 sm:text-lg sm:leading-8 lg:pb-2">
+                {t("pilot.intro")}
+              </p>
+            </div>
+
+            <ol className="mt-14 grid border-y border-white/14 sm:mt-20 lg:grid-cols-3">
+              {pilotItems.map((item, index) => (
+                <li
+                  key={item.number}
+                  className={`border-b border-white/12 py-8 last:border-b-0 sm:py-10 lg:border-b-0 lg:px-10 lg:py-12 ${
+                    index === 0
+                      ? "lg:pl-0"
+                      : index === 2
+                        ? "lg:border-l lg:border-[#F5BE2D]/35 lg:pr-0"
+                        : "lg:border-l lg:border-white/12"
+                  }`}
+                >
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F5BE2D]">
+                    {item.number}
+                  </p>
+                  <h3
+                    className={`mt-7 text-xl font-semibold uppercase leading-tight tracking-[0.02em] sm:text-2xl ${
+                      index === 2 ? "text-[#F5D26A]" : "text-white"
+                    }`}
+                  >
+                    {item.label}
+                  </h3>
+                  <p className="mt-4 max-w-sm text-sm leading-6 text-white/56 sm:text-base sm:leading-7">
+                    {item.text}
+                  </p>
+                </li>
+              ))}
+            </ol>
+
+            <div className="mt-10 flex flex-col items-start sm:mt-12">
+              <PrimaryButton href={`/${locale}/contact`}>{t("pilot.primary")}</PrimaryButton>
+              <p className="mt-4 text-sm leading-6 text-white/48">{t("pilot.note")}</p>
+            </div>
         </div>
       </section>
     </main>
