@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import type React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
 import { ArrowRight, CheckCircle, Loader2, ArrowLeft, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -25,14 +25,6 @@ export default function StartSessionPage() {
   const [sessionCode, setSessionCode] = useState("")
   const locale = useLocale();
   const t = useTranslations("recording");
-  useEffect(() => {
-    // Try to get email from localStorage
-    const savedEmail = localStorage.getItem("eliteReplayEmail")
-    if (savedEmail) {
-      setEmail(savedEmail)
-    }
-  }, [])
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -45,7 +37,7 @@ export default function StartSessionPage() {
         throw new Error("Please enter a valid email address")
       }
 
-      // Make API call to start session
+      // Create the technical test-session record. This does not start a recorder.
       const response = await fetch("/api/start-session", {
         method: "POST",
         headers: {
@@ -69,13 +61,10 @@ export default function StartSessionPage() {
       // Show success message
       setIsSuccess(true)
 
-      // Store email in localStorage for future use
-      localStorage.setItem("eliteReplayEmail", email)
-
       // Show toast notification
       toast({
-        title: "Session Started",
-        description: "Your recording session has been started successfully.",
+        title: "Test session created",
+        description: "No recording or highlight pipeline has been started.",
       })
 
       // After 5 seconds, redirect to the session page if we have a session code
@@ -163,6 +152,16 @@ export default function StartSessionPage() {
                     disabled={isSubmitting || !courtId}
                   />
                   <p className="mt-3 text-sm text-gray-400">{t("session.emailDescription")}</p>
+                  <p className="mt-2 text-sm text-gray-500">
+                    {t("session.privacyPrefix")} {" "}
+                    <Link
+                      href={`/${locale}/privacy`}
+                      className="font-semibold text-[#F5BE2D] underline underline-offset-4"
+                    >
+                      {t("session.privacyLink")}
+                    </Link>
+                    .
+                  </p>
                 </div>
 
                 <Button

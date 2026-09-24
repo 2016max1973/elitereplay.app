@@ -368,10 +368,10 @@
       },
       "instantProcessing": {
         "title": "Procesamiento Instantáneo",
-        "description": "Nuestros dispositivos NVIDIA Jetson Orin in situ procesan tu video localmente en tiempo real, garantizando una generación de video de alta calidad instantánea sin retrasos ni dependencias de la nube.",
+        "description": "Los pilotos pueden combinar módulos en pista con entrega alojada. El lugar de tratamiento y el flujo se definen para el uso concreto.",
         "list1": "Procesamiento de video en tiempo real",
         "list2": "Computación de IA de alto rendimiento",
-        "list3": "No se requiere carga en la nube"
+        "list3": "Alojamiento y entrega adaptados al uso"
       },
       "journey":{
         "title": "Tu recorrido con ÉliteReplay"
@@ -600,7 +600,7 @@
         "title": "Diseñado para la operación real de una pista.",
         "text": "La tecnología queda en segundo plano. El club obtiene un funcionamiento controlable, una experiencia clara y procesos comprensibles.",
         "points": {
-          "local": { "title": "Local-first", "text": "Las funciones centrales están diseñadas para operar sin dependencia permanente de la nube." },
+          "local": { "title": "Según la configuración", "text": "Los módulos en pista y la entrega alojada pueden combinarse en cada piloto; el flujo real se define para cada uso." },
           "configuration": { "title": "Configuración de club y pista", "text": "La experiencia se adapta a cada ubicación y caso de uso." },
           "branding": { "title": "Branding controlable", "text": "La presencia del club y sus partners forma parte de un diseño gestionado conscientemente." },
           "privacy": { "title": "Privacidad y consentimiento", "text": "Acceso, consentimiento y uso deben ser comprensibles para el club y los jugadores." },
@@ -755,7 +755,7 @@
       "messagePlaceholder": "¿Qué te gustaría conseguir con ÉliteReplay en tu pista?",
       "privacyPrefix": "He leído la ",
       "privacyLink": "política de privacidad",
-      "privacySuffix": " y acepto que contacten conmigo.",
+      "privacySuffix": ".",
       "submit": "Abrir borrador de correo",
       "deliveryNote": "No se envía ni almacena nada automáticamente en la web.",
       "draftOpened": "Tu aplicación de correo se ha abierto. Envía el borrador preparado. Si no se ha abierto, escribe a ",
@@ -764,187 +764,231 @@
     }
   },
   "recording": {
-      "title": "Iniciar Grabación",
-      "description": "Listo para capturar tu juego en la cancha: demo123",
+      "title": "Crear una sesión de prueba",
+      "description": "Acceso técnico de demo/piloto para la pista:",
       "session": {
-        "title": "Inicia Tu Sesión",
+        "title": "Crear una sesión de prueba",
         "emailLabel": "Dirección de Correo",
-        "emailDescription": "Enviamos tu video destacado a este correo",
-        "button": "Iniciar Sesión"
+        "emailDescription": "El correo se guarda con la sesión de prueba; esto no inicia una grabación.",
+        "privacyPrefix": "Los detalles de almacenamiento y los plazos aún abiertos se explican en la",
+        "privacyLink": "política de privacidad",
+        "button": "Crear sesión de prueba"
       },
       "courtNotFound": {
         "title": "Cancha No Encontrada",
         "message": "ID de cancha no encontrada. Por favor, escanee el código QR nuevamente."
       },
       "success": {
-        "title": "¡Sesión Iniciada!",
-        "description": "Tu sesión de grabación está en marcha. Recibirás tu video destacado pronto en {email}.",
-        "encouragement": "¡Juega tu mejor partido! Nuestra IA está observando y capturará todos tus momentos destacados.",
-        "viewButton": "Ver Tu Sesión",
+        "title": "Sesión de prueba creada",
+        "description": "La sesión de prueba se creó para este correo:",
+        "encouragement": "Esta demo solo guarda los datos de la sesión. No hay grabador, flujo de consentimiento ni tratamiento de highlights conectado.",
+        "viewButton": "Ver sesión de prueba",
         "closeButton": "Cerrar Esta Ventana"
       }
     },
     "imprint": {
+      "meta": {
+        "title": "Aviso legal",
+        "description": "Identificación del prestador e información legal de ÉliteReplay."
+      },
       "title": "Aviso legal",
-      "subtitle": "Información legal y detalles de la empresa",
-      "company": {
-        "title": "Información de la Empresa",
-        "name": "ÉliteReplay Inc.",
-        "address": "123 Innovation Drive, San Francisco, CA 94105, Estados Unidos"
-      },
-      "contact": {
-        "title": "Información de Contacto",
-        "email": "contact@elitereplay.de",
-        "phone": "+1 (555) 123-4567",
-        "website": "www.elitereplay.com"
-      },
-      "legal": {
-        "title": "Representantes Legales",
-        "ceo": "CEO: Oliver Schmidt",
-        "cto": "CTO: Dra. Sarah Johnson",
-        "legalCounsel": "Asesoría Legal: Martinez & Associates LLP"
-      },
-      "registration": {
-        "title": "Detalles de Registro",
-        "companyType": "Corporación de Delaware",
-        "registrationNumber": "7891234",
-        "taxId": "12-3456789",
-        "founded": "2024"
-      },
-      "responsible": {
-        "title": "Responsable del Contenido",
-        "name": "Oliver Schmidt",
-        "position": "CEO, ÉliteReplay Inc.",
-        "address": "123 Innovation Drive, San Francisco, CA 94105",
-        "email": "oliver@elitereplay.com"
-      },
-      "disclaimer": {
-        "title": "Descargo de Responsabilidad",
-        "text": "La información en este sitio web se proporciona de buena fe y con fines informativos generales únicamente. No ofrecemos garantías sobre la completitud, confiabilidad y exactitud de esta información. Cualquier acción que tome basada en la información de este sitio web es estrictamente bajo su propio riesgo, y no seremos responsables por pérdidas o daños en relación con el uso de nuestro sitio web."
-      },
-      "copyright": {
-        "title": "Aviso de Derechos de Autor",
-        "text": "© {year} ÉliteReplay Inc. Todos los derechos reservados. El contenido, diseño, gráficos y otros materiales en este sitio web están protegidos por leyes de derechos de autor, marcas registradas y otras leyes de propiedad intelectual. No puede reproducir, distribuir ni crear obras derivadas de ningún contenido en este sitio web sin nuestro permiso escrito expreso."
-      },
-      "thirdParty": {
-        "title": "Enlaces de Terceros",
-        "text": "Nuestro sitio web puede contener enlaces a sitios web de terceros. Estos enlaces se proporcionan solo para su conveniencia. No tenemos control sobre el contenido de estos sitios web y no aceptamos responsabilidad por ellos ni por ninguna pérdida o daño que pueda surgir de su uso."
-      },
-      "lastUpdated": "Última actualización: Enero 2025"
+      "subtitle": "Información del prestador de elitereplay.de",
+      "lastUpdated": "Última actualización: 24 de septiembre de 2026",
+      "sections": [
+        {
+          "title": "Prestador",
+          "paragraphs": [
+            "Oliver Reifgens, que actúa bajo el nombre comercial ÉliteReplay, trabajador autónomo en España.",
+            "Domicilio profesional: Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España."
+          ]
+        },
+        {
+          "title": "Contacto",
+          "items": [
+            "Correo electrónico: contact@elitereplay.de",
+            "Sitio web: https://elitereplay.de"
+          ]
+        },
+        {
+          "title": "Forma jurídica y servicios",
+          "paragraphs": [
+            "ÉliteReplay es el nombre comercial del empresario individual Oliver Reifgens y no es una sociedad mercantil.",
+            "El sitio web informa sobre ÉliteReplay, MatchBoard, servicios de highlights y proyectos piloto acordados individualmente. Actualmente no existe una tienda en línea general ni se procesan pagos a través de este sitio. Los precios, impuestos y posibles costes adicionales se indican en la oferta correspondiente antes de celebrar un contrato."
+          ]
+        },
+        {
+          "title": "Responsable del contenido",
+          "paragraphs": [
+            "Oliver Reifgens, en el domicilio y con los datos de contacto indicados anteriormente."
+          ]
+        },
+        {
+          "title": "Enlaces externos",
+          "paragraphs": [
+            "Los respectivos operadores son responsables del contenido de los sitios web externos. Al crear un enlace se comprueba que el destino no presente infracciones legales manifiestas; no se realiza una supervisión permanente sin un motivo concreto."
+          ]
+        },
+        {
+          "title": "Propiedad intelectual",
+          "paragraphs": [
+            "Los contenidos y obras de este sitio están sujetos a la normativa aplicable sobre propiedad intelectual y marcas. Cualquier uso fuera de los límites legales requiere la autorización previa del titular correspondiente."
+          ]
+        }
+      ]
     },
     "privacy": {
-      "title": "Política de Privacidad",
-      "subtitle": "Cómo recopilamos, usamos y protegemos tu información",
-      "effectiveDate": "Fecha de entrada en vigor: 1 de enero de 2025",
-      "lastUpdated": "Última actualización: 1 de enero de 2025",
-      "sections": {
-        "introduction": {
-          "title": "1. Introducción",
-          "text": "Bienvenido a ÉliteReplay ('nosotros', 'nuestro' o 'nos'). Estamos comprometidos a proteger tu privacidad y garantizar la seguridad de tu información personal. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando usas nuestro servicio de highlights deportivos con inteligencia artificial, incluyendo nuestro sitio web, aplicaciones móviles y servicios relacionados (colectivamente, el 'Servicio')."
+      "meta": {
+        "title": "Política de privacidad",
+        "description": "Política de privacidad del sitio de ÉliteReplay, las consultas y los servicios en línea acreditados."
+      },
+      "title": "Política de privacidad",
+      "subtitle": "Qué se trata realmente en el sitio web y en los servicios acreditados de ÉliteReplay",
+      "lastUpdated": "Última actualización: 24 de septiembre de 2026",
+      "sections": [
+        {
+          "title": "1. Responsable y ámbito",
+          "paragraphs": [
+            "El responsable es Oliver Reifgens, que actúa bajo el nombre comercial ÉliteReplay, Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España. Contacto para consultas de privacidad y derechos: contact@elitereplay.de.",
+            "Esta política se aplica a https://elitereplay.de, a los canales de contacto ofrecidos allí y a las funciones de entrega acreditadas en este dominio. Un club, evento, uso de MatchBoard, grabación, aplicación o pase Wallet concreto puede requerir información adicional que prevalezca para ese tratamiento."
+          ]
         },
-        "informationCollected": {
-          "title": "2. Información que Recopilamos",
-          "personal": {
-            "title": "2.1 Información Personal",
-            "text": "Podemos recopilar la siguiente información personal:",
-            "item1": "Direcciones de correo electrónico para entrega de videos y comunicación",
-            "item2": "Nombre e información de contacto cuando nos contactas",
-            "item3": "Información de pago para servicios premium (procesada de forma segura por proveedores externos)",
-            "item4": "Información de cuenta si creas una cuenta con nosotros"
-          },
-          "videoData": {
-            "title": "2.2 Datos de Video e Imagen",
-            "text": "Nuestro servicio procesa grabaciones de video de instalaciones deportivas para crear resúmenes destacados. Esto puede incluir:",
-            "item1": "Imágenes de actividades deportivas",
-            "item2": "Imágenes extraídas del video para análisis con IA",
-            "item3": "Datos biométricos derivados del análisis de movimiento (anonimizados)"
-          },
-          "technical": {
-            "title": "2.3 Información Técnica",
-            "item1": "Información y identificadores del dispositivo",
-            "item2": "Direcciones IP y datos de ubicación",
-            "item3": "Datos de uso y análisis",
-            "item4": "Cookies y tecnologías de seguimiento similares"
-          }
+        {
+          "title": "2. Separación de los servicios",
+          "subsections": [
+            {
+              "title": "Sitio web",
+              "paragraphs": [
+                "El sitio público informa sobre ÉliteReplay y permite realizar consultas. La mera visita no crea una cuenta de jugador ni constituye consentimiento para grabar, crear highlights, publicar o hacer marketing."
+              ]
+            },
+            {
+              "title": "MatchBoard, grabaciones y highlights",
+              "paragraphs": [
+                "Los flujos de MatchBoard y highlights se configuran por separado para pilotos o clubes concretos. Según el uso, pueden tratar nombres o nombres visibles, asignación de equipo y pista, datos del partido y marcador, momentos temporales, marcas de momentos e imágenes o grabaciones de vídeo.",
+                "La participación y los datos del partido, la grabación, la entrega personal de highlights y la publicación o el marketing son finalidades distintas. Antes de cada uso, un aviso propio debe concretar la base jurídica, los roles de ÉliteReplay y del club u organizador, los destinatarios y los plazos. Una consulta web no sustituye esa información ni ninguna de esas decisiones."
+              ]
+            },
+            {
+              "title": "Wallet",
+              "paragraphs": [
+                "El sitio web no integra actualmente un servicio Wallet productivo ni sincroniza datos de miembros de Wallet. Las implementaciones locales de prueba para pases de Apple Wallet no son un servicio productivo ofrecido a través de esta web. Un lanzamiento real exigiría su propio aviso sobre Apple/APNs, alojamiento y eliminación."
+              ]
+            },
+            {
+              "title": "Aplicación para entrenadores",
+              "paragraphs": [
+                "La aplicación nativa TrainerReplay/Capture está técnicamente separada del sitio web. El código del sitio no acredita una distribución pública en App Store ni sincronización de cuentas o nube con esta web. Una entrega real o grabación por un entrenador exige avisos propios de app, cámara, micrófono y grabación; el análisis local de postura o movimiento no debe describirse como identificación biométrica ni entrenamiento de IA."
+              ]
+            }
+          ]
         },
-        "useInformation": {
-          "title": "3. Cómo Usamos Tu Información",
-          "text": "Usamos tu información para:",
-          "item1": "Proporcionar y mejorar nuestro servicio de generación de highlights con IA",
-          "item2": "Entregar contenido de video personalizado a tu dirección de correo especificada",
-          "item3": "Procesar pagos y gestionar tu cuenta",
-          "item4": "Comunicarnos contigo sobre nuestros servicios",
-          "item5": "Analizar patrones de uso para mejorar nuestra tecnología",
-          "item6": "Garantizar la seguridad y prevenir el fraude",
-          "item7": "Cumplir con obligaciones legales"
+        {
+          "title": "3. Acceso al sitio y alojamiento",
+          "items": [
+            "Datos: dirección IP, ruta solicitada, fecha y hora, datos HTTP de solicitud y respuesta e información técnica del navegador, dispositivo, referente y errores, en la medida en que se transmitan al acceder o los registre el proveedor.",
+            "Finalidad: servir el sitio, mantener su estabilidad, diagnosticar errores y detectar usos indebidos o ataques.",
+            "Base jurídica: artículo 6.1.f del RGPD; el interés legítimo es el funcionamiento seguro y fiable del sitio.",
+            "Destinatario: Vercel Inc. y sus subencargados como proveedores de alojamiento e infraestructura.",
+            "Conservación: Vercel pone los logs de ejecución a disposición durante el periodo que depende del plan y de las funciones. El código del sitio no fija un plazo adicional ni un archivo propio de logs. Los registros preservados por un incidente concreto solo se mantienen después durante el tiempo necesario para investigarlo y ejercer o defender reclamaciones.",
+            "Carácter necesario: estos datos técnicos son necesarios para acceder; sin ellos no se puede transmitir el sitio."
+          ]
         },
-        "dataProcessing": {
-          "title": "4. Procesamiento de Datos y Tecnología de IA",
-          "text": "Nuestros sistemas de IA procesan datos de video localmente en dispositivos edge (NVIDIA Jetson Orin) instalados en instalaciones deportivas. Este enfoque asegura:",
-          "item1": "Transmisión mínima de datos a través de redes",
-          "item2": "Procesamiento en tiempo real sin dependencia de la nube",
-          "item3": "Mayor privacidad mediante procesamiento local",
-          "item4": "Eliminación automática de grabaciones sin procesar después de generar highlights"
+        {
+          "title": "4. Consultas de contacto y pilotos de club por correo",
+          "items": [
+            "Datos: nombre, correo electrónico, club u organización, función, ubicación, número de pistas, uso solicitado, mensaje y metadatos de la comunicación por correo.",
+            "Flujo: el formulario no envía nada a un servidor web. Crea un borrador en el navegador que usted mismo envía con su aplicación de correo. Solo el envío transmite los datos.",
+            "Datos obligatorios: el nombre, el club u organización y el correo son necesarios para el borrador; la función, ubicación, número de pistas, uso y mensaje son voluntarios. Sin los datos obligatorios el formulario no puede crear un borrador dirigido de forma útil; también puede escribir directamente a contact@elitereplay.de.",
+            "Finalidad y base jurídica: responder y adoptar medidas precontractuales conforme al artículo 6.1.b del RGPD; para consultas en nombre de una organización, también artículo 6.1.f y el interés en la comunicación empresarial.",
+            "Destinatarios: su proveedor de correo, united-domains GmbH como proveedor del buzón de ÉliteReplay y únicamente las personas de ÉliteReplay que atienden la consulta.",
+            "Conservación: el sitio no guarda el borrador. Los mensajes enviados permanecen hasta cerrar la consulta y, si generan un contrato o justificante, durante los plazos legales de documentación y prescripción aplicables en el buzón o las copias de seguridad. La base es el artículo 6.1.c del RGPD para obligaciones legales y el artículo 6.1.f para prueba y defensa jurídica. No consta un plazo de borrado automático.",
+            "El formulario no produce un alta automática en boletines. La publicidad electrónica solo se envía cuando existe una base jurídica aplicable y puede cancelarse gratuitamente en cualquier momento."
+          ]
         },
-        "dataSharing": {
-          "title": "5. Compartir y Divulgación de Datos",
-          "text": "Podemos compartir tu información en las siguientes circunstancias:",
-          "item1": "Con tu consentimiento: Cuando acuerdes explícitamente compartir tu información",
-          "item2": "Proveedores de servicios: Proveedores externos que nos ayudan a proporcionar nuestros servicios",
-          "item3": "Instalaciones deportivas: Las instalaciones asociadas pueden recibir análisis agregados y anonimizados",
-          "item4": "Requisitos legales: Cuando sea requerido por la ley o para proteger nuestros derechos",
-          "item5": "Transferencias de negocio: En relación con fusiones, adquisiciones o ventas de activos"
+        {
+          "title": "5. Consultas de PadelHouse por WhatsApp",
+          "items": [
+            "Datos: nombre y correo, y opcionalmente nivel de juego y mes preferido. Si abre WhatsApp o envía el mensaje, WhatsApp también trata en particular el número de teléfono, datos del perfil, mensaje y metadatos de comunicación, y datos del dispositivo, conexión y uso conforme a su propia política.",
+            "Flujo: solo después de su acción el formulario abre un enlace wa.me preparado. Entonces los datos introducidos se entregan a WhatsApp; allí decide si envía el mensaje.",
+            "Datos obligatorios: nombre y correo son necesarios para el texto preparado; nivel y mes son voluntarios. Sin los datos obligatorios el formulario no se puede enviar. Puede usar contact@elitereplay.de como alternativa sin WhatsApp.",
+            "Finalidad y base jurídica: tramitar la consulta solicitada sobre el camp piloto y medidas precontractuales conforme al artículo 6.1.b del RGPD.",
+            "Destinatarios: WhatsApp Ireland Limited y las demás empresas de Meta y proveedores indicados en la política de WhatsApp. Alternativa sin WhatsApp: contact@elitereplay.de.",
+            "Conservación: ÉliteReplay conserva el chat según los mismos criterios que una consulta. El almacenamiento adicional de WhatsApp se rige por sus ajustes, contratos y avisos; ÉliteReplay no puede prometer un plazo fijo propio para ese almacenamiento.",
+            "Política de privacidad de WhatsApp: https://www.whatsapp.com/legal/privacy-policy-eea"
+          ]
         },
-        "dataSecurity": {
-          "title": "6. Seguridad de Datos",
-          "text": "Implementamos medidas de seguridad estándar de la industria para proteger tu información, incluyendo: cifrado en tránsito y en reposo, infraestructura de cómputo edge segura, auditorías de seguridad regulares, controles de acceso y autenticación, y políticas de eliminación automática de datos."
+        {
+          "title": "6. Inicio de sesión experimental",
+          "paragraphs": [
+            "Una ruta técnica de inicio publicada es una implementación de demo/piloto, no prueba de un sistema productivo de grabación o highlights. Si se utiliza, trata correo electrónico, ID de pista, código de sesión, fecha de creación, estado y campos técnicamente vacíos de highlights/consentimiento."
+          ],
+          "items": [
+            "Finalidad y base jurídica: crear la sesión de prueba solicitada expresamente, artículo 6.1.b del RGPD.",
+            "Destinatario: Vercel Inc. como proveedor de alojamiento; acceso mediante el enlace de sesión generado.",
+            "Datos obligatorios: técnicamente se exige un correo válido y un ID de pista habilitado. Sin ellos no se crea una sesión de prueba.",
+            "Conservación: el código usa un archivo JSON sin rutina de borrado automático. Por ello, este flujo no debe presentarse como servicio productivo con un plazo fijo; antes de usarlo en producción deben definirse lugar, plazo y proceso de eliminación.",
+            "Almacenamiento del navegador: tras esta corrección, el correo ya no se guarda en localStorage para visitas posteriores."
+          ]
         },
-        "dataRetention": {
-          "title": "7. Retención de Datos",
-          "text": "Retenemos tu información de la siguiente manera:",
-          "item1": "Grabaciones de video sin procesar: Eliminadas dentro de las 24 horas posteriores al procesamiento",
-          "item2": "Videos destacados: Almacenados por 90 días a menos que solicites una retención más larga",
-          "item3": "Información personal: Retenida mientras sea necesario para proporcionar servicios",
-          "item4": "Datos de análisis: Anonimizados y retenidos para mejorar el servicio"
+        {
+          "title": "7. Entrega de highlights y medios mediante enlace",
+          "items": [
+            "Datos: archivos de vídeo e imagen autorizados y, si figuran en el conjunto correspondiente, ID de partido, título, nombres o nombres visibles, asignación de equipo/pista, marcador e información de momentos.",
+            "Finalidad y base jurídica: entregar momentos de partido o camp acordados. Cuando la entrega personal forma parte de una oferta solicitada por la persona, se aplica el artículo 6.1.b del RGPD. La grabación, publicación y marketing son finalidades separadas y, en configuraciones basadas en consentimiento, solo pueden realizarse con un consentimiento separado conforme al artículo 6.1.a. Los encargos de club o evento deben fijar los roles y cualquier base distinta en su aviso al participante.",
+            "Destinatarios y acceso: Vercel Inc. para el sitio y Vercel Blob, y cualquiera que reciba o adivine una URL de entrega o de Blob. Las rutas de highlight y partido no exigen inicio de sesión y algunos ID son previsibles. La clave del enlace del camp dificulta el acceso, pero no es una autenticación personal. Por tanto, las URL no deben entenderse como privadas ni limitadas exclusivamente a destinatarios autorizados.",
+            "Conservación: el código no configura borrado automático ni un plazo fijo para los archivos Blob. Permanecen disponibles hasta su eliminación manual. Todavía no consta una fecha concreta por entrega ni un proceso operativo de borrado; necesidades legales de prueba o defensa pueden justificar una conservación adicional limitada.",
+            "El uso para comunicación pública del club, patrocinio u otro marketing solo tiene lugar mediante una decisión separada y específica, nunca por el mero hecho de visitar el sitio."
+          ]
         },
-        "yourRights": {
-          "title": "8. Tus Derechos",
-          "text": "Dependiendo de tu ubicación, puedes tener los siguientes derechos:",
-          "item1": "Acceso a tu información personal",
-          "item2": "Corrección de información inexacta",
-          "item3": "Eliminación de tu información personal",
-          "item4": "Portabilidad de tus datos",
-          "item5": "Objeción al procesamiento",
-          "item6": "Retiro de consentimiento",
-          "contact": "Para ejercer estos derechos, por favor contáctanos en privacy@elitereplay.com."
+        {
+          "title": "8. Cookies, almacenamiento del navegador, analítica y medios",
+          "items": [
+            "Idioma: el idioma forma parte de la ruta URL. La cookie NEXT_LOCALE que antes se establecía por defecto está desactivada en la configuración corregida.",
+            "Analítica y publicidad: el código activo no incorpora etiquetas de analítica, publicidad ni perfilado.",
+            "Almacenamiento del navegador: la página experimental de inicio ya no guarda el correo de forma persistente. No se acredita otro almacenamiento no necesario en las páginas activas revisadas.",
+            "Medios: las imágenes y vídeos generales se sirven desde la infraestructura de alojamiento del sitio. En páginas de camp desbloqueadas, las vistas previas y vídeos se cargan desde Vercel Blob. WhatsApp solo se abre tras un clic deliberado.",
+            "Si en el futuro se añaden cookies, SDK o rastreadores no necesarios, se bloquearán antes del consentimiento y se ofrecerá una opción de rechazo con igual visibilidad; esta política por sí sola no bastaría."
+          ]
         },
-        "internationalTransfers": {
-          "title": "9. Transferencias Internacionales de Datos",
-          "text": "Nuestros servicios pueden involucrar la transferencia de tu información a países fuera de tu residencia. Aseguramos que se implementen salvaguardas adecuadas para proteger tu información durante dichas transferencias, en cumplimiento con las leyes aplicables de protección de datos."
+        {
+          "title": "9. Destinatarios y transferencias internacionales",
+          "paragraphs": [
+            "Vercel Inc. es un proveedor estadounidense. Vercel declara que utiliza el Marco de Privacidad de Datos UE-EE. UU. para las transferencias cubiertas a Estados Unidos y, en los demás casos, las cláusulas contractuales tipo de la UE 2021/914. El tratamiento principal puede realizarse en Estados Unidos. Información: https://vercel.com/legal/privacy-notice y https://vercel.com/legal/dpa.",
+            "En el Espacio Económico Europeo, WhatsApp lo presta WhatsApp Ireland Limited. WhatsApp describe tratamiento mundial, incluido Estados Unidos, y señala el Marco de Privacidad de Datos UE-EE. UU. y las cláusulas contractuales tipo de la UE como mecanismos aplicables. Detalles: https://www.whatsapp.com/legal/privacy-policy-eea.",
+            "ÉliteReplay no presupone que el tratamiento se limite exclusivamente al EEE. La región de Vercel y los subencargados utilizados dependen de la configuración de la cuenta y de Blob; son aplicables los documentos actuales del proveedor enlazados arriba. El mero acceso de una persona fuera del EEE al sitio público no constituye por sí solo una comunicación iniciada por ÉliteReplay a un proveedor de ese país."
+          ]
         },
-        "childrensPrivacy": {
-          "title": "10. Privacidad de Menores",
-          "text": "Nuestros servicios no están dirigidos a niños menores de 13 años. No recopilamos intencionalmente información personal de niños menores de 13 años. Si crees que hemos recopilado información de un niño menor de 13 años, contáctanos de inmediato."
+        {
+          "title": "10. Seguridad, fuentes y decisiones automatizadas",
+          "paragraphs": [
+            "ÉliteReplay adopta medidas técnicas y organizativas adecuadas al riesgo. No afirmamos seguridad absoluta, cifrado de extremo a extremo en cada fase, auditorías regulares ni un lugar de tratamiento exclusivamente local.",
+            "Los datos proceden normalmente de usted, su navegador o, en un uso concreto de partido/club, del club u organizador participante, MatchBoard y los dispositivos de grabación. Si no se obtienen directamente de usted, el aviso del producto o evento debe indicar también la fuente y las categorías.",
+            "El sitio no toma decisiones exclusivamente automatizadas con efectos jurídicos o similares ni realiza perfilado. El sitio no procesa pagos."
+          ]
         },
-        "policyChanges": {
-          "title": "11. Cambios a Esta Política de Privacidad",
-          "text": "Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos de cualquier cambio material publicando la nueva Política de Privacidad en nuestro sitio web y actualizando la fecha 'Última Actualización'. Tu uso continuo de nuestros servicios después de dichos cambios constituye la aceptación de la política actualizada."
+        {
+          "title": "11. Sus derechos, retirada y reclamación",
+          "items": [
+            "Conforme a los requisitos del RGPD, puede solicitar acceso, rectificación, supresión, limitación del tratamiento y, cuando proceda, portabilidad.",
+            "Puede oponerse al tratamiento basado en el artículo 6.1.f por motivos relacionados con su situación particular; puede oponerse al marketing directo en cualquier momento.",
+            "Puede retirar un consentimiento en cualquier momento, gratuitamente y con efectos futuros. La retirada no afecta a la licitud del tratamiento basado en el consentimiento antes de retirarlo.",
+            "Para ejercer sus derechos basta escribir a contact@elitereplay.de. Si existen dudas razonables, solo podremos pedir la información adicional necesaria para verificar la identidad.",
+            "Puede reclamar especialmente ante la Agencia Española de Protección de Datos (AEPD): https://www.aepd.es. También puede dirigirse a la autoridad de su residencia habitual, lugar de trabajo o lugar de la presunta infracción."
+          ]
         },
-        "contactUs": {
-          "title": "12. Contáctanos",
-          "text": "Si tienes alguna pregunta sobre esta Política de Privacidad o nuestras prácticas de privacidad, por favor contáctanos:",
-        "address": {
-          "company": "ÉliteReplay Inc.",
-          "line1": "123 Innovation Drive",
-          "line2": "San Francisco, CA 94105",
-          "line3": "35660 Corralejo",
-          "line4": "Las Palmas",
-          "line5": "España",
-          "email": "privacy@elitereplay.com",
-          "phone": "+1 (555) 123-4567"
+        {
+          "title": "12. Menores",
+          "paragraphs": [
+            "No existe un límite general de edad para la mera lectura del sitio. El contacto, la contratación, la participación en partidos, las grabaciones, los derechos de imagen y las finalidades basadas en consentimiento deben valorarse por separado para el servicio concreto y la ley aplicable. Si se graba a menores o reciben un servicio propio, el aviso del club, evento o app debe regular la intervención necesaria de sus representantes legales."
+          ]
+        },
+        {
+          "title": "13. Cambios en esta política",
+          "paragraphs": [
+            "Actualizamos esta política cuando cambian los flujos acreditados, proveedores o requisitos legales y publicamos la nueva fecha. La mera continuación del uso no constituye consentimiento. Si una nueva finalidad requiere consentimiento, se solicitará por separado."
+          ]
         }
-        }
-      }
+      ]
     },
     "sessionDemo": {
       "loading": {
@@ -1004,8 +1048,8 @@
         "recordedAt": "Grabado en"
       },
       "aiTechInfo": {
-        "title": "Acerca de la IA de ÉliteReplay",
-        "description": "Este highlight fue creado por nuestra IA con computación de borde. El dispositivo NVIDIA Jetson Orin en la cancha procesó el metraje en vivo, capturando jugadas clave para tu reel personalizado.",
+        "title": "Sobre esta demo de tratamiento",
+        "description": "Esta presentación es una demo. El código del sitio no acredita que un dispositivo Jetson concreto procesara este clip; los detalles reales deben indicarse para cada entrega.",
         "processingTime": "Tiempo de Procesamiento",
         "learnMore": "Aprende Más Sobre Nuestra Tecnología"
       },
@@ -1018,14 +1062,15 @@
     },
     "technology": {
       "hero": {
-        "title": "Nuestra Tecnología de IA",
-        "description": "Descubre cómo nuestra innovadora IA convierte grabaciones deportivas en reels destacados impresionantes"
+        "title": "Tecnología para pilotos",
+        "description": "Resumen de módulos y simulaciones evaluados y configurados para pilotos concretos"
       },
+      "statusNotice": "Estado: esta página muestra posibles módulos y simulaciones de piloto. El hardware y las funciones de análisis y entrega realmente usados se definen para cada configuración; no todas las funciones mostradas están en producción.",
       "hardware": {
-        "title": "Hardware de Computación de Borde",
+        "title": "Hardware edge en evaluación",
         "nvidia": {
           "title": "NVIDIA Jetson Orin",
-          "description": "Utilizamos dispositivos NVIDIA Jetson Orin instalados en las sedes deportivas. Estos potentes equipos de IA procesan video localmente, eliminando la necesidad de subir datos a la nube.",
+          "description": "NVIDIA Jetson Orin es una posible plataforma edge para pilotos. Su uso y ubicación, y los componentes alojados que se añadan, dependen de la configuración concreta.",
           "specs": {
             "processing": "Procesamiento: Hasta 275 TOPS de rendimiento de IA",
             "memory": "Memoria: 64GB de RAM para modelos de IA complejos",
@@ -1035,15 +1080,15 @@
         "features": {
           "multiCamera": {
             "title": "Configuración de Múltiples Cámaras",
-            "description": "Emplea varias cámaras 4K posicionadas estratégicamente alrededor de la cancha para capturar cada ángulo."
+            "description": "Un piloto puede usar varias perspectivas; el número de cámaras, la resolución y la cobertura se definen en la instalación."
           },
           "localStorage": {
             "title": "Almacenamiento Local",
-            "description": "SSDs de alta velocidad almacenan el metraje crudo temporalmente, asegurando un procesamiento fluido."
+            "description": "Según la configuración, SSD locales pueden almacenar temporalmente el vídeo; el lugar y plazo de eliminación deben fijarse para cada uso."
           },
           "powerEfficiency": {
             "title": "Eficiencia Energética",
-            "description": "Diseñado para un uso óptimo de energía manteniendo un rendimiento de IA de primer nivel."
+            "description": "La selección del hardware considera rendimiento, consumo y condiciones operativas de la pista concreta."
           }
         }
       },
@@ -1063,11 +1108,11 @@
             },
             "poseEstimation": {
               "title": "Estimación de Postura",
-              "description": "Monitorea movimientos y posturas de jugadores para resaltar logros atléticos"
+              "description": "Puede apoyar estimaciones de movimiento y postura dentro de un clip sin identificar de forma única a una persona."
             },
             "trajectoryAnalysis": {
               "title": "Análisis de Trayectoria",
-              "description": "Analiza trayectorias de balón para identificar tiros y jugadas exitosas"
+              "description": "Puede evaluar trayectorias como señal para la revisión en configuraciones validadas para ello."
             }
           }
         },
@@ -1077,7 +1122,7 @@
           "features": {
             "excitementScore": {
               "title": "Algoritmo de Puntuación de Excitación",
-              "description": "Los momentos se puntúan según:",
+            "description": "Un modelo piloto puede puntuar momentos con estas señales:",
               "items": {
                 "movement": "Intensidad del movimiento del jugador",
                 "ballSpeed": "Velocidad y trayectoria del balón",
@@ -1087,7 +1132,7 @@
             },
             "autoEditing": {
               "title": "Edición Automática de Video",
-              "description": "Aplica técnicas de edición profesionales incluyendo:",
+            "description": "Un flujo de edición configurado puede incluir:",
               "items": {
                 "angles": "Selección de los mejores ángulos de cámara",
                 "slowMotion": "Añadir efectos de cámara lenta en momentos clave",
@@ -1098,8 +1143,8 @@
           }
         },
         "realTimePipeline": {
-          "title": "Pipeline de Procesamiento en Tiempo Real",
-          "description": "Un proceso local estructurado conecta captura, análisis, selección, edición y entrega controlada.",
+        "title": "Posible flujo piloto",
+        "description": "Un piloto puede conectar captura, análisis, selección, edición y entrega; los componentes y lugares reales dependen de la configuración.",
           "steps": {
             "capture": {
               "title": "Captura de Video",
@@ -1129,12 +1174,12 @@
         }
       },
       "results": {
-        "title": "Diseñado para operar en la pista",
-        "description": "ÉliteReplay conecta procesamiento local, contexto y entrega controlada sin promesas de rendimiento no verificadas.",
+      "title": "Arquitectura piloto para la pista",
+      "description": "Según la configuración, ÉliteReplay conecta contexto, módulos opcionales de tratamiento y entrega controlada.",
         "metrics": {
           "accuracy": {
-            "value": "Local",
-            "label": "Procesamiento en pista"
+          "value": "Según uso",
+          "label": "Se define el lugar de tratamiento"
           },
           "time": {
             "value": "Modular",
@@ -1191,7 +1236,7 @@
         },
         "edgeProcessing": {
           "title": "Simulación de Computación de Borde",
-          "description": "Descubre cómo nuestros dispositivos NVIDIA Jetson Orin procesan video localmente para resultados inmediatos."
+          "description": "Esta simulación interactiva muestra un posible flujo edge; no está conectada a un Jetson en vivo ni acredita el lugar real de tratamiento."
         },
         "qrAccess": {
           "title": "Simulación de Acceso por Código QR",

@@ -89,7 +89,7 @@ export default function DemoPage() {
     setQrScanned(true)
     toast({
       title: "QR Code Scanned",
-      description: "Session started for Court ABC123",
+      description: "Opening the technical test-session form for Court ABC123",
     })
 
     setTimeout(() => {
@@ -473,7 +473,7 @@ export default function DemoPage() {
                                   : "bg-green-500"
                           }`}
                         />
-                        <span className="font-semibold">NVIDIA Jetson Orin</span>
+                        <span className="font-semibold">Simulated edge device</span>
                       </div>
                       <span className="text-gray-400 capitalize">{edgeDeviceStatus}</span>
                     </div>

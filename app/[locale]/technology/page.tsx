@@ -23,6 +23,9 @@ export default function TechnologyPage() {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 {t('hero.description')}
               </p>
+              <p className="mx-auto max-w-3xl rounded-2xl border border-[#F5BE2D]/30 bg-[#F5BE2D]/10 px-5 py-4 text-sm leading-6 text-[#F8E7AF]">
+                {t('statusNotice')}
+              </p>
             </div>
           </div>
         </div>

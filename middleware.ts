@@ -4,6 +4,7 @@ import createMiddleware from 'next-intl/middleware';
 export default createMiddleware({
   locales: ['en', 'de', 'es'],
   defaultLocale: 'de',
+  localeCookie: false,
 });
 
 export const config = {

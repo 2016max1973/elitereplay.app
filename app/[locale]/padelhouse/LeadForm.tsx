@@ -1,7 +1,9 @@
 "use client";
 
 import type { FormEvent } from "react";
+import Link from "next/link";
 import { Send } from "lucide-react";
+import { useLocale } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,6 +18,8 @@ const selectClass =
   "flex h-11 w-full rounded-xl border border-[#D8C79D] bg-white px-3 py-2 text-sm text-[#11161C] ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D8AA54] focus-visible:ring-offset-2";
 
 export function LeadForm() {
+  const locale = useLocale();
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -126,6 +130,19 @@ export function LeadForm() {
       <p className="text-center text-xs leading-5 text-[#747B83]">
         Keine direkte Buchung. Du entscheidest erst nach den persönlich
         bestätigten Details.
+      </p>
+      <p className="text-center text-xs leading-5 text-[#747B83]">
+        Name und E-Mail sind für den vorbereiteten WhatsApp-Text erforderlich;
+        Spielerlevel und Wunschmonat sind freiwillig. Beim Öffnen werden die
+        Angaben an WhatsApp übergeben. Details und die Alternative per E-Mail
+        stehen in der {" "}
+        <Link
+          href={`/${locale}/privacy`}
+          className="font-semibold text-[#8B5E16] underline underline-offset-2"
+        >
+          Datenschutzerklärung
+        </Link>
+        .
       </p>
     </form>
   );

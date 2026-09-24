@@ -369,10 +369,10 @@
       },
       "instantProcessing": {
         "title": "Instant Processing",
-        "description": "Our on-site NVIDIA Jetson Orin devices process your video locally in real-time, ensuring instant, high-quality video generation without delays or cloud dependencies.",
+        "description": "Pilot setups can combine on-court modules with hosted delivery. Processing location and data flow are defined for the specific deployment.",
         "list1": "Real-time video processing",
         "list2": "High-performance AI computing",
-        "list3": "No cloud upload required"
+        "list3": "Hosting and delivery matched to the setup"
       },
       "journey": {
         "title": "Your ÉliteReplay Journey"
@@ -600,7 +600,7 @@
         "title": "Built for real court operations.",
         "text": "The technology stays in the background. Clubs get controllable operations, a clear experience and processes they can understand.",
         "points": {
-          "local": { "title": "Local-first", "text": "Core functions are designed to operate without a permanent cloud dependency." },
+          "local": { "title": "Setup-specific", "text": "On-court modules and hosted delivery can be combined for each pilot; the actual data flow is defined per deployment." },
           "configuration": { "title": "Club and court configuration", "text": "The experience can be configured around each location and use case." },
           "branding": { "title": "Controlled branding", "text": "Club and partner presentation remains part of a deliberately managed design." },
           "privacy": { "title": "Privacy and consent", "text": "Access, consent and use should remain understandable for clubs and players." },
@@ -756,7 +756,7 @@
         "messagePlaceholder": "What would you like ÉliteReplay to do for your court?",
         "privacyPrefix": "I have read the ",
         "privacyLink": "privacy policy",
-        "privacySuffix": " and agree to being contacted.",
+      "privacySuffix": ".",
         "submit": "Open email draft",
         "deliveryNote": "Nothing is sent automatically or stored on the website.",
         "draftOpened": "Your email application has opened. Please send the prepared draft yourself. If it did not open, email ",
@@ -765,187 +765,231 @@
       }
     },
     "recording": {
-      "title": "Start Recording",
-      "description": "Ready to capture your game at court:",
+      "title": "Create a test session",
+      "description": "Technical demo/pilot access for court:",
       "session": {
-        "title": "Start Your Session",
+        "title": "Create a test session",
         "emailLabel": "Email Address",
-        "emailDescription": "We'll send your highlight video to this email",
-        "button": "Start Session"
+        "emailDescription": "The email is stored with the test session; this does not start a recording.",
+        "privacyPrefix": "Storage details and currently open retention periods are explained in the",
+        "privacyLink": "privacy notice",
+        "button": "Create test session"
       },
       "courtNotFound": {
         "title": "Court Not Found",
         "message": "Court ID not found. Please scan the QR code again."
       },
       "success": {
-        "title": "Session Started!",
-        "description": "Your recording session is now running. You'll receive your highlight video shortly at {email}.",
-        "encouragement": "Play your best game! Our AI is watching and will capture all your highlight moments.",
-        "viewButton": "View Your Session",
+        "title": "Test session created",
+        "description": "The test session was created for this email:",
+        "encouragement": "This demo stores only the session record. No recorder, consent flow or highlight processing is connected.",
+        "viewButton": "View test session",
         "closeButton": "Close This Window"
       }
     },
     "imprint": {
-      "title": "Imprint",
-      "subtitle": "Legal information and company details",
-      "company": {
-        "title": "Company Information",
-        "name": "ÉliteReplay Inc.",
-        "address": "123 Innovation Drive, San Francisco, CA 94105, United States"
+      "meta": {
+        "title": "Legal notice",
+        "description": "Provider identification and legal information for ÉliteReplay."
       },
-      "contact": {
-        "title": "Contact Information",
-        "email": "contact@elitereplay.de",
-        "phone": "+1 (555) 123-4567",
-        "website": "www.elitereplay.com"
-      },
-      "legal": {
-        "title": "Legal Representatives",
-        "ceo": "CEO: Oliver Schmidt",
-        "cto": "CTO: Dr. Sarah Johnson",
-        "legalCounsel": "Legal Counsel: Martinez & Associates LLP"
-      },
-      "registration": {
-        "title": "Registration Details",
-        "companyType": "Delaware Corporation",
-        "registrationNumber": "7891234",
-        "taxId": "12-3456789",
-        "founded": "2024"
-      },
-      "responsible": {
-        "title": "Responsible for Content",
-        "name": "Oliver Schmidt",
-        "position": "CEO, ÉliteReplay Inc.",
-        "address": "123 Innovation Drive, San Francisco, CA 94105",
-        "email": "oliver@elitereplay.com"
-      },
-      "disclaimer": {
-        "title": "Disclaimer",
-        "text": "The information on this website is provided in good faith and for general information purposes only. We do not make any warranties about the completeness, reliability, and accuracy of this information. Any action you take upon the information on this website is strictly at your own risk, and we will not be liable for any losses and damages in connection with the use of our website."
-      },
-      "copyright": {
-        "title": "Copyright Notice",
-        "text": "© {year} ÉliteReplay Inc. All rights reserved. The content, design, graphics, and other materials on this website are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any content on this website without our express written permission."
-      },
-      "thirdParty": {
-        "title": "Third-Party Links",
-        "text": "Our website may contain links to third-party websites. These links are provided for your convenience only. We have no control over the content of these websites and accept no responsibility for them or for any loss or damage that may arise from your use of them."
-      },
-      "lastUpdated": "Last updated: January 2025"
+      "title": "Legal notice",
+      "subtitle": "Provider information for elitereplay.de",
+      "lastUpdated": "Last updated: 24 September 2026",
+      "sections": [
+        {
+          "title": "Provider",
+          "paragraphs": [
+            "Oliver Reifgens, trading as ÉliteReplay, self-employed (Autónomo) in Spain.",
+            "Business address: Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España."
+          ]
+        },
+        {
+          "title": "Contact",
+          "items": [
+            "Email: contact@elitereplay.de",
+            "Website: https://elitereplay.de"
+          ]
+        },
+        {
+          "title": "Legal status and services",
+          "paragraphs": [
+            "ÉliteReplay is the trading name of sole trader Oliver Reifgens and is not a corporation.",
+            "The website provides information about ÉliteReplay, MatchBoard, highlight services and individually agreed pilot projects. There is currently no general online shop or payment processing on this website. Prices, taxes and any additional costs are stated in the relevant offer before a contract is concluded."
+          ]
+        },
+        {
+          "title": "Person responsible for content",
+          "paragraphs": [
+            "Oliver Reifgens, at the address and contact details above."
+          ]
+        },
+        {
+          "title": "External links",
+          "paragraphs": [
+            "The respective operators are responsible for content on external websites. External destinations are checked for evident legal infringements when first linked; there is no continuous monitoring without a specific reason."
+          ]
+        },
+        {
+          "title": "Copyright",
+          "paragraphs": [
+            "Content and works on this website are subject to applicable copyright and trade mark law. Use beyond statutory exceptions requires the prior permission of the relevant rights holder."
+          ]
+        }
+      ]
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "subtitle": "How we collect, use, and protect your information",
-      "effectiveDate": "Effective Date: January 1, 2025",
-      "lastUpdated": "Last Updated: January 1, 2025",
-      "sections": {
-        "introduction": {
-          "title": "1. Introduction",
-          "text": "Welcome to ÉliteReplay ('we,' 'our,' or 'us'). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered sports highlight service, including our website, mobile applications, and related services (collectively, the 'Service')."
+      "meta": {
+        "title": "Privacy notice",
+        "description": "Privacy notice for the ÉliteReplay website, enquiries and evidenced online services."
+      },
+      "title": "Privacy notice",
+      "subtitle": "What is actually processed on the website and in evidenced ÉliteReplay services",
+      "lastUpdated": "Last updated: 24 September 2026",
+      "sections": [
+        {
+          "title": "1. Controller and scope",
+          "paragraphs": [
+            "The controller is Oliver Reifgens, trading as ÉliteReplay, Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España. Contact for privacy questions and data-subject rights: contact@elitereplay.de.",
+            "This notice applies to https://elitereplay.de, the contact channels offered there and evidenced delivery functions on this domain. A specific club, event, MatchBoard deployment, recording, app or Wallet pass may require additional notices that take precedence for that processing."
+          ]
         },
-        "informationCollected": {
-          "title": "2. Information We Collect",
-          "personal": {
-            "title": "2.1 Personal Information",
-            "text": "We may collect the following personal information:",
-            "item1": "Email addresses for video delivery and communication",
-            "item2": "Name and contact information when you contact us",
-            "item3": "Payment information for premium services (processed securely by third-party providers)",
-            "item4": "Account information if you create an account with us"
-          },
-          "videoData": {
-            "title": "2.2 Video and Image Data",
-            "text": "Our service processes video recordings from sports facilities to create highlight reels. This may include:",
-            "item1": "Video footage of sports activities",
-            "item2": "Images extracted from video for AI analysis",
-            "item3": "Biometric data derived from movement analysis (anonymized)"
-          },
-          "technical": {
-            "title": "2.3 Technical Information",
-            "item1": "Device information and identifiers",
-            "item2": "IP addresses and location data",
-            "item3": "Usage data and analytics",
-            "item4": "Cookies and similar tracking technologies"
-          }
+        {
+          "title": "2. Service boundaries",
+          "subsections": [
+            {
+              "title": "Website",
+              "paragraphs": [
+                "The public website provides information about ÉliteReplay and enables enquiries. Merely visiting it does not create a player account and is not consent to recording, highlight creation, publication or marketing."
+              ]
+            },
+            {
+              "title": "MatchBoard, recordings and highlights",
+              "paragraphs": [
+                "MatchBoard and highlight workflows are configured separately for specific pilot or club setups. Depending on that deployment, they may process names or display names, team and court assignment, match and score data, timestamps, moment markers, and image or video recordings.",
+                "Participation and match data, recording, personal highlight delivery, and publication or marketing are separate purposes. The legal basis, roles of ÉliteReplay and the club or organiser, recipients and retention must be specified before each deployment in a separate notice. A website enquiry neither replaces that information nor any of those decisions."
+              ]
+            },
+            {
+              "title": "Wallet",
+              "paragraphs": [
+                "The website currently integrates no production Wallet service and synchronises no Wallet member data. Local test implementations for Apple Wallet passes are not a production service offered through this website. A real rollout would require its own notice covering Apple/APNs, hosting and deletion."
+              ]
+            },
+            {
+              "title": "Trainer app",
+              "paragraphs": [
+                "The native TrainerReplay/Capture app is technically separate from the website. The website code evidences neither public App Store distribution nor account or cloud synchronisation with this website. Actual distribution or coach recording requires separate app, camera, microphone and recording notices; local pose or movement analysis must not be described as biometric identification or AI training."
+              ]
+            }
+          ]
         },
-        "useInformation": {
-          "title": "3. How We Use Your Information",
-          "text": "We use your information to:",
-          "item1": "Provide and improve our AI-powered highlight generation service",
-          "item2": "Deliver personalized video content to your specified email address",
-          "item3": "Process payments and manage your account",
-          "item4": "Communicate with you about our services",
-          "item5": "Analyze usage patterns to improve our technology",
-          "item6": "Ensure security and prevent fraud",
-          "item7": "Comply with legal obligations"
+        {
+          "title": "3. Website requests and hosting",
+          "items": [
+            "Data: IP address, requested path, time, HTTP request and response data, and technical browser, device, referrer and error information to the extent transmitted during access or recorded by the host.",
+            "Purpose: website delivery, stability, error diagnosis, and detection of misuse and attacks.",
+            "Legal basis: Article 6(1)(f) GDPR; the legitimate interest is secure and reliable website operation.",
+            "Recipient: Vercel Inc. and its subprocessors as hosting and infrastructure providers.",
+            "Retention: Vercel makes runtime logs available for the plan- and feature-dependent availability period. The website code sets no additional log period or separate log archive. Logs preserved for a specific incident are kept beyond that only for as long as necessary to investigate and pursue legal claims.",
+            "Provision: this technical data is necessary to retrieve the website; without it the website cannot be transmitted."
+          ]
         },
-        "dataProcessing": {
-          "title": "4. Data Processing and AI Technology",
-          "text": "Our AI systems process video data locally on edge devices (NVIDIA Jetson Orin) installed at sports facilities. This approach ensures:",
-          "item1": "Minimal data transmission over networks",
-          "item2": "Real-time processing without cloud dependency",
-          "item3": "Enhanced privacy through local processing",
-          "item4": "Automatic deletion of raw footage after highlight generation"
+        {
+          "title": "4. Contact and club-pilot enquiries by email",
+          "items": [
+            "Data: name, email address, club or organisation, role, location, number of courts, requested use case, message and email communication metadata.",
+            "Flow: the website form sends nothing to a web server. It creates a draft in your browser, which you send yourself using your email application. Only sending the email transmits the details.",
+            "Required information: name, club or organisation and email address are required for the prepared draft; role, location, court count, use case and message are optional. Without the required details the form cannot create a meaningfully addressed draft; you may instead write directly to contact@elitereplay.de.",
+            "Purpose and legal basis: answering the enquiry and taking pre-contractual steps under Article 6(1)(b) GDPR; for enquiries made on behalf of an organisation, also Article 6(1)(f) GDPR and the interest in business communication.",
+            "Recipients: your email provider, united-domains GmbH as provider of the ÉliteReplay mailbox, and only those people within ÉliteReplay who handle the enquiry.",
+            "Retention: the website does not store the draft. Sent messages remain until the enquiry is complete and, where a contract or evidential record results, for the applicable statutory documentation and limitation periods in the mailbox or backups. The basis is Article 6(1)(c) GDPR for legal duties and Article 6(1)(f) GDPR for evidence and legal defence. No automatic deletion period is evidenced.",
+            "This form does not create an automatic newsletter subscription. Electronic marketing is sent only where there is an applicable legal basis and can be stopped at any time free of charge."
+          ]
         },
-        "dataSharing": {
-          "title": "5. Data Sharing and Disclosure",
-          "text": "We may share your information in the following circumstances:",
-          "item1": "With your consent: When you explicitly agree to share your information",
-          "item2": "Service providers: Third-party vendors who assist in providing our services",
-          "item3": "Sports facilities: Partner facilities may receive aggregated, anonymized analytics",
-          "item4": "Legal requirements: When required by law or to protect our rights",
-          "item5": "Business transfers: In connection with mergers, acquisitions, or asset sales"
+        {
+          "title": "5. PadelHouse enquiries through WhatsApp",
+          "items": [
+            "Data: name and email address, plus optional playing level and preferred month. If you open WhatsApp or send the message, WhatsApp also processes in particular your phone number, profile information, message and communication metadata, and device, connection and usage data under its own policy.",
+            "Flow: only after your action does the PadelHouse form open a prepared wa.me link. The entered details are then passed to WhatsApp; you decide there whether to send the message.",
+            "Required information: name and email address are required for the prepared text; playing level and preferred month are optional. The form cannot be submitted without the required details. You may use contact@elitereplay.de as an alternative without WhatsApp.",
+            "Purpose and legal basis: handling the requested pilot-camp enquiry and pre-contractual steps under Article 6(1)(b) GDPR.",
+            "Recipients: WhatsApp Ireland Limited and the other Meta companies and providers named in WhatsApp's privacy policy. Alternative without WhatsApp: contact@elitereplay.de.",
+            "Retention: ÉliteReplay retains the chat according to the same criteria as an enquiry. Additional storage by WhatsApp is governed by WhatsApp's settings, contracts and notices; ÉliteReplay cannot promise its own fixed deletion period for that storage.",
+            "WhatsApp privacy policy: https://www.whatsapp.com/legal/privacy-policy-eea"
+          ]
         },
-        "dataSecurity": {
-          "title": "6. Data Security",
-          "text": "We implement industry-standard security measures to protect your information, including: encryption in transit and at rest, secure edge computing infrastructure, regular security audits, access controls and authentication, and automatic data deletion policies."
+        {
+          "title": "6. Experimental session start",
+          "paragraphs": [
+            "A published technical start route is a demo/pilot implementation, not evidence of a production recording or highlight system. If used, it processes email address, court ID, session code, creation time, status, and technically empty highlight/consent fields."
+          ],
+          "items": [
+            "Purpose and legal basis: creating the expressly requested test session, Article 6(1)(b) GDPR.",
+            "Recipient: Vercel Inc. as hosting provider; access via the generated session link.",
+            "Required information: a valid email address and an enabled court ID are technically required. No test session is created without them.",
+            "Retention: the code uses a JSON file without an automatic deletion routine. This flow therefore must not be presented as a production service with a fixed period; storage location, period and deletion process must be set before production use.",
+            "Browser storage: after this correction, the email address is no longer saved in localStorage for later visits."
+          ]
         },
-        "dataRetention": {
-          "title": "7. Data Retention",
-          "text": "We retain your information as follows:",
-          "item1": "Raw video footage: Deleted within 24 hours after processing",
-          "item2": "Highlight videos: Stored for 90 days unless you request longer retention",
-          "item3": "Personal information: Retained as long as necessary to provide services",
-          "item4": "Analytics data: Anonymized and retained for service improvement"
+        {
+          "title": "7. Highlight and media delivery by link",
+          "items": [
+            "Data: released video and image files and, if present in the relevant dataset, match ID, title, names or display names, team/court assignment, score and moment information.",
+            "Purpose and legal basis: providing agreed match or camp moments. Where personal delivery is part of an offer requested by the data subject, Article 6(1)(b) GDPR applies. Recording, publication and marketing are separate and, in consent-based setups, may take place only on the basis of separate consent under Article 6(1)(a) GDPR. Club or event engagements must define the responsibility roles and any different basis in their participant notice.",
+            "Recipients and access: Vercel Inc. for the website and Vercel Blob, plus anyone who receives or guesses a delivery or direct Blob URL. The highlight and match routes have no sign-in and some IDs are predictable. The camp link key is an access hurdle, not personal authentication. The URLs must therefore not be understood as private or restricted exclusively to authorised recipients.",
+            "Retention: the website code configures neither automatic deletion nor a fixed period for Blob files. Files remain available until manually deleted. A specific deletion date for each delivery and an operational deletion process are not yet evidenced; legal evidence or defence needs may justify limited further retention.",
+            "Use for public club communications, sponsorship or other marketing takes place only on the basis of a separate, purpose-specific decision and never merely because someone visited the website."
+          ]
         },
-        "yourRights": {
-          "title": "8. Your Rights",
-          "text": "Depending on your location, you may have the following rights:",
-          "item1": "Access to your personal information",
-          "item2": "Correction of inaccurate information",
-          "item3": "Deletion of your personal information",
-          "item4": "Portability of your data",
-          "item5": "Objection to processing",
-          "item6": "Withdrawal of consent",
-          "contact": "To exercise these rights, please contact us at privacy@elitereplay.com."
+        {
+          "title": "8. Cookies, browser storage, analytics and embedded media",
+          "items": [
+            "Language: the language is part of the URL path. The NEXT_LOCALE cookie that was previously set by default is disabled in the corrected configuration.",
+            "Analytics and advertising: the active website code includes no analytics, advertising or profiling tags.",
+            "Browser storage: the experimental start page no longer stores the email address persistently in the browser. No other non-essential storage is evidenced on the reviewed active pages.",
+            "Media: general website images and videos are delivered by the site's hosting infrastructure. On unlocked camp pages, previews and videos load from Vercel Blob. WhatsApp opens only following a deliberate click.",
+            "If non-essential cookies, SDKs or trackers are added later, they will be blocked before consent and offered with an equally prominent reject option; this notice alone would not be sufficient."
+          ]
         },
-        "internationalTransfers": {
-          "title": "9. International Data Transfers",
-          "text": "Our services may involve transferring your information to countries outside your residence. We ensure appropriate safeguards are in place to protect your information during such transfers, in compliance with applicable data protection laws."
+        {
+          "title": "9. Recipients and international transfers",
+          "paragraphs": [
+            "Vercel Inc. is a US provider. Vercel states that it uses the EU-US Data Privacy Framework for covered transfers to the United States and the 2021/914 EU Standard Contractual Clauses otherwise. Primary processing may take place in the United States. Provider information: https://vercel.com/legal/privacy-notice and https://vercel.com/legal/dpa.",
+            "Within the European Economic Area, WhatsApp is provided by WhatsApp Ireland Limited. WhatsApp describes global processing, including in the United States, and identifies the EU-US Data Privacy Framework and EU Standard Contractual Clauses as applicable transfer mechanisms. Details: https://www.whatsapp.com/legal/privacy-policy-eea.",
+            "ÉliteReplay does not assume processing restricted exclusively to the EEA. The Vercel region and subprocessors used depend on the account and Blob configuration; the current provider documents linked above apply. A person outside the EEA merely accessing the public website is not in itself a disclosure initiated by ÉliteReplay to a provider in that country."
+          ]
         },
-        "childrensPrivacy": {
-          "title": "10. Children's Privacy",
-          "text": "Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately."
+        {
+          "title": "10. Security, sources and automated decisions",
+          "paragraphs": [
+            "ÉliteReplay takes technical and organisational measures appropriate to the risk. We do not claim absolute security, end-to-end encryption for every processing step, regular audits, or an exclusively local processing location.",
+            "Data generally comes from you, your browser or – in a specific match/club setup – the participating club, organiser, MatchBoard and recording devices. If data is not obtained directly from you, the relevant product or event notice must also identify the source and categories.",
+            "The website makes no solely automated decisions that produce legal or similarly significant effects and carries out no profiling. The website does not process payments."
+          ]
         },
-        "policyChanges": {
-          "title": "11. Changes to This Privacy Policy",
-          "text": "We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on our website and updating the 'Last Updated' date. Your continued use of our services after such changes constitutes acceptance of the updated policy."
+        {
+          "title": "11. Your rights, withdrawal and complaints",
+          "items": [
+            "Subject to the GDPR's conditions, you may request access, rectification, erasure, restriction of processing and, where applicable, data portability.",
+            "You may object to processing under Article 6(1)(f) GDPR on grounds relating to your particular situation; you may object to direct marketing at any time.",
+            "You may withdraw consent at any time free of charge and with effect for the future. Withdrawal does not affect the lawfulness of processing carried out on the basis of consent before it was withdrawn.",
+            "To exercise your rights, send a message to contact@elitereplay.de. Where there are reasonable doubts, we may request only the additional information needed to verify identity.",
+            "You may complain in particular to the Spanish Data Protection Agency, Agencia Española de Protección de Datos (AEPD): https://www.aepd.es. You may also contact the supervisory authority at your habitual residence, place of work, or the place of the alleged infringement."
+          ]
         },
-        "contactUs": {
-          "title": "12. Contact Us",
-          "text": "If you have any questions about this Privacy Policy or our privacy practices, please contact us:",
-        "address": {
-          "company": "ÉliteReplay Inc.",
-          "line1": "123 Innovation Drive",
-          "line2": "San Francisco, CA 94105",
-          "line3": "35660 Corralejo",
-          "line4": "Las Palmas",
-          "line5": "Spain",
-          "email": "privacy@elitereplay.com",
-          "phone": "+1 (555) 123-4567"
+        {
+          "title": "12. Minors",
+          "paragraphs": [
+            "There is no blanket age limit for merely reading the website. Contact, contracting, match participation, recordings, image rights and consent-based purposes must each be assessed for the specific service and applicable law. Where minors are recorded or receive their own service, the relevant club, event or app notice must address the required involvement of a parent or guardian."
+          ]
+        },
+        {
+          "title": "13. Changes to this notice",
+          "paragraphs": [
+            "We update this notice when evidenced data flows, providers or legal requirements change and publish the new date. Continued use alone is not consent. If consent is required for a new purpose, it will be requested separately."
+          ]
         }
-        }
-      }
+      ]
     },
     "sessionDemo": {
       "loading": {
@@ -1005,8 +1049,8 @@
         "recordedAt": "Recorded at"
       },
       "aiTechInfo": {
-        "title": "About ÉliteReplay AI",
-        "description": "This highlight was crafted by our AI using edge computing. The NVIDIA Jetson Orin at the court processed the footage live, capturing key plays for your personalized reel.",
+        "title": "About this processing demo",
+        "description": "This presentation is a demo. The website code does not evidence that a particular Jetson device processed this clip; actual processing details must be stated for each delivery.",
         "processingTime": "Processing Time",
         "learnMore": "Learn More About Our Technology"
       },
@@ -1019,14 +1063,15 @@
     },
     "technology": {
       "hero": {
-        "title": "Our AI Technology",
-        "description": "Explore how our innovative AI turns raw sports footage into stunning highlight reels"
+        "title": "Technology for pilot setups",
+        "description": "An overview of modules and simulations evaluated and configured for specific pilot setups"
       },
+      "statusNotice": "Status: this page shows possible pilot modules and simulations. The hardware, analysis and delivery functions actually used are defined for each setup; not every function shown is in production.",
       "hardware": {
-        "title": "Edge Computing Hardware",
+        "title": "Edge hardware under evaluation",
         "nvidia": {
           "title": "NVIDIA Jetson Orin",
-          "description": "We leverage NVIDIA Jetson Orin edge devices deployed at sports venues. These robust AI units process video locally, eliminating the need for cloud uploads.",
+          "description": "NVIDIA Jetson Orin is one possible edge platform for pilot setups. Whether and where it is used, and which hosted components are added, depends on the specific setup.",
           "specs": {
             "processing": "Processing: Up to 275 TOPS of AI performance",
             "memory": "Memory: 64GB RAM for complex AI models",
@@ -1036,15 +1081,15 @@
         "features": {
           "multiCamera": {
             "title": "Multi-Camera Setup",
-            "description": "Utilizes multiple 4K cameras placed strategically around the court to capture every perspective."
+            "description": "A pilot setup may use multiple camera perspectives; camera count, resolution and coverage are defined on site."
           },
           "localStorage": {
             "title": "Local Storage",
-            "description": "High-speed SSDs store raw footage temporarily, ensuring seamless processing."
+            "description": "Depending on the setup, local SSDs may buffer footage; storage location and deletion period must be defined for each deployment."
           },
           "powerEfficiency": {
             "title": "Power Efficiency",
-            "description": "Designed for optimal energy use while maintaining top-tier AI performance."
+            "description": "Hardware selection considers performance, energy demand and the operating conditions of the specific court."
           }
         }
       },
@@ -1064,11 +1109,11 @@
             },
             "poseEstimation": {
               "title": "Pose Estimation",
-              "description": "Monitors player movements and postures to highlight athletic achievements"
+              "description": "Can support movement and pose estimation within a clip without uniquely identifying a person."
             },
             "trajectoryAnalysis": {
               "title": "Trajectory Analysis",
-              "description": "Analyzes ball paths to pinpoint successful shots and plays"
+              "description": "Can evaluate ball paths as a review signal in setups validated for that purpose."
             }
           }
         },
@@ -1078,7 +1123,7 @@
           "features": {
             "excitementScore": {
               "title": "Excitement Score Algorithm",
-              "description": "Moments are scored based on:",
+            "description": "A pilot model may score moments using the following signals:",
               "items": {
                 "movement": "Player movement intensity",
                 "ballSpeed": "Ball speed and trajectory",
@@ -1088,7 +1133,7 @@
             },
             "autoEditing": {
               "title": "Automatic Video Editing",
-              "description": "Applies professional edits including:",
+            "description": "A configured editing workflow may include:",
               "items": {
                 "angles": "Selecting the best camera angles",
                 "slowMotion": "Adding slow-motion effects at key moments",
@@ -1099,8 +1144,8 @@
           }
         },
         "realTimePipeline": {
-          "title": "Real-Time Processing Pipeline",
-          "description": "A structured local workflow connects capture, analysis, selection, editing and controlled delivery.",
+        "title": "Possible pilot workflow",
+        "description": "A pilot may connect capture, analysis, selection, editing and delivery; the actual components and processing locations depend on the setup.",
           "steps": {
             "capture": {
               "title": "Video Capture",
@@ -1130,12 +1175,12 @@
         }
       },
       "results": {
-        "title": "Designed for court operations",
-        "description": "ÉliteReplay connects local processing, match context and controlled delivery without unsupported performance promises.",
+      "title": "Pilot architecture for the court",
+      "description": "Depending on the setup, ÉliteReplay connects match context, optional processing modules and controlled delivery.",
         "metrics": {
           "accuracy": {
-            "value": "Local",
-            "label": "On-court processing"
+          "value": "Per setup",
+          "label": "Processing location is defined"
           },
           "time": {
             "value": "Modular",
@@ -1192,7 +1237,7 @@
         },
         "edgeProcessing": {
           "title": "Edge Computing Simulation",
-          "description": "Discover how our NVIDIA Jetson Orin devices process video locally for immediate results."
+          "description": "This interactive simulation illustrates a possible edge workflow; it is not connected to a live Jetson and does not evidence the actual processing location."
         },
         "qrAccess": {
           "title": "QR Code Access Simulation",

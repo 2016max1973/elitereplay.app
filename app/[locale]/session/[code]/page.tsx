@@ -21,7 +21,7 @@ function statusLabel(status: string) {
     case "processing":
       return "Highlights werden verarbeitet";
     default:
-      return "Session gestartet";
+      return "Test-Session angelegt";
   }
 }
 
@@ -91,7 +91,8 @@ export default async function SessionPage({ params }: SessionPageProps) {
               ÉliteReplay Session
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-gray-300">
-              Session gestartet. Highlights werden später hier erscheinen.
+              Test-Session angelegt. Dadurch wurde keine Aufnahme oder
+              Highlight-Pipeline gestartet.
             </p>
           </div>
         </div>
@@ -112,11 +113,12 @@ export default async function SessionPage({ params }: SessionPageProps) {
               <div className="flex min-h-[280px] flex-col items-center justify-center rounded-xl border border-dashed border-[#F5BE2D]/30 bg-black/35 p-8 text-center">
                 <Loader2 className="mb-5 h-10 w-10 text-[#F5BE2D]" />
                 <h2 className="mb-3 text-2xl font-semibold">
-                  Session gestartet. Highlights werden später hier erscheinen.
+                  Test-Session angelegt
                 </h2>
                 <p className="max-w-xl text-gray-400">
-                  Deine Session ist angelegt. Sobald Recorder und Pipeline später
-                  Clips zuordnen, werden sie hier sichtbar.
+                  Dieser Demo-Stand speichert nur die Sessiondaten. Recorder und
+                  Pipeline sind nicht verbunden. Falls später Clips manuell
+                  zugeordnet werden, erscheinen sie hier.
                 </p>
               </div>
             )}

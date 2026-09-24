@@ -54,17 +54,18 @@ export async function POST(request: Request) {
 
     await appendReplaySession(session);
 
-    // Log session start (in a real app, this would communicate with the edge device)
+    // Log creation of the test record. No recorder or edge device is contacted.
     console.log(
       `Created replay session ${sessionCode} for court ${normalizedCourtId}`,
     );
 
     return NextResponse.json({
       success: true,
-      message: "Session started successfully",
+      message: "Test session created; recording pipeline not started",
       sessionCode,
       courtId: normalizedCourtId,
       createdAt,
+      pipelineStatus: session.pipelineStatus,
     });
   } catch (error) {
     console.error("Error starting session:", error);
