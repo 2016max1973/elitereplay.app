@@ -1,6 +1,7 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
+import Script from "next/script"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { getLocale } from "next-intl/server"
@@ -32,6 +33,7 @@ export default async function RootLayout({
           {children}
           <Toaster />
         </ThemeProvider>
+        <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
       </body>
     </html>
   )
