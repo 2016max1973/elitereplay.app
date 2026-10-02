@@ -945,7 +945,7 @@
           "title": "8. Cookies, browser storage, analytics and embedded media",
           "items": [
             "Language: the language is part of the URL path. The NEXT_LOCALE cookie that was previously set by default is disabled in the corrected configuration.",
-            "Analytics and advertising: the active website code includes no analytics, advertising or profiling tags.",
+            "Web Analytics: the website uses Vercel Web Analytics for aggregated audience measurement based on our legitimate interest in operating a technically and editorially appropriate website (Article 6(1)(f) GDPR). Page views and technical data such as URL or route, referrer, filtered query parameters, approximate city and country, browser, operating system and device type are processed. Vercel describes the measurement as cookie-free and without a persistent identifier usable across people or websites; a visitor identifier derived from the request is discarded after 24 hours. The recipient is Vercel Inc. No advertising or profiling tags are used. Provider information: https://vercel.com/docs/analytics/privacy-policy.",
             "Browser storage: the experimental start page no longer stores the email address persistently in the browser. No other non-essential storage is evidenced on the reviewed active pages.",
             "Media: general website images and videos are delivered by the site's hosting infrastructure. On unlocked camp pages, previews and videos load from Vercel Blob. WhatsApp opens only following a deliberate click.",
             "If non-essential cookies, SDKs or trackers are added later, they will be blocked before consent and offered with an equally prominent reject option; this notice alone would not be sufficient."
