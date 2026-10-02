@@ -908,7 +908,7 @@
             {
               "title": "Trainer-App",
               "paragraphs": [
-                "Die native TrainerReplay-/Capture-App ist technisch von der Website getrennt. Der Website-Code belegt weder eine öffentliche App-Store-Verteilung noch eine Konto- oder Cloud-Synchronisierung mit dieser Website. Bei einer tatsächlichen Ausgabe oder Coach-Aufnahme gelten eigene App-, Kamera-, Mikrofon- und Aufnahmehinweise; lokale Pose- oder Bewegungsanalyse darf nicht mit biometrischer Identifizierung oder KI-Training gleichgesetzt werden."
+                "Die native TrainerReplay-/Capture-App ist technisch von der Website getrennt. Der Website-Code belegt weder eine öffentliche App-Store-Verteilung noch eine Konto- oder Cloud-Synchronisierung mit dieser Website. Für die App, Kamera, Mikrofon, lokale Speicherung, Body Analysis und Freigaben gilt die ergänzende App-Datenschutzerklärung unter https://elitereplay.de/de/privacy/capture. Lokale Pose- oder Bewegungsanalyse darf nicht mit biometrischer Identifizierung oder KI-Training gleichgesetzt werden."
               ]
             }
           ]
@@ -1017,6 +1017,104 @@
           "title": "13. Änderungen dieser Erklärung",
           "paragraphs": [
             "Wir passen diese Erklärung an, wenn sich belegte Datenflüsse, Dienstleister oder Rechtsanforderungen ändern, und veröffentlichen das neue Datum. Eine bloße fortgesetzte Nutzung gilt nicht als Einwilligung. Ist für einen neuen Zweck eine Einwilligung erforderlich, wird sie gesondert eingeholt."
+          ]
+        }
+      ]
+    },
+    "capturePrivacy": {
+      "meta": {
+        "title": "Datenschutz – ÉliteReplay Capture",
+        "description": "Datenschutzhinweise für die lokale ÉliteReplay Capture Trainer-App auf iPhone und iPad."
+      },
+      "title": "Datenschutz – ÉliteReplay Capture",
+      "subtitle": "Kamera, Trainer-Audio, lokale Replays, Body Analysis und Freigaben",
+      "lastUpdated": "Stand: 2. Oktober 2026",
+      "sections": [
+        {
+          "title": "1. Verantwortlicher und Geltungsbereich",
+          "paragraphs": [
+            "Verantwortlicher für die Bereitstellung der App und den ÉliteReplay-Support ist Oliver Reifgens, handelnd unter ÉliteReplay, Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España. Kontakt für Datenschutzfragen und Betroffenenrechte: contact@elitereplay.de.",
+            "Diese Erklärung gilt für die ÉliteReplay Capture Trainer-App für iPhone und iPad. Wird die App von einem Club, Veranstalter oder selbstständigen Trainer zur Aufnahme anderer Personen eingesetzt, kann diese Stelle für Aufnahmezweck, Rechtsgrundlage, Information der Beteiligten, Freigaben und Löschfristen zusätzlich oder eigenständig verantwortlich sein."
+          ]
+        },
+        {
+          "title": "2. Zweck und Grundprinzip",
+          "paragraphs": [
+            "Die App ist ein lokales Trainer-Werkzeug. Sie zeichnet Video auf, hält einen temporären Replay-Puffer vor, speichert bewusst markierte Spielszenen, kann Trainerkommentare und Coach-Demos aufnehmen und ermöglicht eine lokale Körperpose-Analyse. Die Verarbeitung dient der Durchführung des angeforderten Coaching- und Replay-Ablaufs.",
+            "Soweit ÉliteReplay die App unmittelbar im Rahmen eines vereinbarten Tests oder einer Leistung bereitstellt, beruht die dafür erforderliche Verarbeitung auf Art. 6 Abs. 1 Buchst. b DSGVO. Für die Aufnahme anderer Personen, eine Weitergabe oder Veröffentlichung muss der jeweilige Trainer, Club oder Veranstalter vor Ort eine passende Rechtsgrundlage und die erforderlichen Informationen beziehungsweise Einwilligungen sicherstellen."
+          ]
+        },
+        {
+          "title": "3. Kamera, Mikrofon und Bluetooth",
+          "items": [
+            "Kamera: Aufnahme des Courts, von Spielern, Coach Demos und Replay-Momenten. Ohne Kamerafreigabe ist die Aufnahmefunktion nicht nutzbar.",
+            "Mikrofon: Court-Ton sowie bewusst gestartete Trainerkommentare und Coach-Demos. Die App kann den aktuell verfügbaren Audioeingang, darunter ein kompatibles externes Mikrofon, verwenden.",
+            "Bluetooth: optionale Verbindung zu einem Flic-Button, um Replay- und Kommentaraktionen auszulösen. Ohne Bluetooth oder Flic bleiben die entsprechenden Bedienelemente in der App nutzbar.",
+            "Fotos und Dateien: Ein Partnerlogo kann nur nach bewusster Auswahl aus Fotos oder Dateien lokal importiert werden. Fertige Videos werden nur auf ausdrückliche Aktion über das native iOS-Teilen-Menü übergeben."
+          ]
+        },
+        {
+          "title": "4. Lokal gespeicherte Inhalte",
+          "items": [
+            "Video und Audio: temporäre Rolling-Aufnahme, Roh-Replays, gebrandete Review-Dateien, Trainer-Audio, fertige Coach-MP4 und Coach-Demos.",
+            "Zuordnung: lokale Session-ID, Datum, Clipnummer, Kategorie und ein vom Trainer eingegebener Spielername oder Anzeigename. Diese Angaben können auch in Dateinamen erscheinen.",
+            "Metadaten: lokale JSON-Dateien verbinden Replay, Kommentar, Audioeingang, Kategorie, Session und fertige Exporte.",
+            "Branding: ein ausgewähltes Partnerlogo wird lokal im App-Bereich gespeichert und kann in exportierte Videos eingebrannt werden.",
+            "Es werden keine Passwörter, ÉliteReplay-Benutzerkonten, Werbe-IDs oder Zahlungsdaten durch die App angelegt."
+          ]
+        },
+        {
+          "title": "5. Body Analysis und Player Lock",
+          "paragraphs": [
+            "Body Analysis verwendet Apple Vision lokal auf dem Gerät. Die App verarbeitet aus dem ausgewählten Video zweidimensionale Gelenkpunkte, Konfidenzen, Körperrahmen, Trackingstatus sowie abgeleitete Winkel und Höhen. Eine lokale Signatur hilft, die vom Nutzer ausgewählte Person im Clip konservativ weiterzuverfolgen.",
+            "Die Ergebnisse werden als lokale Analysedatei gespeichert und können auf Wunsch in ein Video mit Skeleton oder ein Skeleton-Only-Video gerendert werden. Die Funktion ist eine visuelle Coaching-Hilfe. Sie ist keine medizinische Messung, keine Messung von Körperkräften, keine Gesichtserkennung und keine biometrische Identifizierung. Die App nutzt diese Daten nicht zum Training eines ÉliteReplay-KI-Modells."
+          ]
+        },
+        {
+          "title": "6. Lokale Verarbeitung, Übermittlung und Tracking",
+          "items": [
+            "Der geprüfte ÉliteReplay-App-Code enthält keinen automatischen Upload von Video, Audio, Spieler-, Session- oder Body-Analysis-Daten an einen ÉliteReplay-Server.",
+            "Es sind keine Werbe-, Analyse-, Profiling- oder Crash-Reporting-SDKs eingebunden. Die App verwendet keine Werbe-ID und führt kein App-übergreifendes Tracking durch.",
+            "Die native iOS-Freigabe wird erst durch den Nutzer geöffnet. Der Nutzer entscheidet selbst, ob und an welches Ziel – etwa AirDrop, Dateien, Fotos, Mail, Nachrichten oder WhatsApp – eine ausgewählte MP4 übergeben wird. Danach gelten die Bedingungen des gewählten Empfängers oder Dienstes.",
+            "Geteilte Dateinamen und gerenderte Videos können Spielername, Kategorie, Datum, Clipnummer, Trainerstimme, Partnerlogo und Body-Analysis-Darstellungen enthalten. Diese Inhalte sind vor dem Teilen zu prüfen."
+          ]
+        },
+        {
+          "title": "7. Flic-Integration",
+          "paragraphs": [
+            "Die optionale Flic-2-Integration verwendet das SDK flic2lib-ios 1.5.0 von Shortcut Labs/50Buttons. Dabei werden auf dem Gerät technische Button- und Verbindungsinformationen verarbeitet, darunter Buttonname, Kennungen, Verbindungsstatus und Ereignisse. Diese Angaben können in lokalen Diagnoseausgaben erscheinen und sollen nicht ungeschützt an Dritte weitergegeben werden.",
+            "Der ÉliteReplay-eigene Code sendet diese Angaben nicht an einen ÉliteReplay-Server. Das geschlossene SDK enthält Funktionen für Netzwerk-, Firmware- und Zertifikatsvorgänge; sein konkretes automatisches Übermittlungs- und Aufbewahrungsverhalten ist aus dem Binary allein nicht vollständig bestimmbar. Anbieterinformationen: https://flic.io/privacy-policy. Der Replay-Ablauf kann alternativ über die sichtbaren App-Bedienelemente ohne Flic ausgelöst werden."
+          ]
+        },
+        {
+          "title": "8. Aufbewahrung und Löschen",
+          "items": [
+            "Die temporäre Rolling-Aufnahme liegt im temporären App-Bereich und ist nicht als dauerhaftes Replay vorgesehen.",
+            "Gespeicherte Replays, Trainer-Reviews, Coach-Audio, Metadaten, Coach-MP4 und Coach-Demos bleiben grundsätzlich lokal erhalten, bis der Nutzer den eindeutig zugeordneten Clip in der App löscht oder die App entfernt wird.",
+            "Body-Analysis-Dateien liegen im lokalen Application-Support-Bereich. Share-Exporte können im Cache liegen und von iOS entfernt werden; die App verspricht dafür keine feste automatische Frist.",
+            "In Fotos, Dateien oder an Drittanbieter geteilte Kopien werden durch das Löschen in der App nicht mitgelöscht und müssen am jeweiligen Ziel separat entfernt werden.",
+            "iOS-Backups oder eine vom Nutzer aktivierte Gerätesynchronisierung liegen außerhalb des unmittelbaren App-Ablaufs und richten sich nach den Einstellungen des Nutzers und den Bedingungen von Apple."
+          ]
+        },
+        {
+          "title": "9. Sicherheit und verantwortliche Nutzung",
+          "paragraphs": [
+            "Die App nutzt den iOS-App-Container und Systemberechtigungen. Nutzer sollten Gerätecode, aktuelle Systemsoftware und kontrollierte Freigabeziele verwenden. Spielernamen sollten nur eingetragen werden, wenn sie für den Coaching-Ablauf erforderlich sind; alternativ kann ein Kürzel oder Anzeigename verwendet werden.",
+            "Der Trainer, Club oder Veranstalter muss sicherstellen, dass aufgenommene Personen vor Beginn verständlich informiert werden und dass Aufnahme, Coach-Kommentar, Weitergabe und Veröffentlichung jeweils zulässig sind."
+          ]
+        },
+        {
+          "title": "10. Rechte und Kontakt",
+          "paragraphs": [
+            "Soweit ÉliteReplay personenbezogene Daten als Verantwortlicher verarbeitet, können betroffene Personen nach Maßgabe der DSGVO Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch verlangen sowie eine Einwilligung für die Zukunft widerrufen. Kontakt: contact@elitereplay.de. Eine Beschwerde ist insbesondere bei der Agencia Española de Protección de Datos unter https://www.aepd.es möglich.",
+            "Daten, die ausschließlich lokal auf dem Gerät eines Trainers oder Clubs liegen und ÉliteReplay nie erhalten hat, kann ÉliteReplay technisch nicht direkt einsehen oder löschen. In diesem Fall ist zuerst der Betreiber dieses Geräts beziehungsweise der verantwortliche Club oder Trainer zu kontaktieren."
+          ]
+        },
+        {
+          "title": "11. Minderjährige und Änderungen",
+          "paragraphs": [
+            "Werden Minderjährige aufgenommen oder analysiert, muss der verantwortliche Trainer, Club oder Veranstalter vorab die nach dem jeweiligen Recht erforderliche Beteiligung der Sorgeberechtigten und kindgerechte Information sicherstellen.",
+            "Diese Erklärung wird angepasst, wenn sich Funktionen, Datenflüsse, Drittanbieter oder rechtliche Anforderungen ändern. Wesentliche neue Zwecke, die eine Einwilligung erfordern, werden nicht allein durch eine Textänderung legitimiert."
           ]
         }
       ]
