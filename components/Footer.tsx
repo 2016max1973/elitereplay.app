@@ -50,6 +50,9 @@ export default function Footer() {
             <Link href={`/${locale}#highlights`} className="hover:text-[#F5BE2D]">
               {navigationT("highlights")}
             </Link>
+            <a href="https://capture.elitereplay.de" className="hover:text-[#F5BE2D]">
+              {navigationT("capture")}
+            </a>
             <Link href={`/${locale}#content-engine`} className="hover:text-[#F5BE2D]">
               {t("content")}
             </Link>

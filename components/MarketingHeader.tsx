@@ -73,6 +73,12 @@ export default function MarketingHeader() {
               {t(key)}
             </Link>
           ))}
+          <a
+            href="https://capture.elitereplay.de"
+            className="rounded-sm py-3 text-[0.79rem] font-semibold text-white/68 transition-colors hover:text-[#F5BE2D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5BE2D]"
+          >
+            {t("capture")}
+          </a>
         </nav>
 
         <div className="ml-auto hidden items-center gap-3 sm:flex xl:ml-3">
@@ -116,6 +122,13 @@ export default function MarketingHeader() {
                 {t(key)}
               </Link>
             ))}
+            <a
+              href="https://capture.elitereplay.de"
+              onClick={() => setIsOpen(false)}
+              className="rounded-xl px-4 py-3.5 text-base font-semibold text-white/82 hover:bg-white/[0.06] hover:text-[#F5BE2D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5BE2D]"
+            >
+              {t("capture")}
+            </a>
             <div className="mt-3 flex flex-col gap-3 border-t border-white/10 pt-4 sm:hidden">
               <LanguageSwitcher
                 label={t("languageLabel")}
