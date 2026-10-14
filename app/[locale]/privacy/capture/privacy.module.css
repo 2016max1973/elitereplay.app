@@ -1,0 +1,95 @@
+/* Opt-in presentation for Capture only; legal content and other pages stay unchanged. */
+.compact > section {
+  max-width: 52rem;
+  padding: 2rem 1.25rem 3.5rem;
+}
+
+.compact header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.compact header::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  margin-bottom: 1rem;
+  background: #f5be2d;
+}
+
+.compact h1 {
+  background: none;
+  color: #f4f3ee;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.compact header p {
+  margin-top: 0.75rem;
+  color: #b1b4bb;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.compact header p:last-child {
+  margin-top: 0.5rem;
+  color: #999da6;
+  font-size: 0.75rem;
+}
+
+.compact > section > div {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #c4c8d0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.compact > section > div > section {
+  margin: 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+}
+
+.compact > section > div > section:not([hidden]) ~ section:not([hidden]) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.compact > section > div > section > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.compact h2 {
+  color: #eeeff2;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.compact h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.compact ul {
+  padding-left: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .compact > section {
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  .compact h1 {
+    font-size: 2rem;
+  }
+}

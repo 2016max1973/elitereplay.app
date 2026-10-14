@@ -15,6 +15,7 @@ type LegalDocumentProps = {
   subtitle: string;
   lastUpdated: string;
   sections: LegalSection[];
+  className?: string;
 };
 
 const linkPattern = /(https:\/\/[^\s]+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g;
@@ -79,9 +80,10 @@ export default function LegalDocument({
   subtitle,
   lastUpdated,
   sections,
+  className = "",
 }: LegalDocumentProps) {
   return (
-    <main className="min-h-screen bg-black pt-[76px] text-white">
+    <main className={`min-h-screen bg-black pt-[76px] text-white ${className}`}>
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <header className="mx-auto mb-14 max-w-4xl text-center">
           <h1 className="bg-gradient-to-r from-white to-[#F5BE2D] bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
