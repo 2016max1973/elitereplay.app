@@ -1,4 +1,5 @@
 import { Fragment, type ReactNode } from "react";
+import styles from "./LegalDocument.module.css";
 
 export type LegalSubsection = {
   title: string;
@@ -80,7 +81,7 @@ export default function LegalDocument({
   subtitle,
   lastUpdated,
   sections,
-  className = "",
+  className = styles.compact,
 }: LegalDocumentProps) {
   return (
     <main className={`min-h-screen bg-black pt-[76px] text-white ${className}`}>

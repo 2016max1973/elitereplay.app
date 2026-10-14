@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import LegalDocument, { type LegalSection } from "@/components/LegalDocument";
-import styles from "./privacy.module.css";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -33,7 +32,6 @@ export default async function CapturePrivacyPage({ params }: PageProps) {
 
   return (
     <LegalDocument
-      className={styles.compact}
       title={t("title")}
       subtitle={t("subtitle")}
       lastUpdated={t("lastUpdated")}
