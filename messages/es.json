@@ -998,7 +998,7 @@
     },
     "title": "Privacidad – ÉliteReplay Capture",
     "subtitle": "Cámara, audio del entrenador, replays locales, Body Analysis y uso compartido",
-    "lastUpdated": "Última actualización: 2 de octubre de 2026",
+    "lastUpdated": "Última actualización: 14 de octubre de 2026",
     "sections": [
       {
         "title": "1. Responsable y ámbito",
@@ -1053,7 +1053,9 @@
         "title": "7. Integración de Flic",
         "paragraphs": [
           "La integración opcional con Flic 2 utiliza flic2lib-ios 1.5.0 de Shortcut Labs/50Buttons. En el dispositivo se procesan datos técnicos del botón y de conexión, incluidos nombre, identificadores, estado de conexión y eventos. Estos datos pueden aparecer en diagnósticos locales y no deben compartirse sin protección.",
-          "El código propio de ÉliteReplay no envía estos datos a un servidor de ÉliteReplay. El SDK cerrado contiene funciones de red, firmware y certificados; su comportamiento exacto de transmisión automática y conservación no puede determinarse completamente solo a partir del binario. Información del proveedor: https://flic.io/privacy-policy. El flujo de replay también puede activarse sin Flic mediante los controles visibles de la app."
+          "El código propio de ÉliteReplay no envía estos datos a un servidor de ÉliteReplay. Según la respuesta escrita de Flic del 5 de octubre de 2026, el SDK transmite información a Flic para comprobar el firmware. El proveedor indica que esta información se utiliza únicamente para determinar la respuesta de firmware adecuada y no se almacena en sus servidores.",
+          "La declaración de privacidad facilitada por Flic para el SDK declara que no hay seguimiento ni recopilación de datos. Estas afirmaciones se basan en la confirmación del proveedor; el comportamiento del SDK cerrado no puede verificarse de forma totalmente independiente solo a partir del binario. Las comprobaciones de firmware pueden implicar una conexión de red con Flic, aunque el contenido del entrenamiento se procese localmente.",
+          "Información del proveedor: https://flic.io/privacy-policy. El flujo de replay también puede activarse sin Flic mediante los controles visibles de la app."
         ]
       },
       {

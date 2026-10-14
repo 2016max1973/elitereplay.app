@@ -1029,7 +1029,7 @@
       },
       "title": "Datenschutz – ÉliteReplay Capture",
       "subtitle": "Kamera, Trainer-Audio, lokale Replays, Body Analysis und Freigaben",
-      "lastUpdated": "Stand: 2. Oktober 2026",
+      "lastUpdated": "Stand: 14. Oktober 2026",
       "sections": [
         {
           "title": "1. Verantwortlicher und Geltungsbereich",
@@ -1084,7 +1084,9 @@
           "title": "7. Flic-Integration",
           "paragraphs": [
             "Die optionale Flic-2-Integration verwendet das SDK flic2lib-ios 1.5.0 von Shortcut Labs/50Buttons. Dabei werden auf dem Gerät technische Button- und Verbindungsinformationen verarbeitet, darunter Buttonname, Kennungen, Verbindungsstatus und Ereignisse. Diese Angaben können in lokalen Diagnoseausgaben erscheinen und sollen nicht ungeschützt an Dritte weitergegeben werden.",
-            "Der ÉliteReplay-eigene Code sendet diese Angaben nicht an einen ÉliteReplay-Server. Das geschlossene SDK enthält Funktionen für Netzwerk-, Firmware- und Zertifikatsvorgänge; sein konkretes automatisches Übermittlungs- und Aufbewahrungsverhalten ist aus dem Binary allein nicht vollständig bestimmbar. Anbieterinformationen: https://flic.io/privacy-policy. Der Replay-Ablauf kann alternativ über die sichtbaren App-Bedienelemente ohne Flic ausgelöst werden."
+            "Der ÉliteReplay-eigene Code sendet diese Angaben nicht an einen ÉliteReplay-Server. Laut schriftlicher Auskunft von Flic vom 5. Oktober 2026 übermittelt das SDK Angaben für die Firmware-Prüfung an Flic. Diese werden nach Auskunft des Anbieters ausschließlich verwendet, um die passende Firmware-Antwort zu bestimmen, und nicht auf dessen Servern gespeichert.",
+            "Die von Flic bereitgestellte Datenschutzerklärung für das SDK deklariert kein Tracking und keine Datensammlung. Diese Angaben beruhen auf der Herstellerbestätigung; das Verhalten des geschlossenen SDKs ist aus dem Binary allein nicht vollständig unabhängig überprüfbar. Die Firmware-Prüfung bedeutet, dass trotz der lokalen Verarbeitung der Trainingsinhalte eine Netzwerkverbindung zu Flic stattfinden kann.",
+            "Anbieterinformationen: https://flic.io/privacy-policy. Der Replay-Ablauf kann alternativ über die sichtbaren App-Bedienelemente ohne Flic ausgelöst werden."
           ]
         },
         {

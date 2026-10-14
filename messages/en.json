@@ -999,7 +999,7 @@
     },
     "title": "Privacy – ÉliteReplay Capture",
     "subtitle": "Camera, coach audio, local replays, Body Analysis and sharing",
-    "lastUpdated": "Last updated: 2 October 2026",
+    "lastUpdated": "Last updated: 14 October 2026",
     "sections": [
       {
         "title": "1. Controller and scope",
@@ -1054,7 +1054,9 @@
         "title": "7. Flic integration",
         "paragraphs": [
           "The optional Flic 2 integration uses Shortcut Labs/50Buttons flic2lib-ios 1.5.0. Technical button and connection information is processed on the device, including button name, identifiers, connection state and events. These details may appear in local diagnostic output and should not be shared with third parties without protection.",
-          "ÉliteReplay-owned code does not send these details to an ÉliteReplay server. The closed SDK contains networking, firmware and certificate functionality; its exact automatic transmission and retention behaviour cannot be determined fully from the binary alone. Provider information: https://flic.io/privacy-policy. The replay workflow can alternatively be triggered with the visible controls in the app without Flic."
+          "ÉliteReplay-owned code does not send these details to an ÉliteReplay server. According to Flic's written response of 5 October 2026, the SDK transmits information to Flic for firmware checks. The provider states that this information is used only to determine the appropriate firmware response and is not stored on its servers.",
+          "The privacy declaration supplied by Flic for the SDK declares no tracking and no data collection. These statements are based on the provider's confirmation; the behaviour of the closed SDK cannot be fully verified independently from the binary alone. Firmware checks mean that a network connection to Flic may occur even though training content is processed locally.",
+          "Provider information: https://flic.io/privacy-policy. The replay workflow can alternatively be triggered with the visible controls in the app without Flic."
         ]
       },
       {
