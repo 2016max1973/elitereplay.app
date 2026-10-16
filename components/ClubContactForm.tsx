@@ -1,5 +1,7 @@
 "use client";
 
+import { trackContactDraft } from "@/lib/analytics";
+
 import Link from "next/link";
 import { Mail, Send } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -42,6 +44,7 @@ export default function ClubContactForm() {
       subject,
     )}&body=${encodeURIComponent(lines.join("\n"))}`;
 
+    trackContactDraft("email");
     setDraftOpened(true);
     window.location.href = mailto;
   }
