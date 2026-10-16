@@ -46,6 +46,7 @@
     "@tensorflow/tfjs-backend-webgpu": "latest",
     "@tensorflow/tfjs-converter": "latest",
     "@tensorflow/tfjs-core": "latest",
+    "@vercel/analytics": "2.0.1",
     "@vercel/blob": "^2.3.3",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",

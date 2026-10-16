@@ -1,5 +1,7 @@
 "use client";
 
+import { trackContactDraft } from "@/lib/analytics";
+
 import type { FormEvent } from "react";
 import Link from "next/link";
 import { Send } from "lucide-react";
@@ -38,6 +40,7 @@ export function LeadForm() {
       lines.join("\n"),
     )}`;
 
+    trackContactDraft("whatsapp");
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
