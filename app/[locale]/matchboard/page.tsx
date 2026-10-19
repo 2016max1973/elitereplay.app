@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
+import MatchBoardDemoActions from "@/components/MatchBoardDemoActions";
+import { matchboardDemoCopy } from "@/lib/matchboard-demo-contact";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -82,6 +85,7 @@ export default async function MatchBoardPage({ params }: PageProps) {
             <p className="mt-7 max-w-3xl text-pretty text-lg font-medium leading-8 text-white/82 sm:text-2xl sm:leading-9">
               {t("hero.subtitle")}
             </p>
+            <MatchBoardDemoActions locale={locale} />
           </div>
 
           <div className="order-1 lg:order-2 lg:justify-self-end">
@@ -228,6 +232,9 @@ export default async function MatchBoardPage({ params }: PageProps) {
                 {t("history.title")}
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-black/58">{t("history.text")}</p>
+              <Link href={`/${locale}/matchboard/demo?view=history`} className="mt-7 inline-flex min-h-12 items-center gap-2 border-b border-[#8A6712]/50 py-2 text-sm font-semibold text-[#78580d] hover:text-black">
+                {matchboardDemoCopy(locale).history}<ArrowRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
             </div>
 
             <ol className="border-t border-black/15">
