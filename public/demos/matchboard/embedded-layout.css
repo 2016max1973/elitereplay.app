@@ -1,0 +1,12 @@
+/*
+ * The website iframe follows #root's content height via ResizeObserver.
+ * A 100vh minimum inside it refers to the iframe's current height. With the
+ * navigation above the History shell, that minimum creates a resize loop:
+ * larger shell -> larger iframe -> larger shell, up to the wrapper's limit.
+ * Keep embedded History content-sized; standalone demo styling is unchanged.
+ * Load this adapter after the generated demo CSS when refreshing its bundle.
+ */
+html.website-embedded body,
+html.website-embedded .player-history-shell {
+  min-height: 0;
+}
