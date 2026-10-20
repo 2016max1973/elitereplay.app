@@ -36,6 +36,12 @@ test('release pages retain the claim, have canonical URLs and no test ribbon', (
       assert.ok(text.includes('YOUR SCORE. YOUR FOCUS. YOUR MOMENT.'), `${locale}/${slug}`);
       assert.ok(!html.includes('class="preview-ribbon"'));
       assert.ok(!html.includes('noindex'));
+      const publicationLabels = [
+        html.match(/<title>(.*?)<\/title>/s)?.[1],
+        html.match(/<footer\b[^>]*>(.*?)<\/footer>/s)?.[1],
+        html.match(/property="og:title" content="([^"]*)"/)?.[1],
+      ].join(' ');
+      assert.doesNotMatch(publicationLabels, /test preview|Testvorschau|vista previa/i);
       assert.match(html, /rel="canonical" href="https:\/\/elitereplay.de\//);
       assert.ok(!html.includes('127.0.0.1'));
       for (const match of html.matchAll(/(?:src|poster|href)="(\/website-2026\/[^"#?]+)"/g)) {
