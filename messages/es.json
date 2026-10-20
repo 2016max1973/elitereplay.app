@@ -844,7 +844,7 @@
       },
       "title": "Política de privacidad",
       "subtitle": "Qué se trata realmente en el sitio web y en los servicios acreditados de ÉliteReplay",
-      "lastUpdated": "Última actualización: 17 de octubre de 2026",
+      "lastUpdated": "Actualizado: 20 de octubre de 2026",
       "sections": [
         {
           "title": "1. Responsable y ámbito",
@@ -895,15 +895,16 @@
           ]
         },
         {
-          "title": "4. Consultas de contacto y pilotos de club por correo",
+          "title": "4. Consultas sobre productos, clubes y eventos",
           "items": [
-            "Datos: nombre, correo electrónico, club u organización, función, ubicación, número de pistas, uso solicitado, mensaje y metadatos de la comunicación por correo.",
-            "Flujo: el formulario no envía nada a un servidor web. Crea un borrador en el navegador que usted mismo envía con su aplicación de correo. Solo el envío transmite los datos.",
-            "Datos obligatorios: el nombre, el club u organización y el correo son necesarios para el borrador; la función, ubicación, número de pistas, uso y mensaje son voluntarios. Sin los datos obligatorios el formulario no puede crear un borrador dirigido de forma útil; también puede escribir directamente a contact@elitereplay.de.",
-            "Finalidad y base jurídica: responder y adoptar medidas precontractuales conforme al artículo 6.1.b del RGPD; para consultas en nombre de una organización, también artículo 6.1.f y el interés en la comunicación empresarial.",
-            "Destinatarios: su proveedor de correo, united-domains GmbH como proveedor del buzón de ÉliteReplay y únicamente las personas de ÉliteReplay que atienden la consulta.",
-            "Conservación: el sitio no guarda el borrador. Los mensajes enviados permanecen hasta cerrar la consulta y, si generan un contrato o justificante, durante los plazos legales de documentación y prescripción aplicables en el buzón o las copias de seguridad. La base es el artículo 6.1.c del RGPD para obligaciones legales y el artículo 6.1.f para prueba y defensa jurídica. No consta un plazo de borrado automático.",
-            "El formulario no produce un alta automática en boletines. La publicidad electrónica solo se envía cuando existe una base jurídica aplicable y puede cancelarse gratuitamente en cualquier momento."
+            "Datos: nombre, correo electrónico y servicio de interés; para eventos, también tipo de evento, fecha deseada o «aún por decidir», lugar o club, número aproximado de participantes, duración y alcance solicitado. El teléfono y el mensaje de texto libre son voluntarios.",
+            "Proceso: al enviar los nuevos formularios, los datos se transmiten mediante una conexión cifrada al servidor del sitio en Vercel. Allí se validan y se reenvían por correo a contact@elitereplay.de. Solo se muestra una confirmación cuando el servidor de correo acepta el mensaje; esto no confirma que ya se haya leído. Si el envío falla, se ofrece un contacto directo por correo.",
+            "Otros contactos: una opción identificada expresamente como borrador de correo abre su propia aplicación de correo. Su proveedor solo transmite el mensaje cuando usted lo envía allí. Esto también se aplica a los formularios anteriores que ofrecen un borrador.",
+            "Datos obligatorios: nombre, correo y servicio elegido; para eventos, además los datos de planificación indicados como obligatorios. Sin ellos no se puede enviar la consulta con el formulario. También puede escribir directamente a contact@elitereplay.de.",
+            "Finalidad y base jurídica: atender consultas y adoptar medidas precontractuales conforme al artículo 6.1.b del RGPD; para consultas en nombre de organizaciones, también el artículo 6.1.f y nuestro interés legítimo en la comunicación empresarial. Una consulta no constituye una reserva vinculante.",
+            "Destinatarios: Vercel Inc. para el alojamiento y tratamiento del formulario, united-domains GmbH para el buzón de ÉliteReplay y las personas que atienden la consulta internamente. Su propio proveedor también trata los mensajes que envía desde su aplicación de correo. Para posibles transferencias internacionales, véase el apartado 9.",
+            "Conservación: el servicio del formulario no crea una base de datos permanente de consultas ni registra el contenido de los mensajes. Los contadores temporales, identificadores de consulta y sumas de comprobación en memoria ayudan a detectar abusos y evitar el procesamiento repetido. Los registros técnicos de alojamiento se describen en el apartado 3. Los correos permanecen en el buzón o sus copias de seguridad hasta resolver la consulta y, cuando proceda, durante los plazos legales de documentación y prescripción. La conservación adicional se basa en el artículo 6.1.c del RGPD para obligaciones legales y en el artículo 6.1.f para pruebas y defensa jurídica.",
+            "La consulta no suscribe a ningún boletín. La publicidad electrónica requiere una base jurídica aplicable y puede cancelarse gratuitamente en cualquier momento."
           ]
         },
         {

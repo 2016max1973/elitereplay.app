@@ -875,7 +875,7 @@
       },
       "title": "Datenschutzerklärung",
       "subtitle": "Was auf der Website und bei den belegten ÉliteReplay-Diensten tatsächlich verarbeitet wird",
-      "lastUpdated": "Stand: 17. Oktober 2026",
+      "lastUpdated": "Stand: 20. Oktober 2026",
       "sections": [
         {
           "title": "1. Verantwortlicher und Geltungsbereich",
@@ -926,15 +926,16 @@
           ]
         },
         {
-          "title": "4. Kontakt- und Club-Pilot-Anfragen per E-Mail",
+          "title": "4. Produkt-, Club- und Veranstaltungsanfragen",
           "items": [
-            "Daten: Name, E-Mail-Adresse, Club oder Organisation, Rolle, Standort, Court-Anzahl, gewünschter Einsatzbereich, Nachricht und die Kommunikationsmetadaten der E-Mail.",
-            "Ablauf: Das Website-Formular überträgt nichts an einen Webserver. Es erstellt im Browser einen Entwurf, den Sie in Ihrem eigenen E-Mail-Programm selbst versenden. Erst der Versand übermittelt die Angaben.",
-            "Pflichtangaben: Name, Club oder Organisation und E-Mail-Adresse sind für den vorbereiteten Entwurf erforderlich; Rolle, Standort, Court-Anzahl, Einsatzbereich und Nachricht sind freiwillig. Ohne die Pflichtangaben kann das Formular keinen sinnvoll adressierten Entwurf erstellen; alternativ können Sie direkt an contact@elitereplay.de schreiben.",
-            "Zweck und Rechtsgrundlage: Beantwortung der Anfrage und vorvertragliche Maßnahmen nach Art. 6 Abs. 1 Buchst. b DSGVO; bei Anfragen im Namen einer Organisation zusätzlich Art. 6 Abs. 1 Buchst. f DSGVO, mit dem Interesse an geschäftlicher Kommunikation.",
-            "Empfänger: Ihr E-Mail-Anbieter, united-domains GmbH als Anbieter des ÉliteReplay-Postfachs und intern nur Personen, die die Anfrage bearbeiten.",
-            "Aufbewahrung: Die Website speichert den Entwurf nicht. Versendete Nachrichten bleiben bis zum Abschluss der Anfrage und – falls daraus ein Vertrags- oder Nachweisvorgang entsteht – für die dafür geltenden gesetzlichen Dokumentations- und Verjährungszeiträume im Postfach beziehungsweise Backup. Grundlage dafür sind Art. 6 Abs. 1 Buchst. c DSGVO bei gesetzlichen Pflichten und Art. 6 Abs. 1 Buchst. f DSGVO für Nachweis und Rechtsverteidigung. Eine automatische Löschfrist ist nicht belegt.",
-            "Es gibt über dieses Formular keine automatische Newsletter-Anmeldung. Elektronische Werbung erfolgt nur auf einer dafür einschlägigen gesetzlichen Grundlage und kann jederzeit kostenlos abbestellt werden."
+            "Daten: Name, E-Mail-Adresse und gewünschtes Angebot; bei Veranstaltungsanfragen zusätzlich Veranstaltungsart, Wunschtermin oder „noch offen“, Ort beziehungsweise Club, ungefähre Teilnehmerzahl, Dauer und gewünschter Leistungsumfang. Telefonnummer und Freitext sind freiwillig.",
+            "Ablauf: Beim Absenden der neuen Anfrageformulare werden die Angaben verschlüsselt an den Website-Server bei Vercel übertragen, dort geprüft und per E-Mail an contact@elitereplay.de weitergeleitet. Eine Bestätigung wird nur angezeigt, wenn der Mailserver die Nachricht angenommen hat. Dies bestätigt nicht, dass sie bereits gelesen wurde. Bei einem Versandfehler steht ein direkter E-Mail-Kontakt zur Verfügung.",
+            "Alternative Kontaktwege: Ein ausdrücklich als E-Mail-Entwurf bezeichneter Kontaktweg öffnet Ihr eigenes E-Mail-Programm. Erst wenn Sie dort selbst senden, wird die Nachricht über Ihren E-Mail-Anbieter übermittelt. Dies gilt auch für bisherige Kontaktformulare, die einen solchen Entwurf anbieten.",
+            "Pflichtangaben: Name, E-Mail-Adresse und Angebotsauswahl; bei Veranstaltungen außerdem die gekennzeichneten Planungsangaben. Ohne diese Angaben kann die Anfrage nicht über das Formular übermittelt werden. Alternativ können Sie direkt an contact@elitereplay.de schreiben.",
+            "Zweck und Rechtsgrundlage: Beantwortung der Anfrage und vorvertragliche Maßnahmen nach Art. 6 Abs. 1 Buchst. b DSGVO; bei Anfragen im Namen einer Organisation zusätzlich Art. 6 Abs. 1 Buchst. f DSGVO, mit dem Interesse an geschäftlicher Kommunikation. Die Anfrage ist keine verbindliche Buchung.",
+            "Empfänger: Vercel Inc. als Anbieter der Website und Formularverarbeitung, united-domains GmbH als Anbieter des ÉliteReplay-Postfachs sowie intern die mit der Bearbeitung betrauten Personen. Beim selbstständigen E-Mail-Versand kommt Ihr eigener E-Mail-Anbieter hinzu. Für mögliche internationale Übermittlungen gilt Abschnitt 9.",
+            "Aufbewahrung: Die Formularfunktion legt keine eigene dauerhafte Anfrage-Datenbank an und protokolliert keine Nachrichteninhalte. Kurzfristige Zähler, Anfragekennungen und Prüfsummen im Arbeitsspeicher dienen der Missbrauchserkennung und dem Schutz vor wiederholter Verarbeitung. Für technische Hosting-Protokolle gilt Abschnitt 3. E-Mails bleiben bis zum Abschluss der Anfrage und gegebenenfalls für gesetzliche Dokumentations- und Verjährungszeiträume im Postfach beziehungsweise Backup. Rechtsgrundlagen für eine weitere Aufbewahrung sind Art. 6 Abs. 1 Buchst. c DSGVO bei gesetzlichen Pflichten und Art. 6 Abs. 1 Buchst. f DSGVO für Nachweis und Rechtsverteidigung.",
+            "Eine Anfrage führt zu keiner Newsletter-Anmeldung. Elektronische Werbung erfolgt nur auf einer dafür einschlägigen gesetzlichen Grundlage und kann jederzeit kostenlos abbestellt werden."
           ]
         },
         {

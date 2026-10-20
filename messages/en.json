@@ -845,7 +845,7 @@
       },
       "title": "Privacy notice",
       "subtitle": "What is actually processed on the website and in evidenced ÉliteReplay services",
-      "lastUpdated": "Last updated: 17 October 2026",
+      "lastUpdated": "Last updated: 20 October 2026",
       "sections": [
         {
           "title": "1. Controller and scope",
@@ -896,15 +896,16 @@
           ]
         },
         {
-          "title": "4. Contact and club-pilot enquiries by email",
+          "title": "4. Product, club and event enquiries",
           "items": [
-            "Data: name, email address, club or organisation, role, location, number of courts, requested use case, message and email communication metadata.",
-            "Flow: the website form sends nothing to a web server. It creates a draft in your browser, which you send yourself using your email application. Only sending the email transmits the details.",
-            "Required information: name, club or organisation and email address are required for the prepared draft; role, location, court count, use case and message are optional. Without the required details the form cannot create a meaningfully addressed draft; you may instead write directly to contact@elitereplay.de.",
-            "Purpose and legal basis: answering the enquiry and taking pre-contractual steps under Article 6(1)(b) GDPR; for enquiries made on behalf of an organisation, also Article 6(1)(f) GDPR and the interest in business communication.",
-            "Recipients: your email provider, united-domains GmbH as provider of the ÉliteReplay mailbox, and only those people within ÉliteReplay who handle the enquiry.",
-            "Retention: the website does not store the draft. Sent messages remain until the enquiry is complete and, where a contract or evidential record results, for the applicable statutory documentation and limitation periods in the mailbox or backups. The basis is Article 6(1)(c) GDPR for legal duties and Article 6(1)(f) GDPR for evidence and legal defence. No automatic deletion period is evidenced.",
-            "This form does not create an automatic newsletter subscription. Electronic marketing is sent only where there is an applicable legal basis and can be stopped at any time free of charge."
+            "Data: name, email address and the service you are interested in; event enquiries also include event type, preferred date or “not decided yet”, venue or club, approximate participant count, duration and requested scope. Phone number and free-text message are optional.",
+            "Process: submitting the new enquiry forms sends your details over an encrypted connection to the website server at Vercel. The server validates the data and forwards it by email to contact@elitereplay.de. A confirmation is displayed only when the mail server accepts the message; it does not confirm that the message has been read. Direct email contact is available if delivery fails.",
+            "Alternative contact methods: a contact option explicitly labelled as an email draft opens your own email application. Your email provider transmits the message only when you send it there. This also applies to existing contact forms that offer such a draft.",
+            "Required fields: name, email address and service selection, plus the marked planning details for events. Without these details the form cannot submit the enquiry. You may instead email contact@elitereplay.de directly.",
+            "Purpose and legal basis: responding to enquiries and taking pre-contractual steps under Article 6(1)(b) GDPR; for enquiries on behalf of organisations, also Article 6(1)(f) and our legitimate interest in business communication. An enquiry is not a binding booking.",
+            "Recipients: Vercel Inc. for website hosting and form processing, united-domains GmbH for the ÉliteReplay mailbox, and the people handling your enquiry internally. Your own email provider also processes messages you send through your email application. See section 9 for potential international transfers.",
+            "Retention: the form service creates no separate permanent enquiry database and does not log message contents. Short-lived counters, request identifiers and checksums in memory support abuse detection and protection against repeated processing. Section 3 applies to technical hosting logs. Emails remain in the mailbox or backups until the enquiry is resolved and, where applicable, for statutory documentation and limitation periods. Further retention is based on Article 6(1)(c) GDPR for legal obligations and Article 6(1)(f) for evidence and legal defence.",
+            "An enquiry does not subscribe you to a newsletter. Electronic marketing requires an applicable legal basis and can be unsubscribed from free of charge at any time."
           ]
         },
         {
