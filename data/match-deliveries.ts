@@ -1,7 +1,5 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
-import camp1Highlights from "@/data/camps/camp-1.json";
-import camp2Highlights from "@/data/camps/camp-2.json";
 import padelGermanyFinalHighlights from "@/data/deliveries/padel-germany-v1/final-highlights.json";
 
 export type MatchDelivery = {
@@ -61,73 +59,6 @@ type SetupSnapshot = Record<string, unknown> & {
     team_b?: string[];
   };
 };
-
-const camp1Hero = camp1Highlights[0];
-const camp2Hero = camp2Highlights[0];
-
-const devFallbackDeliveries: MatchDelivery[] = [
-  {
-    matchId: "camp-1-home-demo",
-    deliveryId: "highlight-camp-1-001",
-    title: "Your match. Your angles. Your moment.",
-    subtitle: "ÉliteReplay Delivery Link",
-    claim:
-      "Öffne dein Highlight, vergleiche beide Perspektiven und teile deinen ÉliteReplay-Link.",
-    heroVideoSrc: camp1Hero.preview,
-    heroPosterSrc: camp1Hero.thumbnail,
-    compare: {
-      leftSrc: camp1Hero.preview,
-      rightSrc: camp1Hero.preview,
-      leftLabel: "NetCam Left",
-      rightLabel: "NetCam Right",
-    },
-    playerCard: {
-      imageSrc: "/images/cards/player-card-olli.jpg",
-      alt: "ÉliteReplay Player Card Beispiel",
-      title: "PlayerCard",
-      subtitle: "A premium keepsake from the same match moment.",
-    },
-    matchFacts: [
-      { label: "Rally", value: "6 shots" },
-      { label: "Court pressure", value: "High" },
-      { label: "Net presence", value: "72%" },
-      { label: "Replay mode", value: "NetCam vs NetCam" },
-    ],
-    shareQrSrc: "/images/qr-code.png",
-    source: "dev-fallback",
-  },
-  {
-    matchId: "camp-2-training-demo",
-    deliveryId: "highlight-camp-2-001",
-    title: "Your match. Your angles. Your moment.",
-    subtitle: "ÉliteReplay Delivery Link",
-    claim:
-      "Öffne dein Highlight, vergleiche beide Perspektiven und teile deinen ÉliteReplay-Link.",
-    heroVideoSrc: camp2Hero.preview,
-    heroPosterSrc: camp2Hero.thumbnail,
-    compare: {
-      leftSrc: camp2Hero.preview,
-      rightSrc: camp2Hero.preview,
-      leftLabel: "SideCam",
-      rightLabel: "NetCam",
-    },
-    playerCard: {
-      imageSrc: "/images/cards/team-card-olli-basti.jpg",
-      alt: "ÉliteReplay Team Card Beispiel",
-      title: "TeamCard",
-      subtitle:
-        "Built from the same delivery dataset for camp pairs and doubles teams.",
-    },
-    matchFacts: [
-      { label: "Training set", value: "Camp 2" },
-      { label: "Moment type", value: "Net exchange" },
-      { label: "Tempo", value: "Fast rally" },
-      { label: "Replay mode", value: "SideCam vs NetCam" },
-    ],
-    shareQrSrc: "/images/qr-code.png",
-    source: "dev-fallback",
-  },
-];
 
 const deliveryRoot = path.join(process.cwd(), "data", "deliveries");
 
@@ -508,32 +439,7 @@ async function readManifestDeliveries() {
 }
 
 async function getDeliveryStore() {
-  const real = await readManifestDeliveries();
-  if (real.deliveries.length > 0) {
-    return real;
-  }
-
-  const fallbackReports = new Map<string, DeliverySourceReport>();
-  for (const delivery of devFallbackDeliveries) {
-    fallbackReports.set(
-      delivery.deliveryId,
-      buildSourceReport(
-        null,
-        {
-          heroVideoSrc: delivery.heroVideoSrc,
-          compareLeftSrc: delivery.compare?.leftSrc,
-          compareRightSrc: delivery.compare?.rightSrc,
-          playerCardImage: delivery.playerCard?.imageSrc,
-          teamOrPlayerNames: "",
-          scoreBefore: "",
-          scoreAfter: "",
-        },
-        "dev-fallback",
-      ),
-    );
-  }
-
-  return { deliveries: devFallbackDeliveries, reports: fallbackReports };
+  return readManifestDeliveries();
 }
 
 export async function findMatchDeliveryByMatchId(matchId: string) {

@@ -2,6 +2,7 @@
 import createMiddleware from 'next-intl/middleware';
 import {NextRequest, NextResponse} from 'next/server';
 import {marketingDestination} from './lib/marketing-routes.mjs';
+import {isRetiredCampPath, retiredCampResponse} from './lib/retired-camp-routes.mjs';
 
 const localeMiddleware = createMiddleware({
   locales: ['en', 'de', 'es'],
@@ -10,6 +11,9 @@ const localeMiddleware = createMiddleware({
 });
 
 export default function middleware(request: NextRequest) {
+  if (isRetiredCampPath(request.nextUrl.pathname)) {
+    return retiredCampResponse(request.method);
+  }
   const destination = marketingDestination(request.nextUrl.pathname);
   if (destination) {
     const url = request.nextUrl.clone();
@@ -23,5 +27,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(en|de|es)/:path*', '/matchboard', '/history', '/capture', '/camps-events', '/contact', '/datenschutz'],
+  matcher: ['/', '/(en|de|es)/:path*', '/matchboard', '/history', '/capture', '/camps-events', '/contact', '/datenschutz', '/camp/:path*', '/camp-a/:path*', '/camp-b/:path*', '/camp-highlights/:path*', '/api/camp-download/:path*', '/camp-assets/:path*'],
 };
