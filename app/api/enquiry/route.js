@@ -1,6 +1,7 @@
 import {Readable} from 'node:stream';
 import {createEnquiryHandler} from '../../../lib/enquiries/enquiry.mjs';
 import {createMailDelivery} from '../../../lib/enquiries/mail-delivery.mjs';
+import {createEnquiryProtection} from '../../../lib/enquiries/protection.mjs';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -14,6 +15,7 @@ if (!process.env.VERCEL) {
 }
 const handler = createEnquiryHandler({
   delivery: createMailDelivery(),
+  protection: createEnquiryProtection(),
   origins,
   trustedProxy: process.env.VERCEL === '1',
 });
@@ -22,7 +24,7 @@ async function enquiry(request) {
   const req = request.body ? Readable.fromWeb(request.body) : Readable.from([]);
   req.method = request.method;
   req.headers = Object.fromEntries(request.headers);
-  req.socket = {remoteAddress: 'local'};
+  req.socket = {remoteAddress: '127.0.0.1'};
   let status, headers, body;
   const res = {
     headersSent: false,

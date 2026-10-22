@@ -1,18 +1,12 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {Readable} from 'node:stream';
 import {randomUUID} from 'node:crypto';
-import {createEnquiryHandler,validateEnquiry,prepareEnquiry} from '../../lib/enquiries/enquiry.mjs';
+import {createEnquiryHandler as handlerFactory,validateEnquiry,prepareEnquiry} from '../../lib/enquiries/enquiry.mjs';
 import {createMailDelivery} from '../../lib/enquiries/mail-delivery.mjs';
 
-const good={kind:'product',source:'home',locale:'de',interest:'Club',name:'Vorschau Test',email:'preview@example.invalid',phone:'',message:'Nur lokaler Test – keine Nachricht.',website:''};
-const event={kind:'event',locale:'de',type:'camp',date:'',dateOpen:true,location:'Testclub',participants:'24',duration:'Ein Nachmittag',interest:'video',name:good.name,email:good.email,phone:'',message:'Nur Test',website:''};
-const request=async(handler,body=good,{headers={},method='POST',id=randomUUID(),chunks}={})=>{
-  const req=Readable.from(chunks||[typeof body==='string'?body:JSON.stringify(body)]);
-  req.method=method;req.headers={host:'elitereplay.de',origin:'https://elitereplay.de','content-type':'application/json','idempotency-key':id,...headers};req.socket={remoteAddress:'127.0.0.1'};
-  const res={headersSent:false,writeHead(status,headers){this.status=status;this.headers=headers;this.headersSent=true;},end(body){this.body=JSON.parse(body);}};
-  await handler(req,res);return res;
-};
+import {good,event,request,fakeProtection} from './helpers/enquiry-fixture.mjs';
+const createEnquiryHandler=options=>handlerFactory({protection:fakeProtection(options.now),...options});
+
 const preview=()=>createMailDelivery({env:{ELITEREPLAY_MAIL_MODE:'preview'}});
 const accept=()=>({mode:'smtp',async send(){return {accepted:true,sent:true,simulated:false};}});
 
