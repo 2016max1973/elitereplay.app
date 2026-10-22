@@ -4,6 +4,7 @@ import {NextRequest, NextResponse} from 'next/server';
 import {marketingDestination} from './lib/marketing-routes.mjs';
 import {isRetiredCampPath, retiredCampResponse} from './lib/retired-camp-routes.mjs';
 import {isRetiredShowcasePath, retiredShowcaseResponse} from './lib/retired-showcase-routes.mjs';
+import {isRetiredTestSessionPath, retiredTestSessionResponse} from './lib/retired-test-session-routes.mjs';
 
 const localeMiddleware = createMiddleware({
   locales: ['en', 'de', 'es'],
@@ -12,6 +13,9 @@ const localeMiddleware = createMiddleware({
 });
 
 export default function middleware(request: NextRequest) {
+  if (isRetiredTestSessionPath(request.nextUrl.pathname)) {
+    return retiredTestSessionResponse(request.method, request.nextUrl.pathname.startsWith('/api/'));
+  }
   if (isRetiredCampPath(request.nextUrl.pathname)) {
     return retiredCampResponse(request.method);
   }
@@ -31,5 +35,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(en|de|es)/:path*', '/matchboard', '/history', '/capture', '/camps-events', '/contact', '/datenschutz', '/camp/:path*', '/camp-a/:path*', '/camp-b/:path*', '/camp-highlights/:path*', '/api/camp-download/:path*', '/camp-assets/:path*', '/padelhouse/:path*', '/match/padel-germany-v1/:path*', '/highlight/padel-germany-v1-:deliveryId/:path*'],
+  matcher: ['/', '/(en|de|es)/:path*', '/demo/:path*', '/start/:path*', '/session/:path*', '/api/start-session/:path*', '/matchboard', '/history', '/capture', '/camps-events', '/contact', '/datenschutz', '/camp/:path*', '/camp-a/:path*', '/camp-b/:path*', '/camp-highlights/:path*', '/api/camp-download/:path*', '/camp-assets/:path*', '/padelhouse/:path*', '/match/padel-germany-v1/:path*', '/highlight/padel-germany-v1-:deliveryId/:path*'],
 };
