@@ -1,0 +1,158 @@
+{
+  "Menü schließen": [
+    "Close menu",
+    "Cerrar menú"
+  ],
+  "Video abspielen": [
+    "Play video",
+    "Reproducir vídeo"
+  ],
+  "Video pausieren": [
+    "Pause video",
+    "Pausar vídeo"
+  ],
+  "Hintergrundvideo abspielen": [
+    "Play background video",
+    "Reproducir vídeo de fondo"
+  ],
+  "Hintergrundvideo pausieren": [
+    "Pause background video",
+    "Pausar vídeo de fondo"
+  ],
+  "Trainingsvideo abspielen": [
+    "Play training video",
+    "Reproducir vídeo de entrenamiento"
+  ],
+  "Trainingsvideo pausieren": [
+    "Pause training video",
+    "Pausar vídeo de entrenamiento"
+  ],
+  "Echte ÉliteReplay-Aufnahme · Seitenkamera": [
+    "Real ÉliteReplay footage · SideCam",
+    "Imágenes reales de ÉliteReplay · SideCam"
+  ],
+  "Echte ÉliteReplay-Trainingsaufnahme": [
+    "Real ÉliteReplay training footage",
+    "Imágenes reales de entrenamiento de ÉliteReplay"
+  ],
+  "Capture-Produktdemo · echte Oberfläche und echtes Material": [
+    "Capture product demo · real interface and footage",
+    "Demo de Capture · interfaz e imágenes reales"
+  ],
+  "ÉliteReplay · Ein Punkt. Mehrere Perspektiven.": [
+    "ÉliteReplay · One point. Several perspectives.",
+    "ÉliteReplay · Un punto. Varias perspectivas."
+  ],
+  "Euer Ballwechsel aus der Vogelperspektive, von der Seite und direkt am Netz — mit dem Spielstand im Bild. Welche Replays ihr auf eurem Court nutzen könnt, klären wir gemeinsam.": [
+    "Your rally from above, from the side and right at the net, with the score on screen. We'll discuss which replays are right for your court.",
+    "Vuestro intercambio desde arriba, desde el lateral y junto a la red, con el marcador en pantalla. Acordamos juntos qué replays podéis utilizar en vuestra pista."
+  ],
+  "ÉliteReplay Capture · Produktfilm": [
+    "ÉliteReplay Capture · Product film",
+    "ÉliteReplay Capture · Vídeo del producto"
+  ],
+  "Replay ansehen, persönlich Feedback geben und einen Coach-Clip mitgeben. Illustrative App-Ansichten mit echtem Trainingsmaterial. Die Bewegungsansicht wird im Capture-Piloten erprobt und weiterentwickelt.": [
+    "Watch a replay, give personal feedback and share a coaching clip. Illustrative app views with real training footage. The movement view is being tested and developed in the Capture pilot.",
+    "Mira un replay, da feedback personal y comparte un clip de entrenamiento. Vistas ilustrativas de la app con imágenes reales. La vista de movimiento se prueba y desarrolla en el piloto de Capture."
+  ],
+  "Haltung und Bewegung gemeinsam ansehen und besprechen. Die Bewegungsansicht mit Körperlinien wird im Capture-Piloten weiterentwickelt. Sie bewertet die Technik nicht automatisch.": [
+    "Review and discuss posture and movement together. The view with body overlays is being developed in the Capture pilot. It does not automatically grade technique.",
+    "Revisad y comentad juntos la postura y el movimiento. La vista con líneas corporales sigue desarrollándose en el piloto de Capture. No evalúa la técnica automáticamente."
+  ],
+  "Produktdemo mit echtem Matchmaterial und Beispieloberfläche. Im Spieler-Modus markierst du deine Szenen bewusst selbst. Die Punktesammlung im Film dient der Veranschaulichung.": [
+    "Product demo with real match footage and an example interface. In player mode, you deliberately mark your own scenes. The collection of points in the film is illustrative.",
+    "Demo del producto con imágenes reales de partido e interfaz de ejemplo. En el modo jugador marcas tú las escenas. La recopilación de puntos del vídeo es ilustrativa."
+  ],
+  "BEWEGUNGSANSICHT · DEMO": [
+    "MOVEMENT VIEW · DEMO",
+    "VISTA DE MOVIMIENTO · DEMO"
+  ],
+  "ECHTES TRAINING": [
+    "REAL TRAINING",
+    "ENTRENAMIENTO REAL"
+  ],
+  "Haltung und Bewegung im Trainingsvideo ansehen. Im Capture-Piloten in Erprobung; keine automatische Technikbewertung.": [
+    "Review posture and movement in training footage. Being tested in the Capture pilot; no automatic technique grading.",
+    "Revisa la postura y el movimiento en el vídeo de entrenamiento. En pruebas dentro del piloto de Capture; sin evaluación automática de la técnica."
+  ],
+  "Echte ÉliteReplay-Trainingsaufnahme. Zum Vergleich die Bewegungsansicht auswählen.": [
+    "Real ÉliteReplay training footage. Select the movement view to compare.",
+    "Imágenes reales de entrenamiento de ÉliteReplay. Selecciona la vista de movimiento para comparar."
+  ],
+  "MatchBoard-Vorführung anfragen": [
+    "Request a MatchBoard demonstration",
+    "Solicitar una demostración de MatchBoard"
+  ],
+  "MatchBoard History anfragen": [
+    "Enquire about MatchBoard History",
+    "Consultar por MatchBoard History"
+  ],
+  "Highlights anfragen": [
+    "Enquire about highlights",
+    "Consultar por los highlights"
+  ],
+  "Deine Anfrage: eure eigenen Highlights": [
+    "Your enquiry: your own highlights",
+    "Tu consulta: vuestros propios highlights"
+  ],
+  "Sieh echte Matchfilme und MyMoment-Highlights aus mehreren Perspektiven. Für euren Einsatz vereinbaren wir die ausgewählten Matches, den Clipumfang und den Termin zur Bereitstellung.": [
+    "Watch real match films and MyMoment highlights from several angles. For your setup, we'll agree on the matches, clip quantity and delivery time.",
+    "Mira vídeos reales de partidos y highlights de MyMoment desde varios ángulos. Acordamos los partidos elegidos, la cantidad de clips y el plazo de entrega."
+  ],
+  "Deine Anfrage: Capture für deine Spielmomente": [
+    "Your enquiry: Capture for your match moments",
+    "Tu consulta: Capture para tus momentos de juego"
+  ],
+  "Eigene Szenen sichern, wiederansehen und mitnehmen: Wir begleiten deinen Einstieg in den Spieler-Modus im Capture-Piloten und stimmen iPhone, Funktionen und Start mit dir ab.": [
+    "Save your own scenes, watch them again and keep them. We'll help you get started in player mode during the Capture pilot and check which features your iPhone supports.",
+    "Guarda tus escenas, vuelve a verlas y llévatelas. Te acompañamos al empezar en el modo jugador del piloto de Capture y revisamos qué funciones admite tu iPhone."
+  ],
+  "SIDECAM / MITTEN IN DER BEWEGUNG": [
+    "SIDECAM / RIGHT IN THE ACTION",
+    "SIDECAM / EN PLENA ACCIÓN"
+  ],
+  "Originaler ÉliteReplay-Matchmoment aus der Seitenkamera": [
+    "Original ÉliteReplay match moment from the SideCam",
+    "Momento original de ÉliteReplay desde la SideCam"
+  ],
+  "NETCAM / GANZ NAH AM DUELL": [
+    "NETCAM / UP CLOSE TO THE DUEL",
+    "NETCAM / MUY CERCA DEL DUELO"
+  ],
+  "Originaler ÉliteReplay-Matchmoment aus der Netzkamera": [
+    "Original ÉliteReplay match moment from the NetCam",
+    "Momento original de ÉliteReplay desde la NetCam"
+  ],
+  "Vorhandener Capture-Produktfilm mit echtem Trainingsmaterial und illustrativen App-Ansichten. Die neuen Funktionen und originalen Clipkarten findest du auf dieser Seite.": [
+    "Capture product film featuring real training footage and illustrative app views. Explore the new features and original clip cards on this page.",
+    "Vídeo de Capture con entrenamiento real y vistas ilustrativas de la app. Descubre las nuevas funciones y las tarjetas originales en esta página."
+  ],
+  "Bewegungslinien helfen, Haltung und Bewegungsablauf gemeinsam zu besprechen. In der aktuellen App lassen sich bis zu zwei erkannte Spieler auswählen und die Bewegungsansicht exportieren.": [
+    "Movement lines help you discuss posture and movement together. The current app lets you select up to two detected players and export the movement view.",
+    "Las líneas de movimiento ayudan a comentar juntos la postura y los movimientos. La app actual permite seleccionar hasta dos jugadores detectados y exportar la vista del movimiento."
+  ],
+  "Ein echter Matchmoment aus der iPhone-Perspektive: Golden Point bei 40:40, mit Namen und Spielstand im Bild. Ausschnitt aus einem vorhandenen Clip mit Beispielnamen.": [
+    "A real match moment from the iPhone perspective: Golden Point at 40:40, with names and score in view. An excerpt from an existing clip with sample names.",
+    "Un momento real del partido desde la perspectiva del iPhone: punto de oro con 40:40, nombres y marcador en pantalla. Fragmento de un clip existente con nombres de ejemplo."
+  ],
+  "Player Mode · Replay mit Spielstand": [
+    "Player Mode · Replay with score",
+    "Player Mode · Replay con marcador"
+  ],
+  "Deine Anfrage: Player Mode für eure Matches": [
+    "Your enquiry: Player Mode for your matches",
+    "Tu consulta: Player Mode para vuestros partidos"
+  ],
+  "Deine Anfrage: Capture für dein Training": [
+    "Your enquiry: Capture for your coaching",
+    "Tu consulta: Capture para tus entrenamientos"
+  ],
+  "Spielstand, Punkt-Clips und MatchBoard-Overlay auf eurem Gerät. Wir stimmen Kameraaufstellung und Steuerung mit euch ab und begleiten euren Einstieg über Apple TestFlight.": [
+    "Score, point clips and the MatchBoard overlay on your device. We'll help you choose camera positions and controls and get started through Apple TestFlight.",
+    "Marcador, clips por punto y MatchBoard superpuesto en vuestro dispositivo. Os ayudamos a colocar la cámara, elegir los controles y empezar a través de Apple TestFlight."
+  ],
+  "Replays, persönliches Video-Feedback und Bewegungsansicht. Wir stimmen Gerät und Steuerung mit dir ab und begleiten deinen Einstieg über Apple TestFlight.": [
+    "Replays, personal video feedback and movement views. We'll help you choose your device and controls and get started through Apple TestFlight.",
+    "Replays, feedback personal en vídeo y vista del movimiento. Te ayudamos a elegir el dispositivo y los controles y a empezar a través de Apple TestFlight."
+  ]
+}

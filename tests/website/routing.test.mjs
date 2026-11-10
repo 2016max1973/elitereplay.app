@@ -5,15 +5,16 @@ import {createHash} from 'node:crypto';
 import {marketingDestination} from '../../lib/marketing-routes.mjs';
 
 test('only approved landing pages are replaced; demos and delivery routes survive', () => {
-  for (const slug of ['', '/matchboard', '/history', '/capture', '/camps-events']) {
-    const destination = marketingDestination(`/de${slug}`);
+  for (const locale of ['de','en','es']) for (const slug of ['', '/matchboard', '/history', '/capture', '/camps-events']) {
+    const destination = marketingDestination(`/${locale}${slug}`);
     assert.equal(destination.kind, 'rewrite');
     assert.ok(existsSync(`public${destination.path}`));
   }
   for (const path of ['/de/matchboard/demo', '/de/matchboard/start',
     '/de/matchboard/setup', '/de/privacy', '/de/privacy/capture',
     '/de/imprint', '/de/match/example', '/de/highlight/example',
-    '/de/camp/camp-1', '/en', '/es', '/en/contact', '/es/contact']) {
+    '/de/camp/camp-1', '/en/matchboard/demo', '/es/matchboard/demo',
+    '/en/privacy', '/es/imprint']) {
     assert.equal(marketingDestination(path), null, path);
   }
   assert.deepEqual(marketingDestination('/de/contact'),
@@ -29,7 +30,8 @@ test('approved films and images retain their exact bytes', () => {
 });
 
 test('release pages retain the claim, have canonical URLs and no test ribbon', () => {
-  for (const [locale, slugs] of [['de', ['index', 'matchboard', 'history', 'capture', 'camps-events']], ['en', ['camps-events']], ['es', ['camps-events']]]) {
+  for (const locale of ['de','en','es']) {
+    const slugs = ['index', 'matchboard', 'history', 'capture', 'camps-events'];
     for (const slug of slugs) {
       const html = readFileSync(`public/website-2026/${locale}/${slug}.html`, 'utf8');
       const text = html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ');
@@ -48,5 +50,31 @@ test('release pages retain the claim, have canonical URLs and no test ribbon', (
         assert.ok(existsSync(`public${match[1]}`), match[1]);
       }
     }
+  }
+});
+
+test('each language switch opens the same page and all locale forms remain present', () => {
+  for (const locale of ['de','en','es']) for (const slug of ['index','matchboard','history','capture','camps-events']) {
+    const html = readFileSync(`public/website-2026/${locale}/${slug}.html`, 'utf8');
+    const suffix = slug === 'index' ? '' : `/${slug}`;
+    assert.match(html, new RegExp(`<html lang="${locale}">`));
+    const switcher = html.match(/<!-- language-switch -->(.*?)<!-- \/language-switch -->/s)?.[1];
+    assert.ok(switcher);
+    assert.equal((switcher.match(/aria-current="page"/g) || []).length, 1);
+    for (const target of ['de','en','es']) {
+      assert.ok(switcher.includes(`href="/${target}${suffix}"`));
+      assert.ok(html.includes(`hreflang="${target}" href="https://elitereplay.de/${target}${suffix}"`));
+    }
+    assert.ok(html.includes('<main id="inhalt">'));
+    assert.ok(html.includes('data-enquiry='));
+    assert.ok(html.includes('</footer>'));
+    const form = JSON.parse(html.match(/<script id="enquiryCopy" type="application\/json">(.*?)<\/script>/s)[1]);
+    assert.equal(form.locale, locale);
+    assert.ok(form.form.previewSuccess && form.form.deliveryUnknown);
+    // Product navigation, privacy and contact remain within the selected locale.
+    const withoutSwitch = html.replace(/<!-- language-switch -->.*?<!-- \/language-switch -->/s, '');
+    const internalLinks = [...withoutSwitch.matchAll(/<a\b[^>]*href="(\/(?:de|en|es)(?:\/[^"]*)?)"/g)].map(m=>m[1]);
+    assert.ok(internalLinks.length > 10);
+    assert.ok(internalLinks.every(link=>link === `/${locale}` || link.startsWith(`/${locale}/`) || link.startsWith(`/${locale}#`)), `${locale}/${slug}: cross-language link`);
   }
 });

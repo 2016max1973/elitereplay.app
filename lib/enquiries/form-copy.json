@@ -91,7 +91,7 @@
     "interests": {
       "matchboard": "MatchBoard",
       "video": "MatchBoard + video",
-      "advice": "Help choosing the right scope"
+      "advice": "Help choosing the right setup"
     },
     "name": "Your name",
     "email": "Your email",
@@ -101,7 +101,6 @@
     "submit": "Send enquiry",
     "loading": "Sending enquiry …",
     "deliveryNote": "We will get back to you by email. Your enquiry is non-binding.",
-    "localNote": "Local test preview: details are checked only on this computer and are not stored. Only sending your own email passes them to ÉliteReplay.",
     "privacyPrefix": "How we handle your enquiry:",
     "privacyLink": "Privacy policy",
     "fallback": "You can also email us directly:",
@@ -129,7 +128,7 @@
     "previewSubmit": "Test enquiry",
     "previewLoading": "Checking test enquiry …",
     "previewNote": "TEST MODE · No emails are sent",
-    "previewDetail": "Try the enquiry process here. Details are checked locally and are neither stored nor sent.",
+    "previewDetail": "Try the enquiry process here. Details are checked, but no enquiry is stored and no email is sent.",
     "previewSuccess": "Test enquiry checked successfully. No email was sent and no enquiry was stored.",
     "success": "Thank you! Your enquiry has been submitted. We will get back to you by email.",
     "notConfigured": "Direct sending is not configured yet. You can contact us using the email link.",
@@ -163,7 +162,7 @@
     "interests": {
       "matchboard": "MatchBoard",
       "video": "MatchBoard + vídeo",
-      "advice": "Asesoramiento sobre el alcance"
+      "advice": "Ayuda para elegir la mejor opción"
     },
     "name": "Tu nombre",
     "email": "Tu correo electrónico",
@@ -173,8 +172,7 @@
     "submit": "Enviar consulta",
     "loading": "Enviando consulta …",
     "deliveryNote": "Te responderemos por correo electrónico. Tu consulta no implica ningún compromiso.",
-    "localNote": "Vista previa local: los datos solo se comprueban en este ordenador y no se guardan. Solo se transmiten a ÉliteReplay cuando envías tu propio correo.",
-    "privacyPrefix": "Cómo tratamos vuestra consulta:",
+    "privacyPrefix": "Cómo tratamos tu consulta:",
     "privacyLink": "Privacidad",
     "fallback": "También puedes escribirnos directamente:",
     "prepared": "Borrador de correo listo. Aún no se ha enviado.",
@@ -201,7 +199,7 @@
     "previewSubmit": "Probar consulta",
     "previewLoading": "Comprobando consulta de prueba …",
     "previewNote": "MODO DE PRUEBA · No se envían correos",
-    "previewDetail": "Puedes probar el proceso aquí. Los datos se comprueban localmente y no se guardan ni se envían.",
+    "previewDetail": "Puedes probar el proceso aquí. Los datos se comprueban, pero no se guarda ninguna consulta ni se envían correos.",
     "previewSuccess": "Consulta de prueba comprobada. No se ha enviado ningún correo ni se ha guardado la consulta.",
     "success": "¡Gracias! Tu consulta se ha enviado. Te responderemos por correo electrónico.",
     "notConfigured": "El envío directo aún no está configurado. Puedes escribirnos mediante el enlace de correo.",

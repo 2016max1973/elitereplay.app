@@ -2,9 +2,10 @@
   'use strict';
 
   // These static pages bypass the Next.js layout and its WebsiteAnalytics component.
-  // Only the published German marketing pages may load the existing counter.
+  // Only the published marketing pages may load the existing counter.
   const hosts = new Set(['elitereplay.de', 'www.elitereplay.de']);
-  const pages = new Set(['/de', '/de/matchboard', '/de/history', '/de/capture', '/de/camps-events']);
+  const pages = new Set(['de', 'en', 'es'].flatMap(locale =>
+    ['', '/matchboard', '/history', '/capture', '/camps-events'].map(path => `/${locale}${path}`)));
   // Keep the same campaign allowlist as lib/analytics-policy.ts.
   const campaignValues = {
     utm_source: ['instagram', 'facebook', 'google', 'whatsapp', 'newsletter', 'qr'],

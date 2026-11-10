@@ -12,9 +12,10 @@ const accept=()=>({mode:'smtp',async send(){return {accepted:true,sent:true,simu
 
 test('all product choices and event languages validate and keep the intended request',()=>{
   for(const [source,interests] of Object.entries({home:['Club','History','Highlights','Trainer','Spieler'],matchboard:['Club','History','Highlights'],history:['Club','History','Highlights'],capture:['Trainer','Spieler']})){
-    for(const interest of interests){
-      const checked=validateEnquiry({...good,source,interest});
+    for(const locale of ['de','en','es']) for(const interest of interests){
+      const checked=validateEnquiry({...good,source,interest,locale});
       assert.equal(checked.ok,true);
+      assert.equal(checked.data.locale,locale);
       const draft=prepareEnquiry(checked.data);
       assert.equal(draft.email,good.email);
       assert.equal(draft.recipient,'contact@elitereplay.de');
@@ -29,9 +30,22 @@ test('all product choices and event languages validate and keep the intended req
   }
 });
 test('server validates choices, required fields, types, limits and header injection',()=>{
-  for(const changes of [{name:' '},{email:'bad'},{email:'a@b.co\nBcc:x@y.co'},{phone:['bad']},{source:'other'},{source:'capture',interest:'Club'},{interest:'smtp'},{locale:'en'},{name:'x'.repeat(121)},{message:'x'.repeat(3001)},{message:'x\u0000'},{website:'spam'},{to:'attacker@example.invalid'},{kind:'other'}])
+  for(const changes of [{name:' '},{email:'bad'},{email:'a@b.co\nBcc:x@y.co'},{phone:['bad']},{source:'other'},{source:'capture',interest:'Club'},{interest:'smtp'},{locale:'fr'},{locale:'__proto__'},{name:'x'.repeat(121)},{message:'x'.repeat(3001)},{message:'x\u0000'},{website:'spam'},{to:'attacker@example.invalid'},{kind:'other'}])
     assert.equal(validateEnquiry({...good,...changes}).ok,false,JSON.stringify(changes));
   for(const value of [null,[],42])assert.equal(validateEnquiry(value).ok,false);
+});
+test('translated product enquiries use the chosen language and preserve German request wording',async()=>{
+  for(const [locale,greeting] of [['en','Hello ÉliteReplay'],['es','Hola']]) {
+    const checked=validateEnquiry({...good,locale});
+    const draft=prepareEnquiry(checked.data);
+    assert.ok(draft.body.includes(greeting),draft.body);
+    assert.doesNotMatch(draft.body,/Hallo ÉliteReplay|Mein Anliegen/);
+    const response=await request(createEnquiryHandler({origins:['https://elitereplay.de'],delivery:preview()}),{...good,locale});
+    assert.deepEqual(response.body,{accepted:false,sent:false,simulated:true});
+  }
+  const draft=prepareEnquiry(validateEnquiry(good).data);
+  assert.match(draft.body,/Hallo ÉliteReplay-Team,/);
+  assert.match(draft.body,/Bitte meldet euch bei mir, um den nächsten Schritt abzustimmen\./);
 });
 test('preview mode cannot instantiate an SMTP transport even if credentials are present',async()=>{
   let transports=0;

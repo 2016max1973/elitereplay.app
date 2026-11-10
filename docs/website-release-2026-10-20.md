@@ -41,3 +41,31 @@ Previous production commit:
 After deployment, verify all five public pages, legal pages, existing demos,
 media playback and read-only enquiry availability. Do not submit production
 forms as a test. The previous ready deployment is the rollback target if needed.
+
+## Language release — 10 November 2026
+
+Oliver explicitly authorized finishing and publishing the English and Spanish
+versions, preserving German content, design and the original claim. The release
+starts from the current production commit `7a06aeb8f75a2a64b872b082468a90c2220e5123`
+and deployment `dpl_7T9KQ6B2NJ95qZQbpx9xF1jF3c2S`; the earlier rollback identifiers
+above are historical and must not be used for this release.
+
+Scope: all five EN/ES marketing pages, DE/EN/ES language navigation, localized
+enquiry validation/drafts, EN/ES translation of the existing privacy notice,
+and inclusion of the new public language routes in the existing analytics
+allowlist. The latest local Capture reference supplies the EN/ES Trainer Tool,
+Player Mode, controls and original overlay media. German Capture and all other
+German page content remain unchanged apart from language navigation/metadata.
+
+The later distributed spam/deduplication protection and retired archive/test
+routes in the production base are retained. The process-local protection note
+above describes the October 20 release only. No security rollback, credential
+change, demo change or real test enquiry is part of this release.
+
+Verification and reproduction: `content/website/README.md`. Browser checks
+cover ten translated pages at three widths, all 18 event language-switch
+combinations, ten simulated forms and both translated Player Mode dialogs.
+41 automated tests passed; the existing external Redis integration test was
+skipped without a dedicated test service. The Next.js production build passed.
+Publishing uses the existing GitHub/Vercel production integration. The existing
+prebuild verifies the shared store and SMTP authentication without sending mail.

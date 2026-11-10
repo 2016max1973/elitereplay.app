@@ -845,7 +845,7 @@
       },
       "title": "Privacy notice",
       "subtitle": "What is actually processed on the website and in evidenced ÉliteReplay services",
-      "lastUpdated": "Last updated: 20 October 2026",
+      "lastUpdated": "Last updated: 22 October 2026",
       "sections": [
         {
           "title": "1. Controller and scope",
@@ -903,8 +903,10 @@
             "Alternative contact methods: a contact option explicitly labelled as an email draft opens your own email application. Your email provider transmits the message only when you send it there. This also applies to existing contact forms that offer such a draft.",
             "Required fields: name, email address and service selection, plus the marked planning details for events. Without these details the form cannot submit the enquiry. You may instead email contact@elitereplay.de directly.",
             "Purpose and legal basis: responding to enquiries and taking pre-contractual steps under Article 6(1)(b) GDPR; for enquiries on behalf of organisations, also Article 6(1)(f) and our legitimate interest in business communication. An enquiry is not a binding booking.",
-            "Recipients: Vercel Inc. for website hosting and form processing, united-domains GmbH for the ÉliteReplay mailbox, and the people handling your enquiry internally. Your own email provider also processes messages you send through your email application. See section 9 for potential international transfers.",
-            "Retention: the form service creates no separate permanent enquiry database and does not log message contents. Short-lived counters, request identifiers and checksums in memory support abuse detection and protection against repeated processing. Section 3 applies to technical hosting logs. Emails remain in the mailbox or backups until the enquiry is resolved and, where applicable, for statutory documentation and limitation periods. Further retention is based on Article 6(1)(c) GDPR for legal obligations and Article 6(1)(f) for evidence and legal defence.",
+            "Recipients: Vercel Inc. for website hosting and form processing, united-domains GmbH for the ÉliteReplay mailbox, Upstash, Inc. for shared spam and duplicate-send protection, and the people responsible for handling enquiries internally. Your own email provider is involved if you send an email yourself. Section 9 covers possible international transfers.",
+            "Spam and duplicate-send protection: Our server uses a secret key to derive protected identifiers from the IP address or IPv6 network, the request identifier and the validated form details. Upstash Redis stores only these identifiers, attempt counters and a technical processing status; it does not store names, email addresses, message text or full IP addresses in plain text. These security records are pseudonymous, not anonymous. Your browser does not connect directly to Upstash for this purpose, and this protection does not set cookies.",
+            "Purpose and legal basis of this protection: limiting automated bulk enquiries and preventing duplicate emails. Processing is based on Article 6(1)(f) GDPR; our legitimate interest is a secure, reliable enquiry service. Excessive attempts may be temporarily blocked. Direct email contact remains available.",
+            "Retention: attempt counters expire in the active database after 60 seconds; request identifiers and processing status expire after 24 hours from the creation of each entry. No permanent database of enquiry contents is created, and the form service does not log message text. Provider processing and deletion rules apply to technical logs and any backups; see section 3 for hosting. Emails remain in the mailbox or backups until the enquiry is resolved and, where applicable, for statutory documentation and limitation periods. Further retention is based on Article 6(1)(c) GDPR for legal obligations and Article 6(1)(f) for evidence and legal defence.",
             "An enquiry does not subscribe you to a newsletter. Electronic marketing requires an applicable legal basis and can be unsubscribed from free of charge at any time."
           ]
         },
@@ -961,6 +963,7 @@
           "title": "9. Recipients and international transfers",
           "paragraphs": [
             "Vercel Inc. is a US provider. Vercel states that it uses the EU-US Data Privacy Framework for covered transfers to the United States and the 2021/914 EU Standard Contractual Clauses otherwise. Primary processing may take place in the United States. Provider information: https://vercel.com/legal/privacy-notice and https://vercel.com/legal/dpa.",
+            "Upstash, Inc. is a US provider acting as a processor for the pseudonymous security records described in section 4. The primary database region is Frankfurt, Germany; no additional read regions are configured. Its data processing addendum provides for international transfer mechanisms including the EU-US Data Privacy Framework where applicable and, additionally, EU Standard Contractual Clauses. Processing exclusively within the EEA is not promised. Provider information: https://upstash.com/static/trust/dpa.pdf and https://upstash.com/static/trust/privacy.pdf.",
             "Within the European Economic Area, WhatsApp is provided by WhatsApp Ireland Limited. WhatsApp describes global processing, including in the United States, and identifies the EU-US Data Privacy Framework and EU Standard Contractual Clauses as applicable transfer mechanisms. Details: https://www.whatsapp.com/legal/privacy-policy-eea.",
             "ÉliteReplay does not assume processing restricted exclusively to the EEA. The Vercel region and subprocessors used depend on the account and Blob configuration; the current provider documents linked above apply. A person outside the EEA merely accessing the public website is not in itself a disclosure initiated by ÉliteReplay to a provider in that country."
           ]

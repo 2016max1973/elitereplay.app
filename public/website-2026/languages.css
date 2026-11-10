@@ -1,0 +1,29 @@
+/* Compact, persistent language row shared by all five pages and three locales. */
+/* The approved mobile History order applies only to the released translations. */
+@media(max-width:760px){
+ html:not([lang="de"]) .v-history-top>div:first-child>p:not(.v-small){order:2}
+ html:not([lang="de"]) .v-history-top>div:first-child>.c-hero-actions,
+ html:not([lang="de"]) .v-history-top>div:first-child>.button{order:3;justify-self:start}
+ html:not([lang="de"]) .v-history-top>div:first-child>.v-small{order:4}
+ html:not([lang="de"]) .v-history-portrait{order:5;margin:0 0 28px}
+}
+.visual-rebuild .site-header{flex-wrap:wrap;height:auto;min-height:128px;padding-top:12px;padding-bottom:0;row-gap:0}
+.site-language-row{flex-basis:100%;display:flex;justify-content:flex-end;border-top:1px solid #ffffff12;margin-top:10px}
+.visual-rebuild .site-header .site-languages{display:flex;position:static;flex-direction:row;gap:4px;margin:0;padding:0;align-items:center;width:auto;max-height:none;overflow:visible;background:none;border:0}
+.visual-rebuild .site-header .site-languages a{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;min-width:42px;min-height:36px;font-size:11px;line-height:1;letter-spacing:.05em;border-bottom:2px solid transparent}
+.visual-rebuild .site-header .site-languages a[aria-current=page]{color:var(--gold);border-bottom-color:var(--gold)}
+.visual-rebuild .site-header .site-languages a[aria-current=page]:after{display:none}
+html{scroll-padding-top:150px}
+@media(max-width:1100px){
+ .visual-rebuild .site-header{min-height:120px;padding-top:10px}
+ .visual-rebuild .site-header #mainNav{top:100%;max-height:calc(100svh - 120px)}
+ .visual-rebuild .site-header .site-languages a{min-height:44px}
+ html{scroll-padding-top:140px}
+}
+@media(max-width:620px){
+ .visual-rebuild .site-header{padding-top:8px;padding-inline:20px;min-height:116px}
+ .site-language-row{margin-top:5px}
+ .visual-rebuild .site-header .site-languages a{font-size:11px;padding-inline:12px}
+ .visual-rebuild .site-header #mainNav{top:100%;max-height:calc(100svh - 116px)}
+ .visual-rebuild .site-header .header-cta{max-width:160px;white-space:normal;text-align:center}
+}

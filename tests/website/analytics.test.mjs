@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createContext, runInContext} from 'node:vm';
 
 const source = readFileSync('public/website-2026/analytics.js', 'utf8');
-const pages = ['de', 'de/matchboard', 'de/history', 'de/capture', 'de/camps-events'];
+const pages = ['de', 'en', 'es'].flatMap(locale => ['', '/matchboard', '/history', '/capture', '/camps-events'].map(path => locale + path));
 
 function boot(url) {
   const scripts = [];
@@ -22,7 +22,7 @@ function boot(url) {
   return {window, scripts, context, beforeSend: window.vaq?.[0][1]};
 }
 
-test('each published German page loads the counter once on the production domains', () => {
+test('each published language page loads the counter once on the production domains', () => {
   for (const host of ['elitereplay.de', 'www.elitereplay.de']) {
     for (const path of pages) {
       const url = `https://${host}/${path}`;
@@ -37,12 +37,12 @@ test('each published German page loads the counter once on the production domain
   }
 });
 
-test('local, preview, other languages, demo and private delivery URLs never load the counter', () => {
+test('local, preview, unsupported languages, demo and private URLs never load the counter', () => {
   for (const url of [
     'http://127.0.0.1:4180/de', 'http://localhost:4179/de',
     'https://elitereplay-preview.vercel.app/de', 'https://elitereplay.de:4181/de',
     'https://elitereplay.de.evil.test/de', 'http://elitereplay.de/de',
-    'https://elitereplay.de/en', 'https://elitereplay.de/es/camps-events',
+    'https://elitereplay.de/fr', 'https://elitereplay.de/en/matchboard/demo', 'https://elitereplay.de/es/history/private',
     'https://elitereplay.de/website-2026/de/index.html',
     ...['matchboard/demo', 'matchboard/start', 'session/private', 'match/123',
       'highlight/private', 'camp/private', 'history/private', 'unknown']
@@ -78,14 +78,10 @@ test('custom events and identity/form payloads cannot enter the new counter', ()
   assert.deepEqual(Object.keys(result).sort(), ['type', 'url']);
 });
 
-test('only the five German static pages include the bootstrap', () => {
+test('all fifteen public marketing pages include the bootstrap once', () => {
   const tag = '<script src="/website-2026/analytics.js" defer></script>';
-  for (const slug of ['index', 'matchboard', 'history', 'capture', 'camps-events']) {
-    const html = readFileSync(`public/website-2026/de/${slug}.html`, 'utf8');
+  for (const locale of ['de','en','es']) for (const slug of ['index', 'matchboard', 'history', 'capture', 'camps-events']) {
+    const html = readFileSync(`public/website-2026/${locale}/${slug}.html`, 'utf8');
     assert.equal(html.split(tag).length - 1, 1, slug);
-  }
-  for (const locale of ['en', 'es']) {
-    const html = readFileSync(`public/website-2026/${locale}/camps-events.html`, 'utf8');
-    assert.ok(!html.includes(tag));
   }
 });
