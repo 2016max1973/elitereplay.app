@@ -150,6 +150,9 @@ for slug in SLUGS:
         else:
             reference = (CONTENT / 'capture-source-de.html').read_text() if slug == 'capture' else clean
             document = localize_document(reference, locale)
+            if slug == "capture":
+                for screen in ("student", "appointment"):
+                    document = document.replace(f"capture-training-2026-11/{screen}-de.png", f"capture-training-2026-11/{screen}-{locale}.png")
             # The live German media and copy remain intact; translation-only aids
             # such as the German-demo note are restored from the prepared copy.
         (PUBLIC / locale / f"{slug}.html").write_text(chrome(document, locale, slug))

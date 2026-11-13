@@ -875,7 +875,7 @@
       },
       "title": "Datenschutzerklärung",
       "subtitle": "Was auf der Website und bei den belegten ÉliteReplay-Diensten tatsächlich verarbeitet wird",
-      "lastUpdated": "Stand: 22. Oktober 2026",
+      "lastUpdated": "Entwurf: 13. November 2026 · vor Veröffentlichung zu vervollständigen",
       "sections": [
         {
           "title": "1. Verantwortlicher und Geltungsbereich",
@@ -897,7 +897,7 @@
               "title": "MatchBoard, Aufnahmen und Highlights",
               "paragraphs": [
                 "MatchBoard und Highlight-Abläufe werden für konkrete Pilot- oder Club-Setups gesondert konfiguriert. Dabei können – abhängig vom jeweiligen Einsatz – Namen oder Anzeigenamen, Team- und Court-Zuordnung, Match- und Score-Daten, Zeitpunkte, Moment-Markierungen sowie Bild- und Videoaufnahmen verarbeitet werden.",
-                "Teilnahme und Matchdaten, Aufnahme, persönliche Highlight-Auslieferung sowie Veröffentlichung oder Marketing sind getrennte Zwecke. Rechtsgrundlage, Rollen von ÉliteReplay und Club beziehungsweise Veranstalter, Empfänger und Fristen müssen vor dem jeweiligen Einsatz in einem eigenen Hinweis festgelegt werden. Eine Website-Anfrage ersetzt diese Information und keine dieser Entscheidungen."
+                "Die Rollen richten sich nach dem konkreten Ablauf und den tatsächlichen Entscheidungen. Bestimmt ein Club oder Trainer eigenständig Zweck und wesentliche Mittel der Aufnahme, Clipauswahl, Empfänger, eines Verkaufs und der Aufbewahrung, ist er für diese Verarbeitung Verantwortlicher. ÉliteReplay ist Auftragsverarbeiter, soweit es die Daten im Auftrag und nach dokumentierten Weisungen verarbeitet; dafür ist eine Vereinbarung nach Artikel 28 DSGVO erforderlich. Für eigene Highlights, die ÉliteReplay selbst für Website, Kommunikation oder Download auswählt und veröffentlicht, ist ÉliteReplay für diesen Zweck Verantwortlicher. Eine Trainerfreigabe für einen Schülerzugang erlaubt keine öffentliche Veröffentlichung oder Marketingnutzung. Bestimmen beide Seiten Zwecke und wesentliche Mittel gemeinsam, ist eine Regelung nach Artikel 26 DSGVO erforderlich."
               ]
             },
             {
@@ -909,7 +909,7 @@
             {
               "title": "Trainer-App",
               "paragraphs": [
-                "Die native TrainerReplay-/Capture-App ist technisch von der Website getrennt. Der Website-Code belegt weder eine öffentliche App-Store-Verteilung noch eine Konto- oder Cloud-Synchronisierung mit dieser Website. Für die App, Kamera, Mikrofon, lokale Speicherung, Body Analysis und Freigaben gilt die ergänzende App-Datenschutzerklärung unter https://elitereplay.de/de/privacy/capture. Lokale Pose- oder Bewegungsanalyse darf nicht mit biometrischer Identifizierung oder KI-Training gleichgesetzt werden."
+                "Die native TrainerReplay-/Capture-App und ihr QR-/Videozugang sind technisch von der allgemeinen ÉliteReplay-Website getrennt. Capture umfasst unter anderem Schüler- und Terminverwaltung, Trainer- und Player Mode, MatchBoard-Spielstand, Handgesten, Flic/Apple Watch, QR-Videozugang sowie Testabläufe für Onlinebuchung und Videopakete. Die datenschutzrechtlichen Rollen für Training, Aufnahmen, Empfänger und Verkäufe hängen davon ab, wer im konkreten Ablauf über Zweck und wesentliche Mittel entscheidet. Verarbeitet ÉliteReplay im Auftrag eines Trainers oder Clubs, braucht es dafür dokumentierte Weisungen und eine Vereinbarung nach Artikel 28 DSGVO. Für eigene ÉliteReplay-Veröffentlichungen ist ÉliteReplay selbst verantwortlich. Einzelheiten zu Kamera, Mikrofon, lokaler Speicherung, Bewegungsanalyse, QR-Zustellung und den getrennten Stripe-Testabläufen enthält die ergänzende Capture-Datenschutzerklärung unter https://elitereplay.de/de/privacy/capture. Lokale Pose- oder Bewegungsanalyse ist keine biometrische Identifizierung und kein KI-Training."
               ]
             }
           ]
@@ -1012,7 +1012,7 @@
             "Sie können nach Maßgabe der DSGVO Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und – soweit anwendbar – Datenübertragbarkeit verlangen.",
             "Sie können einer Verarbeitung auf Grundlage von Art. 6 Abs. 1 Buchst. f DSGVO aus Gründen Ihrer besonderen Situation widersprechen; Direktwerbung können Sie jederzeit widersprechen.",
             "Eine erteilte Einwilligung können Sie jederzeit kostenlos und mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der Verarbeitung, die bis zum Widerruf auf Grundlage der Einwilligung erfolgt ist.",
-            "Zur Ausübung Ihrer Rechte genügt eine Nachricht an contact@elitereplay.de. Bei begründeten Zweifeln können wir nur die zur Identitätsprüfung erforderlichen Zusatzangaben anfordern.",
+            "Für Website-Anfragen und von ÉliteReplay selbst veröffentlichte Highlights schreiben Sie an contact@elitereplay.de. Bei einer Trainingseinheit oder einem Verkauf durch einen Trainer ist der im konkreten Trainingshinweis benannte Trainer beziehungsweise Club der erste Ansprechpartner. ÉliteReplay unterstützt den Verantwortlichen, soweit wir Daten in dessen Auftrag verarbeiten.",
             "Sie können sich insbesondere bei der Agencia Española de Protección de Datos (AEPD) beschweren: https://www.aepd.es. Daneben steht Ihnen die Aufsichtsbehörde Ihres gewöhnlichen Aufenthaltsorts, Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes offen."
           ]
         },
@@ -1033,24 +1033,24 @@
     "capturePrivacy": {
       "meta": {
         "title": "Datenschutz – ÉliteReplay Capture",
-        "description": "Datenschutzhinweise für die lokale ÉliteReplay Capture Trainer-App auf iPhone und iPad."
+        "description": "Datenschutzhinweise zu ÉliteReplay Capture, lokalen Aufnahmen, QR-Videozugang, Player Mode und Onlinebuchung."
       },
       "title": "Datenschutz – ÉliteReplay Capture",
-      "subtitle": "Kamera, Trainer-Audio, lokale Replays, Body Analysis und Freigaben",
-      "lastUpdated": "Stand: 14. Oktober 2026",
+      "subtitle": "Aufnahmen, Player Mode, QR-Videozugang und Onlinebuchung",
+      "lastUpdated": "Entwurf: 13. November 2026 · vor Veröffentlichung zu vervollständigen",
       "sections": [
         {
           "title": "1. Verantwortlicher und Geltungsbereich",
           "paragraphs": [
-            "Verantwortlicher für die Bereitstellung der App und den ÉliteReplay-Support ist Oliver Reifgens, handelnd unter ÉliteReplay, Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España. Kontakt für Datenschutzfragen und Betroffenenrechte: contact@elitereplay.de.",
-            "Diese Erklärung gilt für die ÉliteReplay Capture Trainer-App für iPhone und iPad. Wird die App von einem Club, Veranstalter oder selbstständigen Trainer zur Aufnahme anderer Personen eingesetzt, kann diese Stelle für Aufnahmezweck, Rechtsgrundlage, Information der Beteiligten, Freigaben und Löschfristen zusätzlich oder eigenständig verantwortlich sein."
+            "Verantwortlicher für die allgemeine ÉliteReplay-Website, eigene ÉliteReplay-Veröffentlichungen und den ÉliteReplay-Support ist Oliver Reifgens, handelnd unter ÉliteReplay, Calle Tarabilla 1, C 48, 35660 Corralejo, Las Palmas, España. Kontakt: contact@elitereplay.de.",
+            "Diese Erklärung betrifft Capture, Player Mode sowie den zugehörigen QR-, Video- und Buchungsablauf. Wer für eine Verarbeitung verantwortlich ist, richtet sich nach dem konkreten Zweck und danach, wer über die wesentlichen Mittel entscheidet – nicht allein danach, wer die App bereitstellt. Bestimmt ein Trainer oder Club eigenständig, welche Personen für welches Training aufgenommen werden, welche Clips freigegeben oder verkauft und wie lange sie aufbewahrt werden, ist er für diese Zwecke Verantwortlicher. ÉliteReplay verarbeitet Daten als Auftragsverarbeiter, soweit es im Auftrag und nach dokumentierten Weisungen handelt; dafür ist eine Vereinbarung nach Artikel 28 DSGVO erforderlich. Für eigene Highlights, die ÉliteReplay für Website, Kommunikation oder einen eigenen Download auswählt und veröffentlicht, ist ÉliteReplay für diesen Zweck selbst Verantwortlicher. Eine gemeinsame Verantwortlichkeit besteht nur, wenn beide Seiten Zwecke und wesentliche Mittel tatsächlich gemeinsam bestimmen; dann ist eine Regelung nach Artikel 26 DSGVO erforderlich. Diese Rollen müssen vor dem jeweiligen Einsatz anhand des tatsächlichen Ablaufs festgehalten werden."
           ]
         },
         {
           "title": "2. Zweck und Grundprinzip",
           "paragraphs": [
-            "Die App ist ein lokales Trainer-Werkzeug. Sie zeichnet Video auf, hält einen temporären Replay-Puffer vor, speichert bewusst markierte Spielszenen, kann Trainerkommentare und Coach-Demos aufnehmen und ermöglicht eine lokale Körperpose-Analyse. Die Verarbeitung dient der Durchführung des angeforderten Coaching- und Replay-Ablaufs.",
-            "Soweit ÉliteReplay die App unmittelbar im Rahmen eines vereinbarten Tests oder einer Leistung bereitstellt, beruht die dafür erforderliche Verarbeitung auf Art. 6 Abs. 1 Buchst. b DSGVO. Für die Aufnahme anderer Personen, eine Weitergabe oder Veröffentlichung muss der jeweilige Trainer, Club oder Veranstalter vor Ort eine passende Rechtsgrundlage und die erforderlichen Informationen beziehungsweise Einwilligungen sicherstellen."
+            "Capture unterstützt Trainer bei Schülerverwaltung, Terminplanung, Aufnahmen, Replays, Kommentaren und Video-Feedback. Player Mode ergänzt MatchBoard-Spielstand, Punkt-Clips und eine manuelle Steuerung unter anderem per Handgeste, Flic oder Apple Watch. Trainingsvideos und Körperpose-Analysen werden zunächst lokal auf dem Gerät verarbeitet. Gibt ein Trainer ausgewählte Clips für den QR-Videozugang frei, werden die dafür nötigen Videos und Zuordnungsdaten an den Online-Dienst übertragen. Zusätzlich gibt es einen CourtShop für kleine Court-Artikel mit Bestellung im Browser und Abholung beim Trainer. Onlinebuchungen, Videopakete und der CourtShop verwenden getrennte Checkout-Abläufe.",
+            "Die Rechtsgrundlage richtet sich nach dem jeweiligen Zweck und dem dafür Verantwortlichen. Trainer oder Club müssen die Rechtsgrundlage und Information für ihre Aufnahmen, Freigaben und Verkäufe selbst bestimmen. ÉliteReplay stellt keine Rechtsgrundlage durch die App bereit. Eine Zustimmung zur Aufnahme oder persönlichen Videozustellung umfasst nicht automatisch eine Veröffentlichung durch ÉliteReplay oder eine Nutzung für Marketing."
           ]
         },
         {
@@ -1069,7 +1069,12 @@
             "Zuordnung: lokale Session-ID, Datum, Clipnummer, Kategorie und ein vom Trainer eingegebener Spielername oder Anzeigename. Diese Angaben können auch in Dateinamen erscheinen.",
             "Metadaten: lokale JSON-Dateien verbinden Replay, Kommentar, Audioeingang, Kategorie, Session und fertige Exporte.",
             "Branding: ein ausgewähltes Partnerlogo wird lokal im App-Bereich gespeichert und kann in exportierte Videos eingebrannt werden.",
-            "Es werden keine Passwörter, ÉliteReplay-Benutzerkonten, Werbe-IDs oder Zahlungsdaten durch die App angelegt."
+            "Player Mode kann Spielernamen, Teamzuordnung, Spielstand und Matchereignisse zwischen den gekoppelten Geräten austauschen. Die Verbindung verlangt Verschlüsselung; Matchvideos werden dadurch nicht zwischen den Geräten übertragen.",
+            "Bei der optionalen Handgestensteuerung werden Kamerabilder lokal analysiert. Eine lokale Diagnosedatei speichert technische Statuswerte, Zeitpunkte und Laufzeiten, laut aktuellem Code aber keine Bilder oder Spielernamen.",
+            "Bei einem QR-Training können Name, freiwillige E-Mail-Adresse und Telefonnummer, Aufnahme- und Zustellungsentscheidung, Trainingszuordnung sowie erforderliche technische Sitzungs- und Zugangskennungen verarbeitet werden. Bei freigegebenen Clips kommen Video und zugehörige Angaben wie Zeitpunkt, Übung, Kommentar und Empfänger hinzu.",
+            "Bei einer Online-Terminbuchung werden Name, E-Mail-Adresse, gewählter Termin, Betrag, Zahlungsstatus und technische Buchungs-/Zahlungskennungen verarbeitet. Zahlungsdaten wie die Kartennummer werden im Stripe-Checkout eingegeben und von Stripe verarbeitet; Capture erhält sie nicht.",
+            "Bei einer CourtShop-Bestellung werden Abholname, ausgewählter Artikel, Menge, Bestellbetrag, Bestell- und Zahlungsstatus sowie eine Bestellkennung verarbeitet. Der Käufer erhält keinen neuen Shop-Account; der Bestellbeleg wird über denselben Browserzugang geöffnet. Die Ware wird beim Trainer abgeholt.",
+            "Die App legt keine ÉliteReplay-Passwörter oder Werbe-IDs an. Ein dauerhaftes Schülerkonto mit geräteübergreifender Synchronisierung besteht für diesen Gastzugang nicht."
           ]
         },
         {
@@ -1080,9 +1085,13 @@
           ]
         },
         {
-          "title": "6. Lokale Verarbeitung, Übermittlung und Tracking",
+          "title": "6. Lokale und Onlineverarbeitung",
           "items": [
-            "Der geprüfte ÉliteReplay-App-Code enthält keinen automatischen Upload von Video, Audio, Spieler-, Session- oder Body-Analysis-Daten an einen ÉliteReplay-Server.",
+            "Aufnahmen und Analysen bleiben lokal, solange der Trainer sie nicht ausdrücklich über den Gast-/Videoablauf freigibt. Für freigegebene Onlinevideos nutzt der Dienst eine private Cloudflare-R2-Ablage; zugehörige Buchungs-, Gast- und Freigabedaten werden in einer Online-Datenbank verarbeitet. Die konkrete Betriebsregion und die internationalen Übermittlungsbedingungen sind vor einem Livebetrieb noch zu bestätigen.",
+            "Im Player Mode werden Match- und Punktdaten über die verschlüsselte Verbindung zwischen den gekoppelten Geräten abgeglichen. Die Videoaufnahme bleibt davon getrennt.",
+            "Für die Buchung von Trainingsstunden wurde ein Stripe-Testcheckout praktisch durchlaufen; dabei wurde kein echtes Geld bewegt. Der Stripe-Checkout für kostenpflichtige Videopakete ist technisch vorbereitet, aber der vollständige Kauf mit anschließendem Videoabruf auf dem Schülergerät ist noch nicht praktisch abgenommen. Live-Zahlungen sind nicht freigeschaltet. Wer später Vertragspartner und Zahlungsempfänger ist, muss vor einem Liveverkauf festgelegt und in den Hinweisen ausgewiesen werden.",
+            "Der CourtShop verarbeitet Bestellungen für Court-Artikel über die vorhandene Stripe-Testumgebung. Eine Bestellung umfasst einen Artikeltyp mit 1 bis 10 Stück und ist zur Abholung beim Trainer vorgesehen. Eine Testbestellung wurde bezahlt und vom Trainer als ausgegeben bestätigt; es wurde kein echtes Geld bewegt und keine Warenübergabe getestet. Live-Zahlungen und Versand sind nicht freigeschaltet.",
+            "Für den Gastzugang gibt es keine automatische WhatsApp-, E-Mail- oder Push-Zustellung. Der persönliche Browserzugang läuft 30 Tage. Das Beenden des Videozugangs sperrt weiteren Abruf, löscht aber weder die Cloud-Datei noch bereits gespeicherte Kopien.",
             "Es sind keine Werbe-, Analyse-, Profiling- oder Crash-Reporting-SDKs eingebunden. Die App verwendet keine Werbe-ID und führt kein App-übergreifendes Tracking durch.",
             "Die native iOS-Freigabe wird erst durch den Nutzer geöffnet. Der Nutzer entscheidet selbst, ob und an welches Ziel – etwa AirDrop, Dateien, Fotos, Mail, Nachrichten oder WhatsApp – eine ausgewählte MP4 übergeben wird. Danach gelten die Bedingungen des gewählten Empfängers oder Dienstes.",
             "Geteilte Dateinamen und gerenderte Videos können Spielername, Kategorie, Datum, Clipnummer, Trainerstimme, Partnerlogo und Body-Analysis-Darstellungen enthalten. Diese Inhalte sind vor dem Teilen zu prüfen."
@@ -1104,7 +1113,8 @@
             "Gespeicherte Replays, Trainer-Reviews, Coach-Audio, Metadaten, Coach-MP4 und Coach-Demos bleiben grundsätzlich lokal erhalten, bis der Nutzer den eindeutig zugeordneten Clip in der App löscht oder die App entfernt wird.",
             "Body-Analysis-Dateien liegen im lokalen Application-Support-Bereich. Share-Exporte können im Cache liegen und von iOS entfernt werden; die App verspricht dafür keine feste automatische Frist.",
             "In Fotos, Dateien oder an Drittanbieter geteilte Kopien werden durch das Löschen in der App nicht mitgelöscht und müssen am jeweiligen Ziel separat entfernt werden.",
-            "iOS-Backups oder eine vom Nutzer aktivierte Gerätesynchronisierung liegen außerhalb des unmittelbaren App-Ablaufs und richten sich nach den Einstellungen des Nutzers und den Bedingungen von Apple."
+            "iOS-Backups oder eine vom Nutzer aktivierte Gerätesynchronisierung liegen außerhalb des unmittelbaren App-Ablaufs und richten sich nach den Einstellungen des Nutzers und den Bedingungen von Apple.",
+            "Onlinevideos werden durch das Beenden des Zugangs nicht gelöscht. Für Cloudvideos, Gast-/Buchungsdaten, Shopbestellungen, technische Protokolle und Sicherungskopien ist noch keine vollständige, verbindliche Löschfrist samt durchgehendem Löschprozess festgelegt. Diese Fristen müssen vor einem Livebetrieb bestimmt und technisch umgesetzt werden."
           ]
         },
         {
@@ -1117,14 +1127,14 @@
         {
           "title": "10. Rechte und Kontakt",
           "paragraphs": [
-            "Soweit ÉliteReplay personenbezogene Daten als Verantwortlicher verarbeitet, können betroffene Personen nach Maßgabe der DSGVO Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch verlangen sowie eine Einwilligung für die Zukunft widerrufen. Kontakt: contact@elitereplay.de. Eine Beschwerde ist insbesondere bei der Agencia Española de Protección de Datos unter https://www.aepd.es möglich.",
+            "Für Website-Anfragen und von ÉliteReplay selbst ausgewählte oder veröffentlichte Highlights ist ÉliteReplay unter den oben genannten Kontaktdaten erreichbar. Bei Trainingseinheiten oder Verkäufen eines Trainers ist zunächst der Trainer beziehungsweise Club der Ansprechpartner für Betroffenenrechte; ÉliteReplay unterstützt ihn bei Daten, die wir in dessen Auftrag verarbeiten. Für gemeinsame Verantwortlichkeit gilt die jeweils veröffentlichte Zuständigkeitsregelung. Eine Beschwerde ist insbesondere bei der Agencia Española de Protección de Datos unter https://www.aepd.es möglich.",
             "Daten, die ausschließlich lokal auf dem Gerät eines Trainers oder Clubs liegen und ÉliteReplay nie erhalten hat, kann ÉliteReplay technisch nicht direkt einsehen oder löschen. In diesem Fall ist zuerst der Betreiber dieses Geräts beziehungsweise der verantwortliche Club oder Trainer zu kontaktieren."
           ]
         },
         {
           "title": "11. Minderjährige und Änderungen",
           "paragraphs": [
-            "Werden Minderjährige aufgenommen oder analysiert, muss der verantwortliche Trainer, Club oder Veranstalter vorab die nach dem jeweiligen Recht erforderliche Beteiligung der Sorgeberechtigten und kindgerechte Information sicherstellen.",
+            "Werden Minderjährige aufgenommen oder analysiert, muss der verantwortliche Trainer, Club oder Veranstalter vorab die nach dem jeweiligen Recht erforderliche Beteiligung der Sorgeberechtigten und kindgerechte Information sicherstellen. Die aktuellen QR-Zustimmungen speichern lediglich die Auswahl; eine Version des angezeigten Zustimmungstextes wird im geprüften Datenmodell noch nicht mitgespeichert.",
             "Diese Erklärung wird angepasst, wenn sich Funktionen, Datenflüsse, Drittanbieter oder rechtliche Anforderungen ändern. Wesentliche neue Zwecke, die eine Einwilligung erfordern, werden nicht allein durch eine Textänderung legitimiert."
           ]
         }

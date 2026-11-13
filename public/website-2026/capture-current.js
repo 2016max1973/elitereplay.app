@@ -29,8 +29,8 @@
     document.getElementById('requestTitle').textContent = t(player
       ? 'Deine Anfrage: Player Mode für eure Matches' : 'Deine Anfrage: Capture für dein Training');
     document.getElementById('requestDetail').textContent = t(player
-      ? 'Spielstand, Punkt-Clips und MatchBoard-Overlay auf eurem Gerät. Wir stimmen Kameraaufstellung und Steuerung mit euch ab und begleiten euren Einstieg über Apple TestFlight.'
-      : 'Replays, persönliches Video-Feedback und Bewegungsansicht. Wir stimmen Gerät und Steuerung mit dir ab und begleiten deinen Einstieg über Apple TestFlight.');
+      ? 'Spielstand, Punkt-Clips und MatchBoard-Overlay auf eurem Gerät. Wir stimmen Kameraaufstellung und Steuerung mit euch ab und begleiten euren Einstieg in den Pilot.'
+      : 'Schüler, Kalender, Replays und persönliches Video-Feedback. Sag uns gern, ob du auch die Onlinebuchung oder Videopakete mit Stripe im Pilot kennenlernen möchtest.');
   };
   document.querySelectorAll('input[name="interest"]').forEach(input => input.addEventListener('change', update));
   update();
